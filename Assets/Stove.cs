@@ -1,11 +1,11 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Stove : MonoBehaviour
 {
     [SerializeField] private Transform[] stoveSlots;
-    private List<Meat> meatsInStove = new List<Meat>();
     private void Awake()
     {
         GetComponent<Image>().alphaHitTestMinimumThreshold = 0.1f;
@@ -13,8 +13,14 @@ public class Stove : MonoBehaviour
 
     private void Update()
     {
-        if (meatsInStove.Count <= 0) return;
-        meatsInStove.ForEach(meat => Grill(meat));
+        if (stoveSlots.All(slot => slot.childCount > 0)) return;
+        Meat[] meats = stoveSlots.Where(slot => slot.childCount > 0)
+            .Select(slot => slot.GetChild(0).GetComponent<Meat>()).ToArray();
+        foreach (Meat meat in meats)
+        {
+            if (meat.IsBurnt) continue;
+            meat.OnGrill();
+        }
     }
 
     public void OnDrawGizmos()
@@ -30,7 +36,6 @@ public class Stove : MonoBehaviour
         foreach (Transform slot in stoveSlots)
         {
             if (slot.childCount > 0) continue;
-            meatsInStove.Add(meat);
             meat.transform.SetParent(slot);
             meat.transform.localPosition = Vector3.zero;
             break;
@@ -39,7 +44,6 @@ public class Stove : MonoBehaviour
 
     public void Grill(Meat meat)
     {
-        Debug.Log(meat.FoodState);
         if (meat.IsBurnt) return;
         meat.OnGrill();
     }
