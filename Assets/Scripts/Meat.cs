@@ -55,7 +55,6 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
     {
         _animator.SetBool("OnGrill", IsOnGrill);
         _animator.SetBool("IsBurnt", IsBurnt);
-        Debug.Log(_cookedTimeOnGrill[_currentSide]);
     }
 
     public void OnPointerDown(PointerEventData eventData)
