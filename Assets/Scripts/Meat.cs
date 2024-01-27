@@ -63,7 +63,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
         _animator.SetBool("IsOnFlip", IsOnFlip);
         _animator.SetBool("IsCurrentSideCooked", _currentSide == 1? _currentFoodState[0] == FoodState.Cooked : _currentFoodState[1] == FoodState.Cooked);
         _animator.SetBool("IsOppositeSideCooked", _currentSide == 1? _currentFoodState[1] == FoodState.Cooked : _currentFoodState[0] == FoodState.Cooked);
-        burntParticle.gameObject.SetActive(_currentFoodState[_currentSide] == FoodState.Cooked);
+        burntParticle.gameObject.SetActive(_currentFoodState[_currentSide] == FoodState.Cooked && IsOnGrill);
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -105,7 +105,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
         
         if (!eventData.pointerEnter || !eventData.pointerEnter.CompareTag("Stove") && !IsOnFlip)
         {
-            transform.position = _spawnPosition;
+            FoodSpawnerManager.Instance.AddFoodToTheNearestSlot(this);
             return;
         }
         eventData.pointerEnter.GetComponent<Stove>().DropFood(this);
