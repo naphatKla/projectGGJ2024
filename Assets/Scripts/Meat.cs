@@ -15,7 +15,6 @@ public enum FoodState
 [Serializable] public struct CookedState
 {
     public FoodState FoodState;
-    public Color meatColor; // Delete this after done // sprite
     public float CookedTime;
     public FoodState NextFoodState;
 }
@@ -26,6 +25,8 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
     public FoodState FoodState => _currentFoodState[_currentSide];
     public bool IsBurnt => _currentFoodState.Any(foodState => foodState == FoodState.Burnt);
     public bool IsOnGrill => transform.parent.CompareTag("Stove");
+    public bool IsOnFlip {get; set;}
+    [SerializeField] ParticleSystem burntParticle;
     
     private Vector3 _spawnPosition;
     private Image _image;
@@ -35,6 +36,8 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
     private float[] _cookedTimeOnGrill = new float[2];
     private int _currentSide;
     private Animator _animator;
+    private Tween _holdClickTween;
+    private float _lastedOppositeSideCookedTime;
     
     private void Start()
     {
@@ -49,35 +52,39 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
         _currentSide = 0;
         _image = GetComponent<Image>();
         _animator = GetComponent<Animator>();
+        _image.alphaHitTestMinimumThreshold = 0.1f;
     }
 
     private void FixedUpdate()
     {
         _animator.SetBool("OnGrill", IsOnGrill);
         _animator.SetBool("IsBurnt", IsBurnt);
-        Debug.Log(_cookedTimeOnGrill[_currentSide]);
+        _animator.SetBool("IsOnFlip", IsOnFlip);
+        _animator.SetBool("IsCurrentSideCooked", _currentSide == 1? _currentFoodState[0] == FoodState.Cooked : _currentFoodState[1] == FoodState.Cooked);
+        _animator.SetBool("IsOppositeSideCooked", _currentSide == 1? _currentFoodState[1] == FoodState.Cooked : _currentFoodState[0] == FoodState.Cooked);
+        burntParticle.gameObject.SetActive(_currentFoodState[_currentSide] == FoodState.Cooked);
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log(IsOnGrill);
-        if (IsOnGrill && eventData.button == PointerEventData.InputButton.Right)
-        {
-            FlipSide();
-            Debug.Log("Flip");
-            return;
-        }
         if (eventData.button != PointerEventData.InputButton.Left) return;
+        if (IsOnGrill && !_holdClickTween.IsActive())
+            _holdClickTween = DOVirtual.DelayedCall(0.25f, () =>
+            {
+                FlipController.Instance.OpenBar(this, GetComponent<RectTransform>().position);
+                FlipController.Instance.OnPerfect += FlipSide;
+            }).OnComplete(() => IsOnFlip = true);
         GetComponent<Image>().raycastTarget = false;
-        transform.position = eventData.position;
         transform.DOScale(Vector3.one * 1.5f, 0.25f);
-        transform.SetParent(GameObject.Find("Canvas").transform);
+        transform.SetParent(GameObject.Find("GamePlayCanvas").transform);
     }
 
     public void OnDrag(PointerEventData eventData)
     {
+        if (IsOnFlip) return;
         if (eventData.button != PointerEventData.InputButton.Left) return;
-        transform.position = eventData.position;
+        transform.position = (Vector2)Camera.main.ScreenToWorldPoint(eventData.position);
+        _holdClickTween.Kill();
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -88,9 +95,12 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
     public void OnPointerUp(PointerEventData eventData)
     {
         if (eventData.button != PointerEventData.InputButton.Left) return;
+        IsOnFlip = false;
+        _holdClickTween.Kill();
         transform.DOScale(Vector3.one, 0.25f);
         GetComponent<Image>().raycastTarget = true;
-        if (!eventData.pointerEnter || !eventData.pointerEnter.CompareTag("Stove"))
+        
+        if (!eventData.pointerEnter || !eventData.pointerEnter.CompareTag("Stove") && !IsOnFlip)
         {
             transform.position = _spawnPosition;
             return;
@@ -110,14 +120,13 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
         this.DOKill();
         transform.localScale = Vector3.one;
         _image.raycastTarget = false;
-        _image.DOColor(Color.black, 0.15f);
     }
     
     public void FlipSide()
     {
         if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Flip")) return;
         if (IsBurnt) return;
-        _image.DOColor(_currentCookedState[_currentSide].meatColor, 0.5f);
+        _lastedOppositeSideCookedTime = _cookedTimeOnGrill[_currentSide];
         _currentSide = _currentSide == 0 ? 1 : 0;
         _animator.SetTrigger("IsFlip");
     }
@@ -127,5 +136,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
         if (FoodState == FoodState.Burnt) return;
         _cookedTimeOnGrill[_currentSide] += Time.deltaTime;
         ChangeFoodStateHandler();
+        if (_cookedTimeOnGrill[_currentSide == 0? 1 : 0] <= 0 || _cookedTimeOnGrill[_currentSide == 0? 1 : 0] <= _lastedOppositeSideCookedTime-1.5f) return;
+        _cookedTimeOnGrill[_currentSide == 0? 1 : 0] -= Time.deltaTime;
     }
 }
