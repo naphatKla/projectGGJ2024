@@ -51,6 +51,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
         _currentSide = 0;
         _image = GetComponent<Image>();
         _animator = GetComponent<Animator>();
+        _image.alphaHitTestMinimumThreshold = 0.1f;
     }
 
     private void FixedUpdate()
@@ -70,7 +71,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
             }).OnComplete(() => IsOnFlip = true);
         GetComponent<Image>().raycastTarget = false;
         transform.DOScale(Vector3.one * 1.5f, 0.25f);
-        transform.SetParent(GameObject.Find("Canvas").transform);
+        transform.SetParent(GameObject.Find("GamePlayCanvas").transform);
     }
 
     public void OnDrag(PointerEventData eventData)

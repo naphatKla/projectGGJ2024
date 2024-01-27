@@ -33,6 +33,8 @@ public class Stove : MonoBehaviour
     public void DropFood(Meat meat)
     {
         if (!meat.CompareTag("Grillable")) return;
+        float distance(Transform slot) => Vector3.Distance(meat.transform.position, slot.position);
+        stoveSlots = stoveSlots.OrderBy(distance).ToArray();
         foreach (Transform slot in stoveSlots)
         {
             if (slot.childCount > 0) continue;
