@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using DG.Tweening;
 using Managers;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -9,8 +10,13 @@ namespace Bubbles
     {
         [SerializeField] private GameObject bubblePrefab;
         [SerializeField] private bool playOnLevelStart;
-        [SerializeField] private List<BubbleSettings> bubbleSettings;
+        [SerializeField] private float startDelay;
         [SerializeField] private bool randomizeOrder;
+        [SerializeField] private bool loop;
+        [SerializeField] private bool isEnding;
+        [SerializeField][ShowIf(nameof(isEnding))] private ParameterType endingType;
+        [SerializeField] private List<BubbleSettings> bubbleSettings;
+
 
         [Title("Debug")]
         [SerializeField][ReadOnly] private int currentBubbleIndex;
@@ -26,6 +32,9 @@ namespace Bubbles
         public bool PlayOnLevelStart => playOnLevelStart;
         public List<BubbleSettings> BubbleSettings {get => bubbleSettings; set => bubbleSettings = value;}
         public bool RandomizeOrder => randomizeOrder;
+        public bool Loop => loop;
+        public bool IsEnding => isEnding;
+        public ParameterType EndingType => endingType;
         public int CurrentBubbleIndex => currentBubbleIndex;
         
         private void Awake()
@@ -43,9 +52,17 @@ namespace Bubbles
             if (!_isPlaying || !_nextBubble) return;
             _currentInterval -= Time.deltaTime;
             if (_currentInterval > 0) return;
-            if (randomizeOrder)
+            if (randomizeOrder && _randomizedBubbleSettings.Count > 0)
             {
-                if (_randomizedBubbleSettings.Count == 0) _isPlaying = false;
+                if (loop)
+                {
+                    _randomizedBubbleSettings = bubbleSettings;
+                    _isPlaying = true;
+                }
+                else
+                {
+                    _isPlaying = false;
+                }
                 int randomIndex = Random.Range(0, _randomizedBubbleSettings.Count);
                 SpawnBubble(randomIndex);
                 _previousBubbleSettings = _randomizedBubbleSettings[randomIndex];
@@ -60,7 +77,13 @@ namespace Bubbles
                 _nextBubble = false;
             }
             _currentInterval = 0;
-            if (currentBubbleIndex >= bubbleSettings.Count)
+            if (currentBubbleIndex < bubbleSettings.Count) return;
+            if (loop)
+            {
+                currentBubbleIndex = 0;
+                _isPlaying = true;
+            }
+            else
             {
                 _isPlaying = false;
             }
@@ -68,7 +91,15 @@ namespace Bubbles
 
         public void PlayWave()
         {
-            _isPlaying = true;
+            DOVirtual.DelayedCall(startDelay, () =>
+            {
+                _isPlaying = true;
+            });
+        }
+        
+        public void StopWave()
+        {
+            _isPlaying = false;
         }
         
         public void SetNextBubble()

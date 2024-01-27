@@ -55,12 +55,14 @@ namespace Managers
     public class BubbleManager : MonoSingleton<BubbleManager>
     {
         [SerializeField] private Transform bubbleCanvas;
-        [SerializeField] private List<BubbleManagerSetting> bubbleManagerSettings;
+        [SerializeField] private List<BubbleManagerSetting> bubbleManagerSettings_TH;
+        [SerializeField] private List<BubbleManagerSetting> bubbleManagerSettings_EN;
         [SerializeField] private Transform spawnPointPool;
         [SerializeField] private Transform usedSpawnPointPool;
         
         [Title("Debug")]
-        [SerializeField] private List<ParameterArchetype> parameterArchetypes = new List<ParameterArchetype>()
+        [SerializeField][ReadOnly] private List<BubbleManagerSetting> currentBubbleManagerSettings;
+        [SerializeField][ReadOnly] private List<ParameterArchetype> parameterArchetypes = new List<ParameterArchetype>()
         {
             new ParameterArchetype(ParameterType.Good),
             new ParameterArchetype(ParameterType.Ignorant),
@@ -69,6 +71,9 @@ namespace Managers
         };
         
         private List<Transform> _availableSpawnPoints = new List<Transform>();
+        
+        
+        public List<BubbleManagerSetting> CurrentBubbleManagerSettings => currentBubbleManagerSettings;
         public Transform BubbleCanvas => bubbleCanvas;
         public List<ParameterArchetype> ParameterArchetypes => parameterArchetypes;
         public List<Transform> AvailableSpawnPoints => _availableSpawnPoints;
@@ -78,8 +83,27 @@ namespace Managers
         protected override void Awake()
         {
             base.Awake();
+            if (PlayerPrefs.HasKey("Language"))
+            {
+                switch (PlayerPrefs.GetString("Language"))
+                {
+                    case "TH":
+                        currentBubbleManagerSettings = bubbleManagerSettings_TH;
+                        break;
+                    case "EN":
+                        currentBubbleManagerSettings = bubbleManagerSettings_EN;
+                        break;
+                    default:
+                        currentBubbleManagerSettings = bubbleManagerSettings_EN;
+                        break;
+                }
+            }
+            else
+            {
+                currentBubbleManagerSettings = bubbleManagerSettings_EN;
+            }
             List<BubbleWave> playOnLevelStartWaveSettings =
-                bubbleManagerSettings.FindAll(x => x.BubbleWave.PlayOnLevelStart).Select(x => x.BubbleWave).ToList();
+                currentBubbleManagerSettings.FindAll(x => x.BubbleWave.PlayOnLevelStart).Select(x => x.BubbleWave).ToList();
             foreach (Transform child in spawnPointPool)
             {
                 _availableSpawnPoints.Add(child);
@@ -99,40 +123,6 @@ namespace Managers
             spawnPoint.SetParent(spawnPointPool);
         }
 
-        public string GetBubbleDialogue(int dialogueLineIndex)
-        {
-            string path = Path.Combine(Application.streamingAssetsPath, "Dialogue", "BubbleDialogue.txt");
-            path = path.Replace(@"\", "/");
-            if (File.Exists(path))
-            {
-                string[] lines = File.ReadAllLines(path);
-                return lines[dialogueLineIndex];
-            }
-            Debug.LogError("BubbleDialogue.txt not found");
-            return null;
-        }
-
-        public int GetBubbleAnswers(int answerLineIndex, out string[] answerStrings)
-        {
-            answerStrings = null;
-            string path = Path.Combine(Application.streamingAssetsPath, "Answer", "BubbleAnswer.txt");
-            path = path.Replace(@"\", "/");
-            if (File.Exists(path))
-            {
-                string[] lines = File.ReadAllLines(path);
-                string answerLine = lines[answerLineIndex];
-                string[] answers = answerLine.Split(';');
-                for (int i = 0; i < answers.Length; i++)
-                {
-                    answers[i] = answers[i].Trim();
-                }
-                answerStrings = answers;
-                return answers.Length;
-            }
-            Debug.LogError("BubbleAnswer.txt not found");
-            return 0;
-        }
-        
         public void ModifyParameterScore(ParameterType parameterType, float score)
         {
             if (parameterType == ParameterType.Generic) return;
@@ -184,20 +174,21 @@ namespace Managers
                     splitLines[j] = splitLines[j].Trim('"');
                 }
                 List<string> leadingsWithInterval = new List<string>();
-                for (int j = 1; j < 3; j++)
+                for (int j = 0; j < 2; j++)
                 {
                     if (splitLines[j] != "")
                         leadingsWithInterval.Add(splitLines[j]);
                 }
-                string questionWithInterval = splitLines[3];
+                string questionWithInterval = splitLines[2];
                 List<string> answers = new List<string>();
-                for (int j = 4; j < 7; j++)
+                for (int j = 3; j < 6; j++)
                 {
                     if (splitLines[j] != string.Empty)
                         answers.Add(splitLines[j]);
                 }
-                string combinedResult = splitLines[7];
+                string combinedResult = splitLines[6];
                 AddLeading(leadingsWithInterval.ToArray());
+                if (answers.All(x => x == string.Empty)) continue;
                 AddQuestion(questionWithInterval, answers.ToArray(), combinedResult);
             }
             waveToImport.BubbleSettings = _overrideBubbleSettings;
@@ -207,7 +198,7 @@ namespace Managers
         {
             foreach (string s in leadingsWithInterval)
             {
-                Debug.Log(s);
+                Debug.Log("test: " + s);
                 int startIndex = s.IndexOf('<');
                 int endIndex = s.IndexOf('>');
                 string leading = s.Substring(0, startIndex);
@@ -256,12 +247,25 @@ namespace Managers
             }
             List<BubbleAnswerSettings> answerSettings = new List<BubbleAnswerSettings>();
             Debug.Log(types.Count);
-            for (var i = 0; i < types.Count - 1; i++)
+            for (var i = 0; i < answers.Length; i++)
             {
                 answerSettings.Add(new BubbleAnswerSettings(answers[i], new AnswerArchetype(types[i], new[] {scores[i]})));
             }
             _overrideBubbleSettings.Add(new BubbleSettings(question, Convert.ToSingle(interval), types[^1],
                 new[] { scores[^1] }, true, answerSettings));
         }
+
+        [Title("Debug")]
+        [Button("Set TH")]
+        private void SetTH()
+        {
+            PlayerPrefs.SetString("Language", "TH");
+        }
+        [Button("Set EN")]
+        private void SetEN()
+        {
+            PlayerPrefs.SetString("Language", "EN");
+        }
+        
     }
 }

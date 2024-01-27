@@ -85,6 +85,12 @@ namespace Bubbles
         {
             _bubbleWave = wave;
             _image = GetComponent<Image>();
+            if (transform.localPosition.x > 0)
+            {
+                transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+                Vector3 childScale = transform.GetChild(0).transform.localScale;
+                transform.GetChild(0).transform.localScale = new Vector3(childScale.x * -1, childScale.y, childScale.z);
+            }
             _textTyper = GetComponentInChildren<TextTyper>();
             _settings = settings;
             string dialogue = settings.DialogueString;
@@ -116,16 +122,21 @@ namespace Bubbles
                 bool flipX = transform.localPosition.x > 0;
                 if (flipX)
                 {
-                    spawnPoint.x *= -1;
+                    //spawnPoint.x *= -1;
                 }
                 Transform thisTransform = transform;
                 spawnPoint = thisTransform.TransformPoint(spawnPoint);
                 BubbleAnswer answer = Instantiate(answerPrefab, spawnPoint, Quaternion.identity, thisTransform);
                 var settingsAnswerSettings = _settings.AnswerSettings[i];
-                //settingsAnswerSettings.AnswerString = answers[i];
                 answer.Init(this, settingsAnswerSettings);
                 _bubbleAnswers.Add(answer);
                 answer.gameObject.SetActive(false);
+                if (flipX)
+                {
+                    //answer.transform.localScale = new Vector3(answer.transform.localScale.x * -1, answer.transform.localScale.y, answer.transform.localScale.z);
+                    Vector3 childScale = answer.transform.GetChild(0).transform.localScale;
+                    answer.transform.GetChild(0).transform.localScale = new Vector3(childScale.x * -1, childScale.y, childScale.z);
+                }
             }
         }
         
@@ -163,7 +174,7 @@ namespace Bubbles
                     BubbleManager.ModifyParameterScore(separatedParameterTypes[i], _settings.IgnoreParameterScores[i]);
                 }
             }
-            BubbleManager.LastBubbleIgnored = ignored;
+            BubbleManager.LastBubbleIgnored = ignored && _settings.HasAnswer;
             BubbleManager.FreeSpawnPoint(CurrentSpawnPoint);
             _bubbleWave.SetNextBubble();
             Destroy(gameObject);
