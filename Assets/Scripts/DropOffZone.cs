@@ -1,9 +1,15 @@
 using DG.Tweening;
+using MoreMountains.Feedbacks;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
 
 public class DropOffZone : MonoBehaviour, IDropHandler
 {
+    [SerializeField] private MMF_Player correctFeedback;
+    [SerializeField] private MMF_Player rawFeedback;
+    [SerializeField] private MMF_Player mediumRareFeedback;
+    
     public void OnDrop(PointerEventData eventData)
     {
         if (!eventData.pointerDrag) return;
@@ -22,6 +28,7 @@ public class DropOffZone : MonoBehaviour, IDropHandler
             meat.DOKill(true);
             Destroy(meat.gameObject);
             DOVirtual.DelayedCall(0.5f, () => { FoodSpawnerManager.Instance.SpawnFood();});
+            correctFeedback.PlayFeedbacks();
             return;
         }
 
@@ -29,12 +36,14 @@ public class DropOffZone : MonoBehaviour, IDropHandler
             (!animator.GetBool("IsCurrentSideCooked") && animator.GetBool("IsOppositeSideCooked")))
         {
             Debug.Log("We can't eat the meat with one side cooked");
+            mediumRareFeedback.PlayFeedbacks();
             return;
         }
         
         if (!animator.GetBool("IsCurrentSideCooked") && !animator.GetBool("IsOppositeSideCooked"))
         {
             Debug.Log("What are you doing? The meat is raw");
+            rawFeedback.PlayFeedbacks();
             return;
         }
     }

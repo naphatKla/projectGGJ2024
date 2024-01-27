@@ -10,7 +10,7 @@ namespace Manager
         private Animator _animator;
         void Start()
         {
-            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Confined;
             _animator = GetComponent<Animator>();
         }
 
