@@ -19,9 +19,7 @@ namespace Manager
         {
             transform.position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;
             if (Input.GetMouseButtonDown(0)) 
-                _animator.SetBool("IsPick", true);
-            else if (Input.GetMouseButtonUp(0))
-                _animator.SetBool("IsPick", false);
+                _animator.SetTrigger( "IsPick");
         }
     }
 }

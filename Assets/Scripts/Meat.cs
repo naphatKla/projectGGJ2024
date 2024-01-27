@@ -97,7 +97,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
     public void OnPointerUp(PointerEventData eventData)
     {
         if (eventData.button != PointerEventData.InputButton.Left) return;
-        ChopsticksController.Instance.Animator.SetBool("IsPick", false);
+        ChopsticksController.Instance.Animator.SetTrigger("IsDrop");
         IsOnFlip = false;
         _holdClickTween.Kill();
         transform.DOScale(Vector3.one, 0.25f);
