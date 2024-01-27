@@ -11,6 +11,38 @@ using UnityEngine.Serialization;
 
 namespace Managers
 {
+    [Flags]
+    public enum ParameterType
+    {
+        Generic = 0,
+        Good = 1 << 0,
+        Ignorant = 1 << 1,
+        Despair = 1 << 2,
+        FalseHope = 1 << 3
+    }
+    [Serializable]
+    public class ParameterArchetype
+    {
+        [SerializeField][ReadOnly] private ParameterType parameterType;
+        [SerializeField][ReadOnly] private float parameterScore;
+        
+        public ParameterType ParameterType => parameterType;
+        public float ParameterScore => parameterScore;
+        
+        public ParameterArchetype(ParameterType parameterType)
+        {
+            this.parameterType = parameterType;
+            parameterScore = 0;
+        }
+        
+        public void ModifyParameterScore(float score)
+        {
+            
+            parameterScore += score;
+            if (parameterScore < 0) parameterScore = 0;
+            Debug.Log($"Current {parameterType} score: {parameterScore}");
+        }
+    }
     [Serializable]
     public struct BubbleManagerSetting
     {
@@ -25,7 +57,18 @@ namespace Managers
         [SerializeField] private Transform spawnPointPool;
         [SerializeField] private Transform usedSpawnPointPool;
         
+        [Title("Debug")]
+        [SerializeField] private List<ParameterArchetype> parameterArchetypes = new List<ParameterArchetype>()
+        {
+            new ParameterArchetype(ParameterType.Good),
+            new ParameterArchetype(ParameterType.Ignorant),
+            new ParameterArchetype(ParameterType.Despair),
+            new ParameterArchetype(ParameterType.FalseHope)
+        };
+        
         private List<Transform> _availableSpawnPoints = new List<Transform>();
+
+        
         
         public Transform BubbleCanvas => bubbleCanvas;
         public List<Transform> AvailableSpawnPoints => _availableSpawnPoints;
@@ -87,6 +130,26 @@ namespace Managers
             Debug.LogError("BubbleAnswer.txt not found");
             return 0;
         }
-
+        
+        public void ModifyParameterScore(ParameterType parameterType, float score)
+        {
+            if (parameterType == ParameterType.Generic) return;
+            Debug.Log($"Modify {parameterType} score by {score}");
+            ParameterArchetype archetype = parameterArchetypes.Find(x => x.ParameterType == parameterType);
+            archetype.ModifyParameterScore(score);
+        }
+        
+        public List<ParameterType> SeparateParameterTypes(ParameterType parameterType)
+        {
+            List<ParameterType> parameterTypes = new List<ParameterType>();
+            foreach (ParameterType type in Enum.GetValues(typeof(ParameterType)))
+            {
+                if (parameterType.HasFlag(type) && type != ParameterType.Generic)
+                {
+                    parameterTypes.Add(type);
+                }
+            }
+            return parameterTypes;
+        }
     }
 }

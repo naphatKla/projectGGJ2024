@@ -26,25 +26,30 @@ namespace Bubbles
         [SerializeField][MinValue(0.25f)] private float interval;
 
         [Title("Answer")]
+        [SerializeField][OnValueChanged(nameof(ValidateAnswerScores))] private ParameterType ignoreParameterType;
+        [SerializeField][ShowIf(nameof(_showIgnoreScore))] private float[] ignoreParameterScores;
         [SerializeField] private bool hasAnswer;
         [SerializeField][ShowIf(nameof(hasAnswer))][MinValue(0)] private int answerLineIndex;
-        [SerializeField][ShowIf(nameof(hasAnswer))] private AudioClip[] answerSounds;
-        [SerializeField][ShowIf(nameof(hasAnswer))][MinValue(0)] private int correctAnswerIndex;
-        [SerializeField][ShowIf(nameof(hasAnswer))][MinValue(0)] private float scoreGain;
-        [SerializeField][ShowIf(nameof(hasAnswer))][MinValue(0)] private float scoreLoss;
-        
+        [SerializeField][ShowIf(nameof(hasAnswer))] private List<BubbleAnswerSettings> answerSettings;
+
+        private bool _showIgnoreScore;
+
         public GameObject BubblePrefab => bubblePrefab;
         public float FadeInDuration => fadeInDuration;
         public float FadeOutDuration => fadeOutDuration;
         public float ShrinkDuration => shrinkDuration;
         public float Interval => interval;
         public int DialogueLineIndex => dialogueLineIndex;
+        public ParameterType IgnoreParameterType => ignoreParameterType;
+        public float[] IgnoreParameterScores => ignoreParameterScores;
         public bool HasAnswer => hasAnswer;
         public int AnswerLineIndex => answerLineIndex;
-        public AudioClip[] AnswerSounds => answerSounds;
-        public int CorrectAnswerIndex => correctAnswerIndex;
-        public float ScoreGain => scoreGain;
-        public float ScoreLoss => scoreLoss;
+        public List<BubbleAnswerSettings> AnswerSettings => answerSettings;
+        
+        private void ValidateAnswerScores()
+        {
+            _showIgnoreScore = ignoreParameterType != ParameterType.Generic;
+        }
     }
     public class Bubble : MonoBehaviour, IPointerEnterHandler
     {
@@ -53,6 +58,7 @@ namespace Bubbles
         [SerializeField] private RectTransform[] answerSpawnPoints;
 
         private bool _hasPointerEntered;
+        private bool _answered;
         private float _stayDuration;
         
         private BubbleManager BubbleManager => BubbleManager.Instance;
@@ -106,9 +112,9 @@ namespace Bubbles
                 Transform thisTransform = transform;
                 spawnPoint = thisTransform.TransformPoint(spawnPoint);
                 BubbleAnswer answer = Instantiate(answerPrefab, spawnPoint, Quaternion.identity, thisTransform);
-                answer.Init(this);
-                answer.AnswerText.text = answers[i];
-                answer.IsCorrectAnswer = i == _settings.CorrectAnswerIndex;
+                var settingsAnswerSettings = _settings.AnswerSettings[i];
+                settingsAnswerSettings.AnswerString = answers[i];
+                answer.Init(this, settingsAnswerSettings);
                 _bubbleAnswers.Add(answer);
                 answer.gameObject.SetActive(false);
             }
@@ -129,7 +135,11 @@ namespace Bubbles
                 answer.Image.DOFade(0f, duration);
                 answer.AnswerText.DOFade(0f, duration);
             }
-            _fadeOutTween = _image.DOFade(0f, duration).OnComplete(() => DestroyBubble());
+            _fadeOutTween = _image.DOFade(0f, duration).OnComplete(() =>
+            {
+                if (!_answered)
+                    DestroyBubble();
+            });
             dialogueText.DOFade(0f, duration);
         }
         
@@ -137,7 +147,12 @@ namespace Bubbles
         {
             if (ignored)
             {
-                //Do something here
+                List<ParameterType> separatedParameterTypes = BubbleManager.SeparateParameterTypes(_settings.IgnoreParameterType);
+                for (int i = 0; i < separatedParameterTypes.Count; i++)
+                {
+                    Debug.Log(separatedParameterTypes[i]);
+                    BubbleManager.ModifyParameterScore(separatedParameterTypes[i], _settings.IgnoreParameterScores[i]);
+                }
             }
             BubbleManager.FreeSpawnPoint(CurrentSpawnPoint);
             _bubbleWave.SetNextBubble();
@@ -146,6 +161,7 @@ namespace Bubbles
         
         public void ShrinkBubble()
         {
+            _answered = true;
             transform.DOScale(new Vector3(0, 0, 0), _settings.ShrinkDuration).OnComplete(() => DestroyBubble(false));
         }
 
