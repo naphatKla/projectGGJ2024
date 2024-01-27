@@ -166,6 +166,9 @@ MonoBehaviour:
   - {fileID: 8545174425103960630}
   - {fileID: 6115168162247836444}
   - {fileID: 6504883857289511504}
+  fadeInDuration: 0.25
+  fadeOutDuration: 1.5
+  shrinkDuration: 0.25
 --- !u!1 &4563259670460125904
 GameObject:
   m_ObjectHideFlags: 0

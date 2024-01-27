@@ -7,14 +7,14 @@ namespace Bubbles
 {
     public class BubbleWave : MonoBehaviour
     {
+        [SerializeField] private GameObject bubblePrefab;
         [SerializeField] private bool playOnLevelStart;
         [SerializeField] private List<BubbleSettings> bubbleSettings;
         [SerializeField] private bool randomizeOrder;
 
         [Title("Debug")]
         [SerializeField][ReadOnly] private int currentBubbleIndex;
-            
-        private BubbleSettings CurrentBubbleSettings => bubbleSettings[currentBubbleIndex];
+        
         private BubbleSettings _previousBubbleSettings;
         private List<BubbleSettings> _randomizedBubbleSettings = new List<BubbleSettings>();
         private bool _isPlaying;
@@ -24,7 +24,7 @@ namespace Bubbles
         public BubbleManager BubbleManager => BubbleManager.Instance;
 
         public bool PlayOnLevelStart => playOnLevelStart;
-        public List<BubbleSettings> BubbleSettings => bubbleSettings;
+        public List<BubbleSettings> BubbleSettings {get => bubbleSettings; set => bubbleSettings = value;}
         public bool RandomizeOrder => randomizeOrder;
         public int CurrentBubbleIndex => currentBubbleIndex;
         
@@ -82,7 +82,7 @@ namespace Bubbles
             int randomIndex = Random.Range(0, BubbleManager.AvailableSpawnPoints.Count - 1);
             Transform spawnPoint = BubbleManager.AvailableSpawnPoints[randomIndex];
             BubbleManager.ReserveSpawnPoint(spawnPoint);
-            Bubble bubble = Instantiate(CurrentBubbleSettings.BubblePrefab, spawnPoint.position, Quaternion.identity, BubbleManager.BubbleCanvas).GetComponent<Bubble>();
+            Bubble bubble = Instantiate(bubblePrefab, spawnPoint.position, Quaternion.identity, BubbleManager.BubbleCanvas).GetComponent<Bubble>();
             bubble.CurrentSpawnPoint = spawnPoint;
             bubble.Init(this, bubbleSettings[index]);
         }

@@ -648,18 +648,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bubbleCanvas: {fileID: 119489222}
   bubbleManagerSettings:
-  - waveSetting: {fileID: 1590506077}
+  - waveSetting: {fileID: 2139027910}
   spawnPointPool: {fileID: 580798296}
   usedSpawnPointPool: {fileID: 1692959580}
   parameterArchetypes:
-  - parameterType: 1
+  - parameterType: 4
     parameterScore: 0
   - parameterType: 2
     parameterScore: 0
-  - parameterType: 4
-    parameterScore: 0
   - parameterType: 8
     parameterScore: 0
+  - parameterType: 1
+    parameterScore: 0
+  waveToImport: {fileID: 1590506077}
+  fileName: Story
 --- !u!4 &1586232081
 Transform:
   m_ObjectHideFlags: 0
@@ -706,57 +708,139 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded43cfd89a761e429acc43865ca85ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bubblePrefab: {fileID: 0}
   playOnLevelStart: 1
   bubbleSettings:
-  - bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
-    dialogueLineIndex: 0
-    fadeInDuration: 0.25
-    fadeOutDuration: 1.5
-    shrinkDuration: 0.25
-    interval: 0.25
-    ignoreParameterType: 0
+  - dialogueString: How's life been treating you recently?
+    interval: 0.5
+    ignoreParameterType: 2
     ignoreParameterScores:
     - 50
     hasAnswer: 1
-    answerLineIndex: 0
     answerSettings:
-    - answerSound: {fileID: 0}
-      answerArchetype:
-        parameterType: 8
-        answerScores:
-        - 2
-    - answerSound: {fileID: 0}
-      answerArchetype:
-        parameterType: 4
-        answerScores:
-        - 4
-    - answerSound: {fileID: 0}
-      answerArchetype:
-        parameterType: 1
-        answerScores:
-        - 6
-  - bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
-    dialogueLineIndex: 1
-    fadeInDuration: 0.25
-    fadeOutDuration: 1.5
-    shrinkDuration: 0.25
-    interval: 0.25
-    ignoreParameterType: 0
-    ignoreParameterScores: []
-    hasAnswer: 0
-    answerLineIndex: 1
-    answerSettings:
-    - answerSound: {fileID: 0}
-      answerArchetype:
-        parameterType: 3
-        answerScores:
-        - 5
-        - 10
-    - answerSound: {fileID: 0}
+    - answerString: I'm surviving.
+      answerSound: {fileID: 0}
       answerArchetype:
         parameterType: 0
         answerScores:
         - 0
+    - answerString: I'm doing well.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Could be better.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: You remembered Kim? He became an illustrator
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: I was always berated for drawing back then.
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: What do you reckon is the difference?
+    interval: 0.25
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 10
+    hasAnswer: 1
+    answerSettings:
+    - answerString: The world is unfair lilke that
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 10
+    - answerString: Just keep trying!
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 10
+    - answerString: It just wasn't meant to be
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 10
+  - dialogueString: All this time that I've been trying
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: What is it even for?
+    interval: 0.25
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 10
+    hasAnswer: 1
+    answerSettings:
+    - answerString: You know it's for nothing
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 10
+    - answerString: At least you tried, right?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 10
+    - answerString: You're doing well, just try a bit more!
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 10
+  - dialogueString: '"I wish to become a person I can be proud of."'
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: I could often see my younger self say that to me.
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: What a joke, right?
+    interval: 0.25
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 10
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Snap out of it
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 10
+    - answerString: 'I get that, really. '
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 10
+    - answerString: Still waiting for the punchline.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 10
   randomizeOrder: 0
   currentBubbleIndex: 0
 --- !u!4 &1590506078
@@ -946,6 +1030,50 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!1 &1726776590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1726776592}
+  - component: {fileID: 1726776591}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1726776591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726776590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e940fd115826ee4a8a3d168a433b382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1726776592
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726776590}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 292.2447, y: 220.58554, z: -2.7155805}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2139027908
 GameObject:
   m_ObjectHideFlags: 0
@@ -990,63 +1118,146 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded43cfd89a761e429acc43865ca85ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
   playOnLevelStart: 1
   bubbleSettings:
-  - bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
-    dialogueLineIndex: 0
-    fadeInDuration: 0.25
-    fadeOutDuration: 1.5
-    shrinkDuration: 0.25
-    interval: 0.25
-    ignoreParameterType: 0
+  - dialogueString: How's life been treating you recently?
+    interval: 0.5
+    ignoreParameterType: 2
     ignoreParameterScores:
     - 50
     hasAnswer: 1
-    answerLineIndex: 0
     answerSettings:
-    - answerSound: {fileID: 0}
-      answerArchetype:
-        parameterType: 8
-        answerScores:
-        - 2
-    - answerSound: {fileID: 0}
-      answerArchetype:
-        parameterType: 4
-        answerScores:
-        - 4
-    - answerSound: {fileID: 0}
-      answerArchetype:
-        parameterType: 1
-        answerScores:
-        - 6
-  - bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
-    dialogueLineIndex: 1
-    fadeInDuration: 0.25
-    fadeOutDuration: 1.5
-    shrinkDuration: 0.25
-    interval: 0.25
-    ignoreParameterType: 0
-    ignoreParameterScores: []
-    hasAnswer: 0
-    answerLineIndex: 1
-    answerSettings:
-    - answerSound: {fileID: 0}
-      answerArchetype:
-        parameterType: 3
-        answerScores:
-        - 5
-        - 10
-    - answerSound: {fileID: 0}
+    - answerString: I'm surviving.
+      answerSound: {fileID: 0}
       answerArchetype:
         parameterType: 0
         answerScores:
         - 0
+    - answerString: I'm doing well.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Could be better.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: You remembered Kim? He became an illustrator
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: I was always berated for drawing back then.
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: What do you reckon is the difference?
+    interval: 0.25
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 10
+    hasAnswer: 1
+    answerSettings:
+    - answerString: The world is unfair lilke that
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 10
+    - answerString: Just keep trying!
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 10
+    - answerString: It just wasn't meant to be
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 10
+  - dialogueString: All this time that I've been trying
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: What is it even for?
+    interval: 0.25
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 10
+    hasAnswer: 1
+    answerSettings:
+    - answerString: You know it's for nothing
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 10
+    - answerString: At least you tried, right?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 10
+    - answerString: You're doing well, just try a bit more!
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 10
+  - dialogueString: '"I wish to become a person I can be proud of."'
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: I could often see my younger self say that to me.
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: What a joke, right?
+    interval: 0.25
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 10
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Snap out of it
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 10
+    - answerString: 'I get that, really. '
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 10
+    - answerString: Still waiting for the punchline.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 10
   randomizeOrder: 0
   currentBubbleIndex: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1726776592}
   - {fileID: 1586232081}
   - {fileID: 1710048610}
   - {fileID: 119489222}

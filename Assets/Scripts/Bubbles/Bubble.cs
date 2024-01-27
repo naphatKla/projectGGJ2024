@@ -15,39 +15,42 @@ namespace Bubbles
     [Serializable]
     public struct BubbleSettings
     {
-        [Title("Prefab")]
-        [SerializeField] private GameObject bubblePrefab;
-
         [Title("Dialogue")]
-        [SerializeField][MinValue(0)] private int dialogueLineIndex;
-        [SerializeField][MinValue(0)] private float fadeInDuration;
-        [SerializeField][MinValue(0)] private float fadeOutDuration;
-        [SerializeField][MinValue(0)] private float shrinkDuration;
+        [SerializeField] private string dialogueString;
         [SerializeField][MinValue(0.25f)] private float interval;
 
         [Title("Answer")]
-        [SerializeField][OnValueChanged(nameof(ValidateAnswerScores))] private ParameterType ignoreParameterType;
+        [SerializeField][OnValueChanged(nameof(ValidateAnswerScores))][OnInspectorInit(nameof(ValidateAnswerScores))] private ParameterType ignoreParameterType;
         [SerializeField][ShowIf(nameof(_showIgnoreScore))] private float[] ignoreParameterScores;
         [SerializeField] private bool hasAnswer;
-        [SerializeField][ShowIf(nameof(hasAnswer))][MinValue(0)] private int answerLineIndex;
+        //[SerializeField][ShowIf(nameof(hasAnswer))] private string answerString;
         [SerializeField][ShowIf(nameof(hasAnswer))] private List<BubbleAnswerSettings> answerSettings;
 
         private bool _showIgnoreScore;
-
-        public GameObject BubblePrefab => bubblePrefab;
-        public float FadeInDuration => fadeInDuration;
-        public float FadeOutDuration => fadeOutDuration;
-        public float ShrinkDuration => shrinkDuration;
         public float Interval => interval;
-        public int DialogueLineIndex => dialogueLineIndex;
+        public string DialogueString => dialogueString;
         public ParameterType IgnoreParameterType => ignoreParameterType;
         public float[] IgnoreParameterScores => ignoreParameterScores;
         public bool HasAnswer => hasAnswer;
-        public int AnswerLineIndex => answerLineIndex;
+        //public string AnswerString => answerString;
         public List<BubbleAnswerSettings> AnswerSettings => answerSettings;
         
         private void ValidateAnswerScores()
         {
+            _showIgnoreScore = ignoreParameterType != ParameterType.Generic;
+        }
+        
+        public BubbleSettings(string dialogueString, float interval, ParameterType ignoreParameterType = ParameterType.Generic,
+            float[] ignoreParameterScores = null, bool hasAnswer = false,
+            List<BubbleAnswerSettings> answerSettings = null)
+        {
+            this.dialogueString = dialogueString;
+            this.interval = interval;
+            this.ignoreParameterType = ignoreParameterType;
+            this.ignoreParameterScores = ignoreParameterScores;
+            this.hasAnswer = hasAnswer;
+            //this.answerString = answerString;
+            this.answerSettings = answerSettings;
             _showIgnoreScore = ignoreParameterType != ParameterType.Generic;
         }
     }
@@ -56,6 +59,9 @@ namespace Bubbles
         [SerializeField] private TMP_Text dialogueText;
         [SerializeField] private BubbleAnswer answerPrefab;
         [SerializeField] private RectTransform[] answerSpawnPoints;
+        [SerializeField][MinValue(0)] private float fadeInDuration;
+        [SerializeField][MinValue(0)] private float fadeOutDuration;
+        [SerializeField][MinValue(0)] private float shrinkDuration;
 
         private bool _hasPointerEntered;
         private bool _answered;
@@ -71,6 +77,9 @@ namespace Bubbles
         private Tween _fadeOutTween;
         
         public Transform CurrentSpawnPoint { get; set; }
+        public float FadeInDuration => fadeInDuration;
+        public float FadeOutDuration => fadeOutDuration;
+        public float ShrinkDuration => shrinkDuration;
 
         public void Init(BubbleWave wave, BubbleSettings settings)
         {
@@ -78,15 +87,15 @@ namespace Bubbles
             _image = GetComponent<Image>();
             _textTyper = GetComponentInChildren<TextTyper>();
             _settings = settings;
-            string dialogue = BubbleManager.GetBubbleDialogue(_settings.DialogueLineIndex);
-            _textTyper.TypeText(dialogue, 0.025f);
+            string dialogue = settings.DialogueString;
             dialogueText.text = dialogue;
+            _textTyper.TypeText(dialogue, 0.025f);
             if (_settings.HasAnswer)
             {
                 SpawnAnswers();
             }
             _stayDuration = dialogue.Length * 0.1f;
-            StartFadeIn(_settings.FadeInDuration);
+            StartFadeIn(fadeInDuration);
         }
         
         private void Update()
@@ -94,13 +103,13 @@ namespace Bubbles
             _stayDuration -= Time.deltaTime;
             if (_stayDuration <= 0f && !_fadeOutTween.IsActive())
             {
-                StartFadeOut(_settings.FadeOutDuration);
+                StartFadeOut(fadeOutDuration);
             }
         }
 
         private void SpawnAnswers()
         {
-            int answerCount = BubbleManager.GetBubbleAnswers(_settings.AnswerLineIndex, out string[] answers);
+            int answerCount = _settings.AnswerSettings.Count;
             for (int i = answerCount - 1; i >= 0; i--)
             {
                 Vector3 spawnPoint = answerSpawnPoints[i].anchoredPosition;
@@ -113,7 +122,7 @@ namespace Bubbles
                 spawnPoint = thisTransform.TransformPoint(spawnPoint);
                 BubbleAnswer answer = Instantiate(answerPrefab, spawnPoint, Quaternion.identity, thisTransform);
                 var settingsAnswerSettings = _settings.AnswerSettings[i];
-                settingsAnswerSettings.AnswerString = answers[i];
+                //settingsAnswerSettings.AnswerString = answers[i];
                 answer.Init(this, settingsAnswerSettings);
                 _bubbleAnswers.Add(answer);
                 answer.gameObject.SetActive(false);
@@ -154,6 +163,7 @@ namespace Bubbles
                     BubbleManager.ModifyParameterScore(separatedParameterTypes[i], _settings.IgnoreParameterScores[i]);
                 }
             }
+            BubbleManager.LastBubbleIgnored = ignored;
             BubbleManager.FreeSpawnPoint(CurrentSpawnPoint);
             _bubbleWave.SetNextBubble();
             Destroy(gameObject);
@@ -162,7 +172,7 @@ namespace Bubbles
         public void ShrinkBubble()
         {
             _answered = true;
-            transform.DOScale(new Vector3(0, 0, 0), _settings.ShrinkDuration).OnComplete(() => DestroyBubble(false));
+            transform.DOScale(new Vector3(0, 0, 0), shrinkDuration).OnComplete(() => DestroyBubble(false));
         }
 
         public void OnPointerEnter(PointerEventData eventData)

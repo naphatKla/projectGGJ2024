@@ -11,9 +11,9 @@ using UnityEngine.UI;
 namespace Bubbles
 {
     [Serializable]
-    public struct AnswerArchetype
+    public class AnswerArchetype
     {
-        [SerializeField][OnValueChanged(nameof(ValidateAnswerScores))] private ParameterType parameterType;
+        [SerializeField][OnValueChanged(nameof(ValidateAnswerScores))][OnInspectorInit(nameof(ValidateAnswerScores))] private ParameterType parameterType;
         [SerializeField][ShowIf(nameof(_showAnswerScores))] private float[] answerScores;
         public ParameterType ParameterType => parameterType;
         public float[] AnswerScores => answerScores;
@@ -24,15 +24,30 @@ namespace Bubbles
         {
             _showAnswerScores = parameterType != ParameterType.Generic;
         }
+        
+        public AnswerArchetype(ParameterType parameterType, float[] answerScores)
+        {
+            this.parameterType = parameterType;
+            this.answerScores = answerScores;
+            _showAnswerScores = parameterType != ParameterType.Generic;
+        }
     }
     [Serializable]
     public struct BubbleAnswerSettings
     {
+        [SerializeField] private string answerString;
         [SerializeField] private AudioClip answerSound;
         [SerializeField] private AnswerArchetype answerArchetype;
         public AudioClip AnswerSounds => answerSound;
         public AnswerArchetype AnswerArchetype => answerArchetype;
-        public string AnswerString {get; set;}
+        public string AnswerString => answerString;
+
+        public BubbleAnswerSettings(string answerString, AnswerArchetype answerArchetype)
+        {
+            this.answerArchetype = answerArchetype;
+            this.answerString = answerString;
+            answerSound = null;
+        }
     }
     public class BubbleAnswer : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
     {
