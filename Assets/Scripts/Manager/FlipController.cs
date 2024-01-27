@@ -49,8 +49,8 @@ public class FlipController : MonoSingleton<FlipController>
         else if (Indicator.rectTransform.localPosition.y <= -_barHigh/2 && _indicatorDirection != 1)
             _indicatorDirection = 1;
         
-        Indicator.rectTransform.localPosition = _indicatorDirection == 1? Vector3.MoveTowards(Indicator.rectTransform.localPosition, new Vector3(0,_barHigh/2,0), indicatorSpeed)
-        : Vector3.MoveTowards(Indicator.rectTransform.localPosition, new Vector3(0,-_barHigh/2,0), indicatorSpeed);
+        Indicator.rectTransform.localPosition = _indicatorDirection == 1? Vector3.MoveTowards(Indicator.rectTransform.localPosition, new Vector3(0,_barHigh/2,0), indicatorSpeed * Time.deltaTime)
+        : Vector3.MoveTowards(Indicator.rectTransform.localPosition, new Vector3(0,-_barHigh/2,0), indicatorSpeed * Time.deltaTime);
         OnOpenBar?.Invoke();
         
         if(_currentMeat && _currentMeat.IsBurnt)

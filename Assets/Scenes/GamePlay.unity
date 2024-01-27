@@ -564,7 +564,7 @@ MonoBehaviour:
   perfectBar: {fileID: 2078120800}
   Indicator: {fileID: 520101453}
   perfectBarHighPercent: 0.35
-  indicatorSpeed: 2
+  indicatorSpeed: 500
   _perfectBarRangePercent: {x: 0, y: 0}
 --- !u!114 &892141066
 MonoBehaviour:
@@ -1780,6 +1780,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meat
       objectReference: {fileID: 0}
+    - target: {fileID: 6022221820950772259, guid: 2312f5cb8b5f60243a7df0102d834f4d, type: 3}
+      propertyPath: cookedStates.Array.data[0].meatImage
+      value: 
+      objectReference: {fileID: 21300000, guid: fccfac3fdfe2db34fbeb3312c9cafc10, type: 3}
+    - target: {fileID: 6022221820950772259, guid: 2312f5cb8b5f60243a7df0102d834f4d, type: 3}
+      propertyPath: cookedStates.Array.data[1].meatImage
+      value: 
+      objectReference: {fileID: 21300000, guid: beb67988cfb444a46a0d2f3b762e2b06, type: 3}
+    - target: {fileID: 6022221820950772259, guid: 2312f5cb8b5f60243a7df0102d834f4d, type: 3}
+      propertyPath: cookedStates.Array.data[2].meatImage
+      value: 
+      objectReference: {fileID: 21300000, guid: bfd7b35d9ee93d14aa320939128186c0, type: 3}
     - target: {fileID: 6132527048085927756, guid: 2312f5cb8b5f60243a7df0102d834f4d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1860,6 +1872,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6586828353128532427, guid: 2312f5cb8b5f60243a7df0102d834f4d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fccfac3fdfe2db34fbeb3312c9cafc10, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
