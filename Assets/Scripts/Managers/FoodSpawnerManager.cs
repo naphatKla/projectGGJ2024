@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Linq;
 using Plugins.Singleton;
 using Sirenix.Utilities;
@@ -11,15 +12,13 @@ public class FoodSpawnerManager : MonoSingleton<FoodSpawnerManager>
     
     void Start()
     {
-        SpawnFood();
+        StartCoroutine(LoopSpawnWithDelay(spawnPoints.Length, 0.25f));
     }
     
     public void SpawnFood()
     {
-        spawnPoints.Where(point => point.childCount <= 0).ForEach(point =>
-        {
-            Instantiate(foods[Random.Range(0, foods.Length)], point.position, Quaternion.identity, point);
-        });
+        Transform point = spawnPoints.FirstOrDefault(point => point.childCount <= 0);
+        Instantiate(foods[Random.Range(0, foods.Length)], point.position, Quaternion.identity, point);
     }
     
     public void AddFoodToTheNearestSlot(Meat meat)
@@ -32,6 +31,15 @@ public class FoodSpawnerManager : MonoSingleton<FoodSpawnerManager>
             meat.transform.SetParent(slot);
             meat.transform.localPosition = Vector3.zero;
             break;
+        }
+    }
+
+    private IEnumerator LoopSpawnWithDelay(int loops, float delay)
+    {
+        for (int i = 0; i < loops; i++)
+        {
+            SpawnFood();
+            yield return new WaitForSeconds(delay);
         }
     }
 }

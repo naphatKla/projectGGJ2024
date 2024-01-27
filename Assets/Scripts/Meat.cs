@@ -54,6 +54,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
         _image = GetComponent<Image>();
         _animator = GetComponent<Animator>();
         _image.alphaHitTestMinimumThreshold = 0.1f;
+        DOVirtual.DelayedCall(0.5f, ()=> _animator.SetBool("IsSpawning", false));
     }
 
     private void FixedUpdate()
@@ -121,6 +122,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
         
         if (FoodState != FoodState.Burnt) return;
         this.DOKill();
+        DOVirtual.DelayedCall(0.5f, () => { FoodSpawnerManager.Instance.SpawnFood();});
         transform.localScale = Vector3.one;
         _image.raycastTarget = false;
     }
