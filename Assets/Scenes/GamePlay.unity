@@ -228,7 +228,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -225}
-  m_SizeDelta: {x: 100, y: 10}
+  m_SizeDelta: {x: 50, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &520101453
 MonoBehaviour:
@@ -534,7 +534,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892141063}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -545,8 +545,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -515, y: -131.93579}
-  m_SizeDelta: {x: 100, y: 500}
+  m_AnchoredPosition: {x: 996, y: -290}
+  m_SizeDelta: {x: 50, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &892141065
 MonoBehaviour:
@@ -563,7 +563,8 @@ MonoBehaviour:
   flipBar: {fileID: 892141066}
   perfectBar: {fileID: 2078120800}
   Indicator: {fileID: 520101453}
-  perfectBarHighPercent: 1
+  perfectBarHighPercent: 0.25
+  indicatorSpeed: 3
   _perfectBarRangePercent: {x: 0, y: 0}
 --- !u!114 &892141066
 MonoBehaviour:
@@ -1594,7 +1595,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -225}
-  m_SizeDelta: {x: 100, y: 50}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2078120800
 MonoBehaviour:
@@ -1708,11 +1709,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6132527048085927756, guid: 2312f5cb8b5f60243a7df0102d834f4d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 349
+      value: 357
       objectReference: {fileID: 0}
     - target: {fileID: 6132527048085927756, guid: 2312f5cb8b5f60243a7df0102d834f4d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -414
+      value: -408
       objectReference: {fileID: 0}
     - target: {fileID: 6132527048085927756, guid: 2312f5cb8b5f60243a7df0102d834f4d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

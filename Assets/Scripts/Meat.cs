@@ -26,6 +26,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
     public FoodState FoodState => _currentFoodState[_currentSide];
     public bool IsBurnt => _currentFoodState.Any(foodState => foodState == FoodState.Burnt);
     public bool IsOnGrill => transform.parent.CompareTag("Stove");
+    public bool IsOnFlip {get; set;}
     
     private Vector3 _spawnPosition;
     private Image _image;
@@ -35,6 +36,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
     private float[] _cookedTimeOnGrill = new float[2];
     private int _currentSide;
     private Animator _animator;
+    private Tween _holdClickTween;
     
     private void Start()
     {
@@ -59,24 +61,24 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log(IsOnGrill);
-        if (IsOnGrill && eventData.button == PointerEventData.InputButton.Right)
-        {
-            FlipSide();
-            Debug.Log("Flip");
-            return;
-        }
         if (eventData.button != PointerEventData.InputButton.Left) return;
+        if (IsOnGrill && !_holdClickTween.IsActive())
+            _holdClickTween = DOVirtual.DelayedCall(0.25f, () =>
+            {
+                FlipController.Instance.OpenBar(this, GetComponent<RectTransform>().position);
+                FlipController.Instance.OnPerfect += FlipSide;
+            }).OnComplete(() => IsOnFlip = true);
         GetComponent<Image>().raycastTarget = false;
-        transform.position = eventData.position;
         transform.DOScale(Vector3.one * 1.5f, 0.25f);
         transform.SetParent(GameObject.Find("Canvas").transform);
     }
 
     public void OnDrag(PointerEventData eventData)
     {
+        if (IsOnFlip) return;
         if (eventData.button != PointerEventData.InputButton.Left) return;
         transform.position = eventData.position;
+        _holdClickTween.Kill();
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -87,6 +89,8 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
     public void OnPointerUp(PointerEventData eventData)
     {
         if (eventData.button != PointerEventData.InputButton.Left) return;
+        IsOnFlip = false;
+        _holdClickTween.Kill();
         transform.DOScale(Vector3.one, 0.25f);
         GetComponent<Image>().raycastTarget = true;
         if (!eventData.pointerEnter || !eventData.pointerEnter.CompareTag("Stove"))
