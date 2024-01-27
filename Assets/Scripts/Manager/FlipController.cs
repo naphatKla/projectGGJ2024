@@ -1,7 +1,6 @@
-
 using System;
 using Plugins.Singleton;
-using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -21,6 +20,7 @@ public class FlipController : MonoSingleton<FlipController>
     private Vector2 _perfectBarAvailableRange;
     private Vector2 _perfectBarRange;
     [SerializeField] private Vector2 _perfectBarRangePercent;
+    [SerializeField] Texture2D cursorTexture;
     private int _indicatorDirection = 1;
     private Meat _currentMeat;
 
@@ -36,6 +36,7 @@ public class FlipController : MonoSingleton<FlipController>
         _perfectBarHigh = _barHigh * perfectBarHighPercent;
         _perfectBarAvailableRange = new Vector2(-(_barHigh/2) + (_perfectBarHigh/2), (_barHigh/2) - (_perfectBarHigh/2)); // min, max
         perfectBar.rectTransform.sizeDelta = new Vector2(perfectBar.rectTransform.rect.width, _perfectBarHigh);
+        
         RandomPosition();
     }
 

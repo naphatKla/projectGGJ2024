@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
+using Manager;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -83,6 +84,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
     {
         if (IsOnFlip) return;
         if (eventData.button != PointerEventData.InputButton.Left) return;
+        ChopsticksController.Instance.Animator.SetBool("IsPick", true);
         transform.position = (Vector2)Camera.main.ScreenToWorldPoint(eventData.position);
         _holdClickTween.Kill();
     }
@@ -95,6 +97,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
     public void OnPointerUp(PointerEventData eventData)
     {
         if (eventData.button != PointerEventData.InputButton.Left) return;
+        ChopsticksController.Instance.Animator.SetBool("IsPick", false);
         IsOnFlip = false;
         _holdClickTween.Kill();
         transform.DOScale(Vector3.one, 0.25f);
@@ -129,6 +132,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
         _lastedOppositeSideCookedTime = _cookedTimeOnGrill[_currentSide];
         _currentSide = _currentSide == 0 ? 1 : 0;
         _animator.SetTrigger("IsFlip");
+        ChopsticksController.Instance.Animator.SetTrigger("IsFlip");
     }
 
     public void OnGrill()
