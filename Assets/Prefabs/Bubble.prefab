@@ -237,8 +237,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u0E44\u0E14\u0E49\u0E14\u0E39\u0E02\u0E48\u0E32\u0E27\u0E44\u0E2B\u0E21\u0E0A\u0E48\u0E27\u0E07\u0E19\u0E35\u0E49"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1cd30e355cb28e64ab6f7d4de38961ac, type: 2}
-  m_sharedMaterial: {fileID: 1867413487447480382, guid: 1cd30e355cb28e64ab6f7d4de38961ac, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e4e2aea853c9aec4ca491574495589dd, type: 2}
+  m_sharedMaterial: {fileID: -7561265712487772968, guid: e4e2aea853c9aec4ca491574495589dd, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
