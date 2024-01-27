@@ -9,6 +9,7 @@ public class FoodSpawnerManager : MonoSingleton<FoodSpawnerManager>
     [SerializeField] private Transform[] spawnPoints;
     [SerializeField] private Meat[] foods;
     public int maxSpawn => spawnPoints.Length;
+    public int AvailableSlot => spawnPoints.Count(point => point.childCount <= 0);
     
     void Start()
     {

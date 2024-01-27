@@ -109,7 +109,14 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
             FoodSpawnerManager.Instance.AddFoodToTheNearestSlot(this);
             return;
         }
-        eventData.pointerEnter.GetComponent<Stove>().DropFood(this);
+        
+        Stove stove = eventData.pointerEnter.GetComponent<Stove>();
+        if (stove.AvailableSlot <= 0)
+        {
+            FoodSpawnerManager.Instance.AddFoodToTheNearestSlot(this);
+            return;
+        }
+        stove.DropFood(this);
     }
 
     public void ChangeFoodStateHandler()

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Stove : MonoBehaviour
 {
     [SerializeField] private Transform[] stoveSlots;
+    public int AvailableSlot => stoveSlots.Count(point => point.childCount <= 0);
     private void Awake()
     {
         GetComponent<Image>().alphaHitTestMinimumThreshold = 0.1f;
