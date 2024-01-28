@@ -158,6 +158,41 @@ RectTransform:
   m_AnchoredPosition: {x: -229, y: 205}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &41216579
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 41216580}
+  m_Layer: 5
+  m_Name: Spawnpoint (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &41216580
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41216579}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1679481404}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 725, y: 360}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &79294442
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,6 +364,117 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   StartShakingButton: 0
+--- !u!1 &92203341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 92203343}
+  - component: {fileID: 92203342}
+  m_Layer: 0
+  m_Name: Bad Ending 3 EN
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &92203342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92203341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded43cfd89a761e429acc43865ca85ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
+  isEnding: 1
+  playOnLevelStart: 0
+  startDelay: 0
+  randomizeOrder: 0
+  loop: 0
+  endingType: 8
+  bubbleSettings:
+  - dialogueString: 'I thought you would understand. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'But it seems like I was wrong. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'You and your optimism. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "Don\u2019t you know that it hurts more than anything? "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "As if I\u2019m like this because I didn\u2019t try hard enough. "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "Why don\u2019t you try to understand how I feel? "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'Just face your own feelings for once. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "Hahaha\u2026 but you will just tell me to work on it, won't
+      you? "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "Fine, I\u2019ll show you how \"I\" work on it. "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  currentBubbleIndex: 0
+  currentRandomizedBubbleIndex: 0
+  randomizedBubbleSettings: []
+  currentRandomizedBundle: []
+--- !u!4 &92203343
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92203341}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 626381759}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &98388671
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,41 +619,6 @@ RectTransform:
   m_AnchoredPosition: {x: 10, y: 343}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &119003797
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 119003798}
-  m_Layer: 5
-  m_Name: Spawnpoint (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &119003798
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 119003797}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 385096899}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -750, y: 108.99998}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &163322469
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,6 +753,225 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 163322469}
   m_CullTransparentMesh: 0
+--- !u!1 &174489753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 174489755}
+  - component: {fileID: 174489754}
+  m_Layer: 0
+  m_Name: Bad Ending 3 TH
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &174489754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174489753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded43cfd89a761e429acc43865ca85ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
+  isEnding: 1
+  playOnLevelStart: 0
+  startDelay: 0
+  randomizeOrder: 0
+  loop: 0
+  endingType: 8
+  bubbleSettings:
+  - dialogueString: "\u0E09\u0E31\u0E19\u0E01\u0E47\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E19\u0E32\u0E22\u0E08\u0E30\u0E40\u0E02\u0E49\u0E32\u0E43\u0E08 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E41\u0E15\u0E48\u0E09\u0E31\u0E19\u0E04\u0E34\u0E14\u0E1C\u0E34\u0E14 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E04\u0E27\u0E32\u0E21\u0E04\u0E34\u0E14\u0E41\u0E07\u0E48\u0E1A\u0E27\u0E01\u0E02\u0E2D\u0E07\u0E19\u0E32\u0E22... "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E44\u0E21\u0E48\u0E23\u0E39\u0E49\u0E2B\u0E23\u0E37\u0E2D\u0E44\u0E07\u0E27\u0E48\u0E32\u0E09\u0E31\u0E19\u0E40\u0E08\u0E47\u0E1A\u0E1B\u0E27\u0E14\u0E41\u0E04\u0E48\u0E44\u0E2B\u0E19? "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E17\u0E33\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E01\u0E31\u0E1A\u0E27\u0E48\u0E32\u0E09\u0E31\u0E19\u0E1E\u0E22\u0E32\u0E22\u0E32\u0E21\u0E44\u0E21\u0E48\u0E1E\u0E2D "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E17\u0E33\u0E44\u0E21\u0E44\u0E21\u0E48\u0E25\u0E2D\u0E07\u0E40\u0E02\u0E49\u0E32\u0E43\u0E08\u0E04\u0E27\u0E32\u0E21\u0E23\u0E39\u0E49\u0E2A\u0E36\u0E01\u0E09\u0E31\u0E19\u0E1A\u0E49\u0E32\u0E07? "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E40\u0E1C\u0E0A\u0E34\u0E0D\u0E2B\u0E19\u0E49\u0E32\u0E01\u0E31\u0E1A\u0E15\u0E31\u0E27\u0E15\u0E19\u0E17\u0E35\u0E48\u0E41\u0E17\u0E49\u0E08\u0E23\u0E34\u0E07\u0E02\u0E2D\u0E07\u0E19\u0E32\u0E22\u0E1A\u0E49\u0E32\u0E07\u0E2A\u0E34 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E2E\u0E48\u0E32\u0E2E\u0E48\u0E32\u0E2E\u0E48\u0E32\u2026
+      \u0E41\u0E15\u0E48\u0E19\u0E32\u0E22\u0E01\u0E47\u0E04\u0E07\u0E08\u0E30\u0E1A\u0E2D\u0E01\u0E43\u0E2B\u0E49\u0E09\u0E31\u0E19\u0E2A\u0E39\u0E49\u0E15\u0E48\u0E2D\u0E44\u0E1B
+      \u0E43\u0E0A\u0E48\u0E44\u0E2B\u0E21\u0E25\u0E48\u0E30? "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E44\u0E14\u0E49 \u0E40\u0E14\u0E35\u0E4B\u0E22\u0E27\u0E08\u0E30\u0E42\u0E0A\u0E27\u0E4C\u0E43\u0E2B\u0E49\u0E14\u0E39\u0E27\u0E48\u0E32
+      \"\u0E09\u0E31\u0E19\" \u0E08\u0E30\u0E2A\u0E39\u0E49\u0E15\u0E48\u0E2D\u0E44\u0E1B\u0E22\u0E31\u0E07\u0E44\u0E07 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  currentBubbleIndex: 0
+  currentRandomizedBubbleIndex: 0
+  randomizedBubbleSettings: []
+  currentRandomizedBundle: []
+--- !u!4 &174489755
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174489753}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1633050330}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &292875731
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 292875732}
+  - component: {fileID: 292875733}
+  m_Layer: 0
+  m_Name: Bad Ending 1 TH
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &292875732
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292875731}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1633050330}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &292875733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292875731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded43cfd89a761e429acc43865ca85ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
+  isEnding: 1
+  playOnLevelStart: 0
+  startDelay: 0
+  randomizeOrder: 0
+  loop: 0
+  endingType: 2
+  bubbleSettings:
+  - dialogueString: "\u0E42\u0E14\u0E19\u0E40\u0E21\u0E34\u0E19\u0E2D\u0E35\u0E01\u0E41\u0E25\u0E49\u0E27\u0E2A\u0E34\u0E19\u0E30 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E19\u0E32\u0E22\u0E17\u0E33\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E01\u0E31\u0E1A\u0E04\u0E19\u0E2D\u0E37\u0E48\u0E19\u0E46
+      \u0E40\u0E25\u0E22 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u2026 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E44\u0E21\u0E48\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E40\u0E2B\u0E47\u0E19\u0E41\u0E01\u0E48\u0E15\u0E31\u0E27\u0E44\u0E1B\u0E2B\u0E19\u0E48\u0E2D\u0E22\u0E40\u0E2B\u0E23\u0E2D? "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E17\u0E33\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E27\u0E48\u0E32\u0E1B\u0E31\u0E0D\u0E2B\u0E32\u0E44\u0E21\u0E48\u0E21\u0E35\u0E2D\u0E22\u0E39\u0E48 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E17\u0E33\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E27\u0E48\u0E32
+      \"\u0E09\u0E31\u0E19\" \u0E44\u0E21\u0E48\u0E21\u0E35\u0E2D\u0E22\u0E39\u0E48 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E2E\u0E30\u0E2E\u0E48\u0E32\u2026 \u0E41\u0E15\u0E48\u0E40\u0E2D\u0E32\u0E40\u0E2B\u0E2D\u0E30 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E40\u0E1B\u0E47\u0E19\u0E41\u0E1A\u0E1A\u0E19\u0E35\u0E49\u0E41\u0E2B\u0E25\u0E30\u0E14\u0E35\u0E41\u0E25\u0E49\u0E27 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  currentBubbleIndex: 0
+  currentRandomizedBubbleIndex: 0
+  randomizedBubbleSettings: []
+  currentRandomizedBundle: []
 --- !u!1 &325392574
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,7 +1158,7 @@ RectTransform:
   m_AnchoredPosition: {x: -114, y: 84}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &385096898
+--- !u!1 &389066021
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -836,41 +1166,126 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 385096899}
-  m_Layer: 5
-  m_Name: Free
+  - component: {fileID: 389066023}
+  - component: {fileID: 389066022}
+  m_Layer: 0
+  m_Name: FxAudioSource (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &385096899
-RectTransform:
+--- !u!82 &389066022
+AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 385096898}
+  m_GameObject: {fileID: 389066021}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -2725762312766684751, guid: 04057f9136d3671459d44b7ea3a5958e, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &389066023
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389066021}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 884015157}
-  - {fileID: 972453174}
-  - {fileID: 119003798}
-  - {fileID: 2127267214}
-  - {fileID: 2043576456}
-  - {fileID: 1239343155}
-  - {fileID: 990397861}
-  - {fileID: 486752300}
-  m_Father: {fileID: 1783832293}
+  m_Children: []
+  m_Father: {fileID: 1780188153}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &401311199
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,6 +1491,98 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &407305030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 407305031}
+  - component: {fileID: 407305032}
+  m_Layer: 0
+  m_Name: Good Ending EN
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &407305031
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407305030}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 626381759}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &407305032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407305030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded43cfd89a761e429acc43865ca85ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
+  isEnding: 1
+  playOnLevelStart: 0
+  startDelay: 0
+  randomizeOrder: 0
+  loop: 0
+  endingType: 1
+  bubbleSettings:
+  - dialogueString: 'You know, thanks for talking to me today. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "I thought you wouldn\u2019t come. "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "I\u2019m glad that I was wrong this time. "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'Hahahaha, it really feels good. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'Knowing that someone still cares. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'We should hang out again soon. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  currentBubbleIndex: 0
+  currentRandomizedBubbleIndex: 0
+  randomizedBubbleSettings: []
+  currentRandomizedBundle: []
 --- !u!1 &407478569
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,7 +1618,7 @@ RectTransform:
   m_AnchoredPosition: {x: -96, y: -108}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &433532125
+--- !u!1 &439817312
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1119,178 +1626,220 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 433532127}
-  - component: {fileID: 433532126}
+  - component: {fileID: 439817313}
+  - component: {fileID: 439817314}
   m_Layer: 0
-  m_Name: BubbleWave1
+  m_Name: Good Ending TH
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &433532126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 433532125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ded43cfd89a761e429acc43865ca85ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bubblePrefab: {fileID: 0}
-  playOnLevelStart: 1
-  bubbleSettings:
-  - dialogueString: How's life been treating you recently?
-    interval: 0.5
-    ignoreParameterType: 2
-    ignoreParameterScores:
-    - 50
-    hasAnswer: 1
-    answerSettings:
-    - answerString: I'm surviving.
-      answerSound: {fileID: 0}
-      answerArchetype:
-        parameterType: 0
-        answerScores:
-        - 0
-    - answerString: I'm doing well.
-      answerSound: {fileID: 0}
-      answerArchetype:
-        parameterType: 0
-        answerScores:
-        - 0
-    - answerString: Could be better.
-      answerSound: {fileID: 0}
-      answerArchetype:
-        parameterType: 0
-        answerScores:
-        - 0
-  - dialogueString: You remembered Kim? He became an illustrator
-    interval: 0.25
-    ignoreParameterType: 0
-    ignoreParameterScores: []
-    hasAnswer: 0
-    answerSettings: []
-  - dialogueString: I was always berated for drawing back then.
-    interval: 0.25
-    ignoreParameterType: 0
-    ignoreParameterScores: []
-    hasAnswer: 0
-    answerSettings: []
-  - dialogueString: What do you reckon is the difference?
-    interval: 0.25
-    ignoreParameterType: 2
-    ignoreParameterScores:
-    - 10
-    hasAnswer: 1
-    answerSettings:
-    - answerString: The world is unfair lilke that
-      answerSound: {fileID: 0}
-      answerArchetype:
-        parameterType: 1
-        answerScores:
-        - 10
-    - answerString: Just keep trying!
-      answerSound: {fileID: 0}
-      answerArchetype:
-        parameterType: 8
-        answerScores:
-        - 10
-    - answerString: It just wasn't meant to be
-      answerSound: {fileID: 0}
-      answerArchetype:
-        parameterType: 4
-        answerScores:
-        - 10
-  - dialogueString: All this time that I've been trying
-    interval: 0.25
-    ignoreParameterType: 0
-    ignoreParameterScores: []
-    hasAnswer: 0
-    answerSettings: []
-  - dialogueString: What is it even for?
-    interval: 0.25
-    ignoreParameterType: 2
-    ignoreParameterScores:
-    - 10
-    hasAnswer: 1
-    answerSettings:
-    - answerString: You know it's for nothing
-      answerSound: {fileID: 0}
-      answerArchetype:
-        parameterType: 4
-        answerScores:
-        - 10
-    - answerString: At least you tried, right?
-      answerSound: {fileID: 0}
-      answerArchetype:
-        parameterType: 1
-        answerScores:
-        - 10
-    - answerString: You're doing well, just try a bit more!
-      answerSound: {fileID: 0}
-      answerArchetype:
-        parameterType: 8
-        answerScores:
-        - 10
-  - dialogueString: '"I wish to become a person I can be proud of."'
-    interval: 0.25
-    ignoreParameterType: 0
-    ignoreParameterScores: []
-    hasAnswer: 0
-    answerSettings: []
-  - dialogueString: I could often see my younger self say that to me.
-    interval: 0.25
-    ignoreParameterType: 0
-    ignoreParameterScores: []
-    hasAnswer: 0
-    answerSettings: []
-  - dialogueString: What a joke, right?
-    interval: 0.25
-    ignoreParameterType: 2
-    ignoreParameterScores:
-    - 10
-    hasAnswer: 1
-    answerSettings:
-    - answerString: Snap out of it
-      answerSound: {fileID: 0}
-      answerArchetype:
-        parameterType: 8
-        answerScores:
-        - 10
-    - answerString: 'I get that, really. '
-      answerSound: {fileID: 0}
-      answerArchetype:
-        parameterType: 4
-        answerScores:
-        - 10
-    - answerString: Still waiting for the punchline.
-      answerSound: {fileID: 0}
-      answerArchetype:
-        parameterType: 1
-        answerScores:
-        - 10
-  randomizeOrder: 0
-  currentBubbleIndex: 0
---- !u!4 &433532127
+--- !u!4 &439817313
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 433532125}
+  m_GameObject: {fileID: 439817312}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1633050330}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &439817314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439817312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded43cfd89a761e429acc43865ca85ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
+  isEnding: 1
+  playOnLevelStart: 0
+  startDelay: 0
+  randomizeOrder: 0
+  loop: 0
+  endingType: 1
+  bubbleSettings:
+  - dialogueString: "\u0E02\u0E2D\u0E1A\u0E04\u0E38\u0E13\u0E17\u0E35\u0E48\u0E21\u0E32\u0E04\u0E38\u0E22\u0E01\u0E31\u0E1A\u0E09\u0E31\u0E19\u0E27\u0E31\u0E19\u0E19\u0E35\u0E49\u0E19\u0E30 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E19\u0E36\u0E01\u0E27\u0E48\u0E32\u0E08\u0E30\u0E44\u0E21\u0E48\u0E21\u0E32\u0E41\u0E25\u0E49\u0E27\u0E0B\u0E30\u0E2D\u0E35\u0E01 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E14\u0E35\u0E43\u0E08\u0E17\u0E35\u0E48\u0E04\u0E23\u0E31\u0E49\u0E07\u0E19\u0E35\u0E49\u0E09\u0E31\u0E19\u0E04\u0E34\u0E14\u0E1C\u0E34\u0E14 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E2E\u0E48\u0E32\u0E2E\u0E48\u0E32\u0E2E\u0E48\u0E32\u0E2E\u0E48\u0E32
+      \u0E23\u0E39\u0E49\u0E2A\u0E36\u0E01\u0E14\u0E35\u0E40\u0E1B\u0E47\u0E19\u0E1A\u0E49\u0E32\u0E40\u0E25\u0E22 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E17\u0E35\u0E48\u0E23\u0E39\u0E49\u0E27\u0E48\u0E32\u0E22\u0E31\u0E07\u0E21\u0E35\u0E04\u0E19\u0E41\u0E04\u0E23\u0E4C\u0E2D\u0E22\u0E39\u0E48 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E44\u0E27\u0E49\u0E04\u0E23\u0E31\u0E49\u0E07\u0E2B\u0E19\u0E49\u0E32\u0E21\u0E32\u0E40\u0E08\u0E2D\u0E01\u0E31\u0E19\u0E43\u0E2B\u0E21\u0E48\u0E19\u0E30 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  currentBubbleIndex: 0
+  currentRandomizedBubbleIndex: 0
+  randomizedBubbleSettings: []
+  currentRandomizedBundle: []
+--- !u!1 &445373696
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 445373698}
+  - component: {fileID: 445373697}
+  m_Layer: 0
+  m_Name: FxAudioSource (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &445373697
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445373696}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -2725762312766684751, guid: 04057f9136d3671459d44b7ea3a5958e, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &445373698
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445373696}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 626735332}
+  m_Father: {fileID: 1780188153}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &486752299
+--- !u!1 &554874766
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1298,33 +1847,289 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 486752300}
+  - component: {fileID: 554874767}
   m_Layer: 5
-  m_Name: Spawnpoint (7)
+  m_Name: Used
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &486752300
+--- !u!224 &554874767
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 486752299}
+  m_GameObject: {fileID: 554874766}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 385096899}
+  m_Father: {fileID: 1130414728}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 750, y: 338.99997}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &556661997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 556661999}
+  - component: {fileID: 556661998}
+  m_Layer: 0
+  m_Name: FxAudioSource (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &556661998
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556661997}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -2725762312766684751, guid: 04057f9136d3671459d44b7ea3a5958e, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &556661999
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556661997}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1780188153}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &562206425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 562206427}
+  - component: {fileID: 562206426}
+  m_Layer: 0
+  m_Name: FxAudioSource (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &562206426
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562206425}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -2725762312766684751, guid: 04057f9136d3671459d44b7ea3a5958e, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &562206427
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562206425}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1780188153}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &616219033
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,7 +2235,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &626735330
+--- !u!1 &619396599
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1438,238 +2243,775 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 626735332}
-  - component: {fileID: 626735331}
+  - component: {fileID: 619396600}
+  - component: {fileID: 619396601}
   m_Layer: 0
-  m_Name: BubbleManager
+  m_Name: GeneralTH
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &626735331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 626735330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 205426aa555ddff418a6ff0491e7de87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bubbleCanvas: {fileID: 1783832293}
-  bubbleManagerSettings:
-  - waveSetting: {fileID: 796078378}
-  spawnPointPool: {fileID: 385096899}
-  usedSpawnPointPool: {fileID: 1194254808}
-  parameterArchetypes:
-  - parameterType: 4
-    parameterScore: 0
-  - parameterType: 2
-    parameterScore: 0
-  - parameterType: 8
-    parameterScore: 0
-  - parameterType: 1
-    parameterScore: 0
-  waveToImport: {fileID: 433532126}
-  fileName: Story
---- !u!4 &626735332
+--- !u!4 &619396600
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 626735330}
+  m_GameObject: {fileID: 619396599}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.4950514, y: -1.3013227, z: 0.036706936}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 433532127}
-  - {fileID: 796078379}
-  m_Father: {fileID: 0}
+  m_Children: []
+  m_Father: {fileID: 1633050330}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &796078377
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 796078379}
-  - component: {fileID: 796078378}
-  m_Layer: 0
-  m_Name: BubbleWave2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &796078378
+--- !u!114 &619396601
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796078377}
+  m_GameObject: {fileID: 619396599}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ded43cfd89a761e429acc43865ca85ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
+  isEnding: 0
   playOnLevelStart: 1
+  startDelay: 5
+  randomizeOrder: 1
+  loop: 1
+  endingType: 0
   bubbleSettings:
-  - dialogueString: How's life been treating you recently?
+  - dialogueString: "\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E21\u0E30\u0E40\u0E02\u0E37\u0E2D\u0E40\u0E17\u0E28... "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E40\u0E1B\u0E47\u0E19\u0E1C\u0E31\u0E01\u0E2B\u0E23\u0E37\u0E2D\u0E1C\u0E25\u0E44\u0E21\u0E49? "
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E2B\u0E4A\u0E30?"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E1C\u0E31\u0E01"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E1C\u0E25\u0E44\u0E21\u0E49"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: "\u0E14\u0E39\u0E40\u0E19\u0E37\u0E49\u0E2D\u0E1E\u0E27\u0E01\u0E19\u0E35\u0E49\u0E2A\u0E34 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E2D\u0E22\u0E32\u0E01\u0E23\u0E39\u0E49... "
     interval: 0.5
-    ignoreParameterType: 2
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E27\u0E48\u0E32\u0E40\u0E04\u0E22\u0E2D\u0E22\u0E32\u0E01\u0E40\u0E1B\u0E47\u0E19\u0E27\u0E35\u0E41\u0E01\u0E19\u0E44\u0E2B\u0E21? "
+    interval: 5
+    ignoreParameterType: 0
     ignoreParameterScores:
-    - 50
+    - 0
     hasAnswer: 1
     answerSettings:
-    - answerString: I'm surviving.
+    - answerString: "\u0E01\u0E47\u0E44\u0E21\u0E48\u0E19\u0E30"
       answerSound: {fileID: 0}
       answerArchetype:
         parameterType: 0
         answerScores:
         - 0
-    - answerString: I'm doing well.
+    - answerString: "\u0E01\u0E47\u0E40\u0E04\u0E22\u0E40\u0E1B\u0E47\u0E19"
       answerSound: {fileID: 0}
       answerArchetype:
         parameterType: 0
         answerScores:
         - 0
-    - answerString: Could be better.
+    - answerString: "\u0E2D\u0E37\u0E21\u0E21..."
       answerSound: {fileID: 0}
       answerArchetype:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: You remembered Kim? He became an illustrator
+  - dialogueString: "\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E08\u0E30\u0E0B\u0E37\u0E49\u0E2D\u0E40\u0E04\u0E2A\u0E42\u0E17\u0E23\u0E28\u0E31\u0E1E\u0E17\u0E4C\u0E43\u0E2B\u0E21\u0E48 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: I was always berated for drawing back then.
-    interval: 0.25
+  - dialogueString: "\u0E2A\u0E35\u0E44\u0E2B\u0E19\u0E14\u0E35? "
+    interval: 5
     ignoreParameterType: 0
-    ignoreParameterScores: []
-    hasAnswer: 0
-    answerSettings: []
-  - dialogueString: What do you reckon is the difference?
-    interval: 0.25
-    ignoreParameterType: 2
     ignoreParameterScores:
-    - 10
+    - 0
     hasAnswer: 1
     answerSettings:
-    - answerString: The world is unfair lilke that
+    - answerString: "\u0E0A\u0E21\u0E1E\u0E39\u0E1E\u0E32\u0E2A\u0E40\u0E17\u0E25"
       answerSound: {fileID: 0}
       answerArchetype:
-        parameterType: 1
+        parameterType: 0
         answerScores:
-        - 10
-    - answerString: Just keep trying!
+        - 0
+    - answerString: "\u0E40\u0E17\u0E32"
       answerSound: {fileID: 0}
       answerArchetype:
-        parameterType: 8
+        parameterType: 0
         answerScores:
-        - 10
-    - answerString: It just wasn't meant to be
+        - 0
+    - answerString: "\u0E17\u0E2D\u0E07\u0E2D\u0E23\u0E48\u0E32\u0E21"
       answerSound: {fileID: 0}
       answerArchetype:
-        parameterType: 4
+        parameterType: 0
         answerScores:
-        - 10
-  - dialogueString: All this time that I've been trying
+        - 0
+  - dialogueString: "\u0E04\u0E33\u0E19\u0E35\u0E49\u0E04\u0E19\u0E40\u0E02\u0E35\u0E22\u0E19\u0E1C\u0E34\u0E14\u0E1A\u0E48\u0E2D\u0E22 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: What is it even for?
-    interval: 0.25
-    ignoreParameterType: 2
+  - dialogueString: "\u0E1C\u0E31\u0E14 \"\u0E01\u0E23\u0E30\u0E40\u0E1E\u0E23\u0E32\"
+      \u0E40\u0E02\u0E35\u0E22\u0E19\u0E22\u0E31\u0E07\u0E44\u0E07? "
+    interval: 5
+    ignoreParameterType: 0
     ignoreParameterScores:
-    - 10
+    - 0
     hasAnswer: 1
     answerSettings:
-    - answerString: You know it's for nothing
+    - answerString: "\u0E01\u0E23\u0E30\u0E40\u0E1E\u0E23\u0E32"
       answerSound: {fileID: 0}
       answerArchetype:
-        parameterType: 4
+        parameterType: 0
         answerScores:
-        - 10
-    - answerString: At least you tried, right?
+        - 0
+    - answerString: "\u0E01\u0E30\u0E40\u0E1E\u0E23\u0E32"
       answerSound: {fileID: 0}
       answerArchetype:
-        parameterType: 1
+        parameterType: 0
         answerScores:
-        - 10
-    - answerString: You're doing well, just try a bit more!
+        - 0
+    - answerString: "\u0E01\u0E25\u0E30\u0E40\u0E20\u0E23\u0E32"
       answerSound: {fileID: 0}
       answerArchetype:
-        parameterType: 8
+        parameterType: 0
         answerScores:
-        - 10
-  - dialogueString: '"I wish to become a person I can be proud of."'
-    interval: 0.25
+        - 0
+  - dialogueString: "\u0E1B\u0E01\u0E15\u0E34\u0E01\u0E34\u0E19\u0E44\u0E2D\u0E15\u0E34\u0E21\u0E22\u0E31\u0E07\u0E44\u0E07? "
+    interval: 5
     ignoreParameterType: 0
-    ignoreParameterScores: []
-    hasAnswer: 0
-    answerSettings: []
-  - dialogueString: I could often see my younger self say that to me.
-    interval: 0.25
-    ignoreParameterType: 0
-    ignoreParameterScores: []
-    hasAnswer: 0
-    answerSettings: []
-  - dialogueString: What a joke, right?
-    interval: 0.25
-    ignoreParameterType: 2
     ignoreParameterScores:
-    - 10
+    - 0
     hasAnswer: 1
     answerSettings:
-    - answerString: Snap out of it
+    - answerString: "\u0E40\u0E25\u0E35\u0E22"
       answerSound: {fileID: 0}
       answerArchetype:
-        parameterType: 8
+        parameterType: 0
         answerScores:
-        - 10
-    - answerString: 'I get that, really. '
+        - 0
+    - answerString: "\u0E01\u0E31\u0E14"
       answerSound: {fileID: 0}
       answerArchetype:
-        parameterType: 4
+        parameterType: 0
         answerScores:
-        - 10
-    - answerString: Still waiting for the punchline.
+        - 0
+    - answerString: "\u0E01\u0E34\u0E19\u0E08\u0E32\u0E01\u0E42\u0E04\u0E19\u0E02\u0E35\u0E49\u0E19\u0E21\u0E32"
       answerSound: {fileID: 0}
       answerArchetype:
-        parameterType: 1
+        parameterType: 0
         answerScores:
-        - 10
-  randomizeOrder: 0
+        - 0
+  - dialogueString: "\u0E0A\u0E48\u0E27\u0E07\u0E19\u0E35\u0E49\u0E2D\u0E32\u0E01\u0E32\u0E28\u0E44\u0E21\u0E48\u0E04\u0E48\u0E2D\u0E22\u0E14\u0E35\u0E40\u0E25\u0E22
+      \u0E27\u0E48\u0E32\u0E21\u0E30? "
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E1D\u0E19\u0E15\u0E01\u0E1A\u0E49\u0E32\u0E07\u0E01\u0E47\u0E14\u0E35\u0E19\u0E30"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E08\u0E23\u0E34\u0E07 \u0E2D\u0E22\u0E32\u0E01\u0E40\u0E2B\u0E47\u0E19\u0E41\u0E2A\u0E07\u0E41\u0E14\u0E14\u0E1A\u0E49\u0E32\u0E07"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E2B\u0E27\u0E31\u0E07\u0E27\u0E48\u0E32\u0E1E\u0E32\u0E22\u0E38\u0E08\u0E30\u0E44\u0E21\u0E48\u0E40\u0E02\u0E49\u0E32\u0E19\u0E30"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: "\u0E44\u0E14\u0E49\u0E14\u0E39\u0E02\u0E48\u0E32\u0E27\u0E44\u0E2B\u0E21\u0E0A\u0E48\u0E27\u0E07\u0E19\u0E35\u0E49? "
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E44\u0E21\u0E48\u0E2D\u0E30 \u0E21\u0E35\u0E41\u0E15\u0E48\u0E02\u0E48\u0E32\u0E27\u0E44\u0E23\u0E49\u0E2A\u0E32\u0E23\u0E30"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E14\u0E39\u0E2D\u0E22\u0E39\u0E48\u0E1A\u0E49\u0E32\u0E07\u0E46"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: "\u0E21\u0E35\u0E16\u0E31\u0E48\u0E27\u0E44\u0E2B\u0E21? "
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E44\u0E21\u0E48\u0E21\u0E35"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E21\u0E35"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E21\u0E35 \u0E41\u0E15\u0E48 20 \u0E1A\u0E32\u0E17"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: "\u0E08\u0E31\u0E1A\u0E15\u0E30\u0E40\u0E01\u0E35\u0E22\u0E1A\u0E41\u0E1B\u0E25\u0E01\u0E14\u0E35\u0E19\u0E30 "
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E41\u0E25\u0E49\u0E27\u0E44\u0E07?"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E16\u0E37\u0E2D\u0E27\u0E48\u0E32\u0E0A\u0E21\u0E41\u0E25\u0E49\u0E27\u0E01\u0E31\u0E19\u0E19\u0E30"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E21\u0E35\u0E41\u0E1B\u0E25\u0E01\u0E01\u0E27\u0E48\u0E32\u0E19\u0E35\u0E49\u0E2D\u0E35\u0E01"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: "\u0E44\u0E2B\u0E19\u0E46 \u0E01\u0E47\u0E21\u0E32\u0E41\u0E25\u0E49\u0E27... "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E44\u0E21\u0E48\u0E01\u0E34\u0E19\u0E1C\u0E31\u0E01\u0E2B\u0E19\u0E48\u0E2D\u0E22\u0E2B\u0E23\u0E2D? "
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E44\u0E21\u0E48\u0E04\u0E38\u0E49\u0E21 \u0E40\u0E19\u0E37\u0E49\u0E2D\u0E41\u0E1E\u0E07\u0E01\u0E27\u0E48\u0E32"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E44\u0E21\u0E48\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E19\u0E32\u0E22\u0E01\u0E34\u0E19\u0E1C\u0E31\u0E01\u0E14\u0E49\u0E27\u0E22"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E44\u0E21\u0E48\u0E2D\u0E23\u0E48\u0E2D\u0E22\u0E2B\u0E23\u0E2D\u0E01
+        \u0E40\u0E0A\u0E37\u0E48\u0E2D\u0E09\u0E31\u0E19"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: "\u0E21\u0E35\u0E04\u0E33\u0E16\u0E32\u0E21... "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E1E\u0E23\u0E30\u0E2D\u0E20\u0E31\u0E22\u0E21\u0E13\u0E35\u0E40\u0E1B\u0E48\u0E32\u0E1B\u0E35\u0E48\u0E2B\u0E23\u0E37\u0E2D\u0E40\u0E1B\u0E48\u0E32\u0E02\u0E25\u0E38\u0E48\u0E22? "
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E1B\u0E35\u0E48"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E1B\u0E25\u0E38\u0E48\u0E22"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E2E\u0E31\u0E48\u0E19\u0E41\u0E19\u0E48 \u0E19\u0E31\u0E48\u0E19\u0E21\u0E31\u0E19\u0E2A\u0E38\u0E19\u0E17\u0E23...
+        \u0E40\u0E2D\u0E4A\u0E30..."
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: "\u0E40\u0E04\u0E47\u0E21\u0E2B\u0E23\u0E37\u0E2D\u0E2B\u0E27\u0E32\u0E19? "
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E16\u0E32\u0E21\u0E17\u0E33\u0E44\u0E21\u0E04\u0E23\u0E31\u0E1A\u0E40\u0E19\u0E35\u0E48\u0E22\u0E22\u0E22\u0E22!?"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E2B\u0E27\u0E32\u0E19"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E40\u0E04\u0E47\u0E21"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: "\u0E44\u0E14\u0E49\u0E40\u0E25\u0E48\u0E19\u0E40\u0E01\u0E21\u0E2D\u0E30\u0E44\u0E23\u0E44\u0E2B\u0E21\u0E0A\u0E48\u0E27\u0E07\u0E19\u0E35\u0E49? "
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E44\u0E21\u0E48\u0E40\u0E04\u0E22\u0E44\u0E14\u0E49\u0E40\u0E25\u0E48\u0E19"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E0A\u0E48\u0E27\u0E07\u0E19\u0E35\u0E49\u0E21\u0E35\u0E41\u0E15\u0E48\u0E01\u0E32\u0E0A\u0E32"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E40\u0E01\u0E21\u0E40\u0E14\u0E34\u0E21\u0E15\u0E31\u0E49\u0E07\u0E41\u0E15\u0E48\u0E21\u0E2B\u0E32\u0E25\u0E31\u0E22\u0E41\u0E2B\u0E25\u0E30"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: "\u0E40\u0E04\u0E22\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E40\u0E23\u0E32\u0E2D\u0E22\u0E39\u0E48\u0E43\u0E19\u0E40\u0E01\u0E21\u0E44\u0E2B\u0E21? "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E43\u0E19 Matrix \u0E44\u0E23\u0E07\u0E35\u0E49? "
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E01\u0E47\u0E40\u0E1B\u0E47\u0E19\u0E44\u0E1B\u0E44\u0E14\u0E49"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E40\u0E1A\u0E35\u0E22\u0E27\u0E25\u0E30"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E41\u0E19\u0E48\u0E19\u0E2D\u0E19"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: "\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E19\u0E01\u0E21\u0E35\u0E08\u0E23\u0E34\u0E07\u0E44\u0E2B\u0E21? "
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E40\u0E14\u0E34\u0E19\u0E21\u0E32\u0E19\u0E35\u0E48\u0E44\u0E21\u0E48\u0E40\u0E2B\u0E47\u0E19\u0E0B\u0E31\u0E01\u0E15\u0E31\u0E27\u0E40\u0E25\u0E22\u0E40\u0E2B\u0E23\u0E2D?"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E44\u0E21\u0E48 \u0E19\u0E01\u0E40\u0E1B\u0E47\u0E19\u0E42\u0E14\u0E23\u0E19\u0E2A\u0E2D\u0E14\u0E41\u0E19\u0E21\u0E08\u0E32\u0E01\u0E23\u0E31\u0E10\u0E1A\u0E32\u0E25"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E15\u0E49\u0E2D\u0E07\u0E01\u0E32\u0E23\u0E08\u0E30\u0E2A\u0E37\u0E48\u0E2D\u0E2D\u0E30\u0E44\u0E23\u0E40\u0E19\u0E35\u0E48\u0E22?"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: "\u0E40\u0E04\u0E22\u0E2D\u0E22\u0E32\u0E01\u0E40\u0E25\u0E48\u0E19\u0E01\u0E35\u0E2C\u0E32
+      extreme \u0E44\u0E2B\u0E21? "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E41\u0E1A\u0E1A\u0E1A\u0E31\u0E19\u0E08\u0E35\u0E49\u0E08\u0E31\u0E4A\u0E21\u0E2B\u0E23\u0E37\u0E2D\u0E42\u0E14\u0E14\u0E23\u0E48\u0E21\u0E44\u0E23\u0E07\u0E35\u0E49? "
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E44\u0E21\u0E48\u0E01\u0E25\u0E49\u0E32"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E01\u0E47\u0E2D\u0E22\u0E32\u0E01\u0E2D\u0E22\u0E39\u0E48"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E16\u0E49\u0E32\u0E21\u0E35\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E19\u0E44\u0E1B\u0E01\u0E47\u0E42\u0E2D\u0E40\u0E04"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
   currentBubbleIndex: 0
---- !u!4 &796078379
+  currentRandomizedBubbleIndex: 0
+  randomizedBubbleSettings: []
+  currentRandomizedBundle: []
+--- !u!1 &626381758
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 626381759}
+  m_Layer: 0
+  m_Name: EN
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &626381759
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796078377}
+  m_GameObject: {fileID: 626381758}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1979759794}
+  - {fileID: 1778408835}
+  - {fileID: 407305031}
+  - {fileID: 708785977}
+  - {fileID: 1608022164}
+  - {fileID: 92203343}
+  m_Father: {fileID: 2075089851}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &708785976
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 708785977}
+  - component: {fileID: 708785978}
+  m_Layer: 0
+  m_Name: Bad Ending 1 EN
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &708785977
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708785976}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 626381759}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &708785978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708785976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded43cfd89a761e429acc43865ca85ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
+  isEnding: 1
+  playOnLevelStart: 0
+  startDelay: 0
+  randomizeOrder: 0
+  loop: 0
+  endingType: 2
+  bubbleSettings:
+  - dialogueString: Ignored yet again.
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "You\u2019re doing it just like everyone else."
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u2026"
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "Don\u2019t you think it\u2019s selfish?"
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "Pretending that your problems don\u2019t exist."
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "Pretending that \u201CI\u201D don't exist."
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "Haha\u2026 but who am I kidding. "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'Perhaps this is for the best then. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  currentBubbleIndex: 0
+  currentRandomizedBubbleIndex: 0
+  randomizedBubbleSettings: []
+  currentRandomizedBundle: []
+--- !u!1 &797619414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 797619416}
+  - component: {fileID: 797619415}
+  m_Layer: 0
+  m_Name: FxAudioSource (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &797619415
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797619414}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -2725762312766684751, guid: 04057f9136d3671459d44b7ea3a5958e, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &797619416
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797619414}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 626735332}
+  m_Father: {fileID: 1780188153}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &813718120
 GameObject:
@@ -2453,7 +3795,7 @@ ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 8372634237054214206, guid: 63abf7813c1e6144ab6cb0d26de5bf3b, type: 3}
   m_PrefabInstance: {fileID: 875356001}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &884015156
+--- !u!1 &929203443
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2461,33 +3803,126 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 884015157}
-  m_Layer: 5
-  m_Name: Spawnpoint
+  - component: {fileID: 929203445}
+  - component: {fileID: 929203444}
+  m_Layer: 0
+  m_Name: FxAudioSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &884015157
-RectTransform:
+--- !u!82 &929203444
+AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 884015156}
+  m_GameObject: {fileID: 929203443}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -2725762312766684751, guid: 04057f9136d3671459d44b7ea3a5958e, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &929203445
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929203443}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 385096899}
+  m_Father: {fileID: 1780188153}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -750, y: -351}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &955366175
 GameObject:
   m_ObjectHideFlags: 0
@@ -3102,76 +4537,6 @@ MonoBehaviour:
         RemapZero: 0
         RemapOne: 50
         InstantFontSize: 0
---- !u!1 &972453173
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 972453174}
-  m_Layer: 5
-  m_Name: Spawnpoint (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &972453174
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 972453173}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 385096899}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -750, y: -121.00002}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &990397860
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 990397861}
-  m_Layer: 5
-  m_Name: Spawnpoint (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &990397861
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 990397860}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 385096899}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 750, y: 108.99998}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &990522764
 GameObject:
   m_ObjectHideFlags: 0
@@ -3787,6 +5152,134 @@ MonoBehaviour:
         CurveRemapOne: 1
         DestinationAlpha: 1
         AllowAdditivePlays: 0
+--- !u!1 &1036086663
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1036086665}
+  - component: {fileID: 1036086664}
+  m_Layer: 0
+  m_Name: FxAudioSource (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1036086664
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036086663}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -2725762312766684751, guid: 04057f9136d3671459d44b7ea3a5958e, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1036086665
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036086663}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1780188153}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1039849563
 GameObject:
   m_ObjectHideFlags: 0
@@ -3852,7 +5345,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: efde70dedeac2824c9ca8f3b5badc8f3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5f00972b494ecff43b9711024473c948, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3964,6 +5457,109 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   StartShakingButton: 0
+--- !u!1 &1130414727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1130414728}
+  - component: {fileID: 1130414731}
+  - component: {fileID: 1130414730}
+  - component: {fileID: 1130414729}
+  m_Layer: 5
+  m_Name: BubbleCanvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1130414728
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130414727}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1679481404}
+  - {fileID: 554874767}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1130414729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130414727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 2047
+--- !u!114 &1130414730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130414727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 1
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1130414731
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130414727}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 1
+  m_Camera: {fileID: 2044070282}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 90
+  m_TargetDisplay: 0
 --- !u!1 &1133475498
 GameObject:
   m_ObjectHideFlags: 0
@@ -4250,7 +5846,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1192245816}
   m_CullTransparentMesh: 1
---- !u!1 &1194254807
+--- !u!1 &1247688816
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4258,68 +5854,126 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1194254808}
-  m_Layer: 5
-  m_Name: Used
+  - component: {fileID: 1247688818}
+  - component: {fileID: 1247688817}
+  m_Layer: 0
+  m_Name: FxAudioSource (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1194254808
-RectTransform:
+--- !u!82 &1247688817
+AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1194254807}
+  m_GameObject: {fileID: 1247688816}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -2725762312766684751, guid: 04057f9136d3671459d44b7ea3a5958e, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1247688818
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247688816}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1783832293}
+  m_Father: {fileID: 1780188153}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1239343154
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1239343155}
-  m_Layer: 5
-  m_Name: Spawnpoint (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1239343155
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1239343154}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 385096899}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 750, y: -121.00002}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1252851007
 GameObject:
   m_ObjectHideFlags: 0
@@ -4471,6 +6125,200 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1252851007}
   m_CullTransparentMesh: 1
+--- !u!1 &1295297229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1295297231}
+  - component: {fileID: 1295297230}
+  m_Layer: 0
+  m_Name: MusicAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1295297230
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295297229}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 1040714207374246018, guid: 04057f9136d3671459d44b7ea3a5958e, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1295297231
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295297229}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1780188153}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1337233506
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1337233508}
+  - component: {fileID: 1337233507}
+  - component: {fileID: 1337233509}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1337233507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337233506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e940fd115826ee4a8a3d168a433b382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1337233508
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337233506}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 292.2447, y: 220.58554, z: -2.7155805}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1337233509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337233506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63e5bc4f25cb33d42b50dfc9e1b72e06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints:
+  - {fileID: 369063789}
+  - {fileID: 1399660137}
+  - {fileID: 1970033904}
+  - {fileID: 407478570}
+  - {fileID: 1840949841}
+  - {fileID: 955366176}
+  foods:
+  - {fileID: 6022221820950772259, guid: 2312f5cb8b5f60243a7df0102d834f4d, type: 3}
 --- !u!1 &1399660136
 GameObject:
   m_ObjectHideFlags: 0
@@ -4581,6 +6429,524 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1458512550}
   m_CullTransparentMesh: 1
+--- !u!1 &1467624336
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1467624337}
+  - component: {fileID: 1467624338}
+  m_Layer: 0
+  m_Name: StoryTH
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1467624337
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467624336}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1633050330}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1467624338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467624336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded43cfd89a761e429acc43865ca85ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
+  isEnding: 0
+  playOnLevelStart: 1
+  startDelay: 0
+  randomizeOrder: 1
+  loop: 1
+  endingType: 0
+  bubbleSettings:
+  - dialogueString: "\u0E40\u0E1B\u0E47\u0E19\u0E44\u0E07\u0E1A\u0E49\u0E32\u0E07\u0E0A\u0E48\u0E27\u0E07\u0E19\u0E35\u0E49? "
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E25\u0E33\u0E1A\u0E32\u0E01\u0E2D\u0E22\u0E39\u0E48\u0E1E\u0E2D\u0E15\u0E31\u0E27"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E01\u0E47\u0E43\u0E0A\u0E49\u0E44\u0E14\u0E49"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E44\u0E21\u0E48\u0E04\u0E48\u0E2D\u0E22\u0E14\u0E35\u0E40\u0E17\u0E48\u0E32\u0E44\u0E2B\u0E23\u0E48"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: "\u0E08\u0E33\u0E04\u0E34\u0E21\u0E44\u0E14\u0E49\u0E44\u0E2B\u0E21?
+      \u0E15\u0E2D\u0E19\u0E19\u0E35\u0E49\u0E40\u0E1B\u0E47\u0E19\u0E19\u0E31\u0E01\u0E27\u0E32\u0E14\u0E14\u0E31\u0E07\u0E44\u0E1B\u0E41\u0E25\u0E49\u0E27 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E2A\u0E21\u0E31\u0E22\u0E01\u0E48\u0E2D\u0E19\u0E21\u0E35\u0E41\u0E15\u0E48\u0E04\u0E19\u0E15\u0E34\u0E40\u0E15\u0E35\u0E22\u0E19\u0E07\u0E32\u0E19\u0E09\u0E31\u0E19 "
+    interval: 0.5
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E17\u0E33\u0E44\u0E21\u0E40\u0E02\u0E32\u0E44\u0E14\u0E49\u0E14\u0E35\u0E01\u0E27\u0E48\u0E32\u0E09\u0E31\u0E19\u0E01\u0E31\u0E19\u0E19\u0E30? "
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E42\u0E25\u0E01\u0E19\u0E35\u0E49\u0E21\u0E31\u0E19\u0E44\u0E21\u0E48\u0E22\u0E38\u0E15\u0E34\u0E18\u0E23\u0E23\u0E21\u0E2D\u0E22\u0E39\u0E48\u0E41\u0E25\u0E49\u0E27"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+    - answerString: "\u0E2A\u0E39\u0E49\u0E46!"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: "\u0E21\u0E31\u0E19\u0E2D\u0E32\u0E08\u0E08\u0E30\u0E44\u0E21\u0E48\u0E40\u0E2B\u0E21\u0E32\u0E30\u0E01\u0E31\u0E1A\u0E19\u0E32\u0E22\u0E15\u0E31\u0E49\u0E07\u0E41\u0E15\u0E48\u0E41\u0E23\u0E01"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 1
+  - dialogueString: "\u0E17\u0E35\u0E48\u0E09\u0E31\u0E19\u0E1E\u0E22\u0E32\u0E22\u0E32\u0E21\u0E21\u0E32\u0E17\u0E31\u0E49\u0E07\u0E2B\u0E21\u0E14\u0E19\u0E35\u0E48 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E2D\u0E30\u0E44\u0E23\u0E01\u0E31\u0E19? "
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E04\u0E27\u0E32\u0E21\u0E2A\u0E34\u0E49\u0E19\u0E2B\u0E27\u0E31\u0E07"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 2
+    - answerString: "\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E19\u0E49\u0E2D\u0E22\u0E01\u0E47\u0E44\u0E14\u0E49\u0E25\u0E2D\u0E07\u0E25\u0E30\u0E01\u0E31\u0E19"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 2
+    - answerString: "\u0E17\u0E33\u0E14\u0E35\u0E41\u0E25\u0E49\u0E27 \u0E17\u0E33\u0E15\u0E48\u0E2D\u0E44\u0E1B!"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 1
+  - dialogueString: "\u0E2B\u0E32\u0E07\u0E32\u0E19\u0E44\u0E21\u0E48\u0E44\u0E14\u0E49\u0E2D\u0E35\u0E01\u0E41\u0E25\u0E49\u0E27 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E08\u0E30\u0E14\u0E31\u0E19\u0E17\u0E38\u0E23\u0E31\u0E07\u0E44\u0E1B\u0E17\u0E33\u0E44\u0E21\u0E19\u0E30? "
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 2
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E1A\u0E48\u0E19\u0E44\u0E1B\u0E44\u0E21\u0E48\u0E0A\u0E48\u0E27\u0E22\u0E2D\u0E30\u0E44\u0E23\u0E2B\u0E23\u0E2D\u0E01\u0E19\u0E48\u0E32"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 1
+    - answerString: "\u0E44\u0E21\u0E48\u0E25\u0E2D\u0E07\u0E1E\u0E31\u0E01\u0E14\u0E39\u0E2B\u0E19\u0E48\u0E2D\u0E22\u0E40\u0E2B\u0E23\u0E2D"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 2
+    - answerString: "\u0E2B\u0E4A\u0E30?"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 2
+        answerScores:
+        - 1
+  - dialogueString: "\"\u0E09\u0E31\u0E19\u0E2D\u0E22\u0E32\u0E01\u0E40\u0E15\u0E34\u0E1A\u0E42\u0E15\u0E44\u0E1B\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E20\u0E32\u0E04\u0E20\u0E39\u0E21\u0E34\u0E43\u0E08\" "
+    interval: 0.5
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E15\u0E2D\u0E19\u0E40\u0E14\u0E47\u0E01\u0E46 \u0E09\u0E31\u0E19\u0E04\u0E07\u0E08\u0E30\u0E1E\u0E39\u0E14\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E07\u0E31\u0E49\u0E19 "
+    interval: 0.5
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E19\u0E48\u0E32\u0E02\u0E33\u0E14\u0E35 \u0E43\u0E0A\u0E48\u0E44\u0E2B\u0E21\u0E25\u0E48\u0E30? "
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 3
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E2B\u0E22\u0E38\u0E14\u0E15\u0E31\u0E14\u0E1E\u0E49\u0E2D\u0E44\u0E14\u0E49\u0E41\u0E25\u0E49\u0E27!"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: "\u0E40\u0E02\u0E49\u0E32\u0E43\u0E08\u0E46"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 1
+    - answerString: "\u0E01\u0E33\u0E25\u0E31\u0E07\u0E08\u0E30\u0E02\u0E33\u0E40\u0E25\u0E22"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+  - dialogueString: "\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E0A\u0E35\u0E27\u0E34\u0E15\u0E21\u0E31\u0E19\u0E44\u0E21\u0E48\u0E41\u0E1F\u0E23\u0E4C\u0E2B\u0E23\u0E37\u0E2D\u0E40\u0E1B\u0E25\u0E48\u0E32? "
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 2
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E43\u0E0A\u0E48\u0E21\u0E30 \u0E2D\u0E22\u0E32\u0E01\u0E04\u0E38\u0E22\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E07\u0E19\u0E35\u0E49\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E01\u0E31\u0E19"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 2
+    - answerString: "\u0E25\u0E33\u0E1A\u0E32\u0E01\u0E01\u0E47\u0E15\u0E49\u0E2D\u0E07\u0E17\u0E19"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: "\u0E43\u0E04\u0E23\u0E08\u0E30\u0E23\u0E39\u0E49?"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 2
+        answerScores:
+        - 1
+  - dialogueString: "\u0E16\u0E49\u0E32\u0E09\u0E31\u0E19\u0E2B\u0E32\u0E22\u0E44\u0E1B\u0E01\u0E47\u0E44\u0E21\u0E48\u0E21\u0E35\u0E43\u0E04\u0E23\u0E41\u0E04\u0E23\u0E4C\u0E2B\u0E23\u0E2D\u0E01
+      \u0E43\u0E0A\u0E48\u0E44\u0E2B\u0E21? "
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E40\u0E14\u0E35\u0E4B\u0E22\u0E27\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E19\u0E40\u0E1B\u0E47\u0E19\u0E2B\u0E48\u0E27\u0E07\u0E19\u0E30"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: "\u0E41\u0E15\u0E48\u0E09\u0E31\u0E19\u0E41\u0E04\u0E23\u0E4C\u0E19\u0E30"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+  - dialogueString: "\u0E17\u0E38\u0E01\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E21\u0E31\u0E19\u0E23\u0E39\u0E49\u0E2A\u0E36\u0E01\u0E2D\u0E49\u0E32\u0E07\u0E27\u0E49\u0E32\u0E07 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E09\u0E31\u0E19\u0E1E\u0E22\u0E32\u0E22\u0E32\u0E21\u0E41\u0E25\u0E49\u0E27 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E41\u0E15\u0E48\u0E01\u0E47\u0E04\u0E27\u0E49\u0E32\u0E19\u0E49\u0E33\u0E40\u0E2B\u0E25\u0E27 "
+    interval: 5
+    ignoreParameterType: 1
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E43\u0E04\u0E23\u0E01\u0E47\u0E23\u0E39\u0E49\u0E27\u0E48\u0E32\u0E21\u0E31\u0E19\u0E44\u0E23\u0E49\u0E1B\u0E23\u0E30\u0E42\u0E22\u0E0A\u0E19\u0E4C"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 2
+    - answerString: "\u0E01\u0E33\u0E02\u0E35\u0E49\u0E14\u0E35\u0E01\u0E27\u0E48\u0E32\u0E01\u0E33\u0E15\u0E14\u0E19\u0E30"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+  - dialogueString: "\u0E09\u0E31\u0E19\u0E23\u0E39\u0E49\u0E2A\u0E36\u0E01\u0E2B\u0E14\u0E2B\u0E39\u0E48\u0E2D\u0E22\u0E39\u0E48\u0E15\u0E25\u0E2D\u0E14\u0E40\u0E25\u0E22 "
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 2
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E40\u0E14\u0E35\u0E4B\u0E22\u0E27\u0E01\u0E47\u0E14\u0E35\u0E02\u0E36\u0E49\u0E19
+        \u0E43\u0E0A\u0E48\u0E44\u0E2B\u0E21?"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: "\u0E1E\u0E23\u0E38\u0E48\u0E07\u0E19\u0E35\u0E49\u0E2D\u0E2D\u0E01\u0E44\u0E1B\u0E40\u0E17\u0E35\u0E48\u0E22\u0E27\u0E01\u0E31\u0E19\u0E44\u0E2B\u0E21?"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 2
+  - dialogueString: "\u0E23\u0E39\u0E49\u0E2A\u0E36\u0E01\u0E2B\u0E25\u0E07\u0E17\u0E32\u0E07\u0E21\u0E32\u0E01\u0E40\u0E25\u0E22 "
+    interval: 0.5
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E2D\u0E22\u0E39\u0E48\u0E43\u0E19\u0E2D\u0E38\u0E42\u0E21\u0E07\u0E04\u0E4C "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E17\u0E35\u0E48\u0E44\u0E21\u0E48\u0E21\u0E35\u0E41\u0E21\u0E49\u0E41\u0E15\u0E48\u0E41\u0E2A\u0E07\u0E1B\u0E25\u0E32\u0E22\u0E2D\u0E38\u0E42\u0E21\u0E07\u0E04\u0E4C "
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E41\u0E25\u0E49\u0E27\u0E08\u0E30\u0E2B\u0E25\u0E07\u0E15\u0E48\u0E2D\u0E44\u0E1B\u0E41\u0E1A\u0E1A\u0E19\u0E35\u0E49\u0E40\u0E2B\u0E23\u0E2D?"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E2D\u0E22\u0E48\u0E39\u0E01\u0E31\u0E1A\u0E1B\u0E31\u0E08\u0E08\u0E38\u0E1A\u0E31\u0E19\u0E14\u0E35\u0E01\u0E27\u0E48\u0E32\u0E19\u0E30"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: "\u0E43\u0E0A\u0E49\u0E40\u0E27\u0E25\u0E32\u0E44\u0E1B\u0E1E\u0E31\u0E01\u0E1F\u0E37\u0E49\u0E19\u0E08\u0E34\u0E15\u0E43\u0E08\u0E01\u0E47\u0E14\u0E35\u0E19\u0E30"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+  - dialogueString: "\u0E19\u0E32\u0E22\u0E40\u0E04\u0E22\u0E04\u0E34\u0E14\u0E16\u0E36\u0E07\u0E2D\u0E14\u0E35\u0E15\u0E1A\u0E49\u0E32\u0E07\u0E2B\u0E23\u0E37\u0E2D\u0E40\u0E1B\u0E25\u0E48\u0E32? "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E04\u0E34\u0E14\u0E16\u0E36\u0E07\u0E27\u0E31\u0E19\u0E27\u0E32\u0E19 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E41\u0E25\u0E49\u0E27\u0E01\u0E25\u0E31\u0E1A\u0E21\u0E32\u0E21\u0E2D\u0E07\u0E15\u0E31\u0E27\u0E40\u0E2D\u0E07\u0E43\u0E19\u0E1B\u0E31\u0E08\u0E08\u0E38\u0E1A\u0E31\u0E19\u0E41\u0E25\u0E49\u0E27\u0E1C\u0E34\u0E14\u0E2B\u0E27\u0E31\u0E07 "
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 2
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E0A\u0E35\u0E27\u0E34\u0E15\u0E01\u0E47\u0E04\u0E37\u0E2D\u0E01\u0E32\u0E23\u0E14\u0E34\u0E48\u0E07\u0E25\u0E07\u0E40\u0E2B\u0E27"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 2
+    - answerString: "\u0E01\u0E47\u0E44\u0E21\u0E48\u0E02\u0E19\u0E32\u0E14\u0E19\u0E31\u0E49\u0E19\u0E19\u0E30"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E15\u0E2D\u0E19\u0E40\u0E14\u0E47\u0E01\u0E46 \u0E2A\u0E1A\u0E32\u0E22\u0E01\u0E27\u0E48\u0E32\u0E19\u0E35\u0E49\u0E40\u0E22\u0E2D\u0E30\u0E40\u0E25\u0E22
+        \u0E27\u0E48\u0E32\u0E44\u0E2B\u0E21?"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+  - dialogueString: "\u0E09\u0E31\u0E19\u0E2D\u0E22\u0E32\u0E01\u0E15\u0E32\u0E22 "
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 2
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E40\u0E25\u0E48\u0E32\u0E21\u0E32\u0E44\u0E14\u0E49\u0E19\u0E30
+        \u0E09\u0E31\u0E19\u0E1E\u0E23\u0E49\u0E2D\u0E21\u0E1F\u0E31\u0E07"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+    - answerString: "\u0E40\u0E14\u0E35\u0E4B\u0E22\u0E27\u0E01\u0E47\u0E14\u0E35\u0E02\u0E36\u0E49\u0E19\u0E19\u0E48\u0E32"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: "\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E01\u0E31\u0E19\u0E40\u0E25\u0E22"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 3
+  - dialogueString: "\"\u0E40\u0E14\u0E35\u0E4B\u0E22\u0E27\u0E01\u0E47\u0E14\u0E35\u0E02\u0E36\u0E49\u0E19\" "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\"\u0E40\u0E14\u0E35\u0E4B\u0E22\u0E27\u0E01\u0E47\u0E1C\u0E48\u0E32\u0E19\u0E21\u0E31\u0E19\u0E44\u0E1B\u0E44\u0E14\u0E49\" "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E40\u0E2B\u0E2D\u0E30... \u0E21\u0E35\u0E41\u0E15\u0E48\u0E04\u0E33\u0E1E\u0E39\u0E14\u0E01\u0E25\u0E27\u0E07\u0E46 "
+    interval: 5
+    ignoreParameterType: 1
+    ignoreParameterScores:
+    - 2
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E41\u0E15\u0E48\u0E01\u0E47\u0E08\u0E23\u0E34\u0E07\u0E44\u0E21\u0E48\u0E43\u0E0A\u0E48\u0E40\u0E2B\u0E23\u0E2D
+        \u0E2A\u0E39\u0E49\u0E15\u0E48\u0E2D\u0E44\u0E1B"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: "\u0E40\u0E02\u0E32\u0E01\u0E47\u0E1E\u0E39\u0E14\u0E44\u0E1B\u0E07\u0E31\u0E49\u0E19\u0E46
+        \u0E41\u0E2B\u0E25\u0E30"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 1
+    - answerString: "\u0E40\u0E2B\u0E47\u0E19\u0E14\u0E49\u0E27\u0E22"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: "\u0E19\u0E32\u0E19\u0E08\u0E19\u0E09\u0E31\u0E19\u0E25\u0E37\u0E21\u0E44\u0E1B\u0E41\u0E25\u0E49\u0E27 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E41\u0E15\u0E48\u0E08\u0E33\u0E15\u0E2D\u0E19\u0E17\u0E35\u0E48\u0E09\u0E31\u0E19\u0E22\u0E34\u0E49\u0E21\u0E04\u0E23\u0E31\u0E49\u0E07\u0E25\u0E48\u0E32\u0E2A\u0E38\u0E14\u0E44\u0E14\u0E49\u0E44\u0E2B\u0E21? "
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E07\u0E32\u0E19\u0E40\u0E17\u0E28\u0E01\u0E32\u0E25\u0E23\u0E2D\u0E1A\u0E01\u0E48\u0E2D\u0E19\u0E19\u0E32\u0E22\u0E23\u0E48\u0E32\u0E40\u0E23\u0E34\u0E07\u0E21\u0E32\u0E01\u0E40\u0E25\u0E22\u0E19\u0E30"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+    - answerString: "\u0E16\u0E49\u0E32\u0E08\u0E33\u0E44\u0E21\u0E48\u0E44\u0E14\u0E49
+        \u0E01\u0E47\u0E22\u0E34\u0E49\u0E21\u0E15\u0E2D\u0E19\u0E19\u0E35\u0E49\u0E40\u0E25\u0E22!"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 1
+    - answerString: "\u0E09\u0E31\u0E19\u0E22\u0E31\u0E07\u0E08\u0E33\u0E02\u0E2D\u0E07\u0E15\u0E31\u0E27\u0E40\u0E2D\u0E07\u0E44\u0E21\u0E48\u0E44\u0E14\u0E49\u0E40\u0E25\u0E22"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 2
+  - dialogueString: "\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E40\u0E1B\u0E47\u0E19\u0E44\u0E1B\u0E44\u0E14\u0E49\u0E44\u0E2B\u0E21? "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E17\u0E35\u0E48\u0E04\u0E27\u0E32\u0E21\u0E1D\u0E31\u0E19\u0E43\u0E19\u0E27\u0E31\u0E22\u0E40\u0E14\u0E47\u0E01\u0E08\u0E30\u0E01\u0E25\u0E31\u0E1A\u0E21\u0E32\u0E40\u0E1B\u0E47\u0E19\u0E08\u0E23\u0E34\u0E07 "
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E1B\u0E25\u0E48\u0E2D\u0E22\u0E21\u0E31\u0E19\u0E44\u0E1B\u0E40\u0E16\u0E2D\u0E30"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 1
+    - answerString: "\u0E44\u0E21\u0E48\u0E25\u0E2D\u0E07\u0E44\u0E21\u0E48\u0E23\u0E39\u0E49!"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: "\u0E04\u0E07\u0E44\u0E14\u0E49\u0E41\u0E15\u0E48\u0E1D\u0E31\u0E19\u0E25\u0E21\u0E46
+        \u0E41\u0E25\u0E49\u0E07\u0E46 \u0E41\u0E2B\u0E25\u0E30"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+  currentBubbleIndex: 0
+  currentRandomizedBubbleIndex: 0
+  randomizedBubbleSettings: []
+  currentRandomizedBundle: []
 --- !u!1 &1471431478
 GameObject:
   m_ObjectHideFlags: 0
@@ -4715,6 +7081,292 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1471431478}
   m_CullTransparentMesh: 0
+--- !u!1 &1483593926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1483593928}
+  - component: {fileID: 1483593927}
+  m_Layer: 0
+  m_Name: FxAudioSource (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1483593927
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483593926}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -2725762312766684751, guid: 04057f9136d3671459d44b7ea3a5958e, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1483593928
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483593926}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1780188153}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1603781199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1603781200}
+  m_Layer: 5
+  m_Name: Spawnpoint (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1603781200
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603781199}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1679481404}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -725, y: 360}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1608022163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1608022164}
+  - component: {fileID: 1608022165}
+  m_Layer: 0
+  m_Name: Bad Ending 2 EN
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1608022164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608022163}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 626381759}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1608022165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608022163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded43cfd89a761e429acc43865ca85ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
+  isEnding: 1
+  playOnLevelStart: 0
+  startDelay: 0
+  randomizeOrder: 0
+  loop: 0
+  endingType: 4
+  bubbleSettings:
+  - dialogueString: 'Looks like you finally accepted it. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'Both of us are beyond saving. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'All roads lead to the same destination. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'Only a path of damnation awaits people like us. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'Join me then, and together we shall walk to its end. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  currentBubbleIndex: 0
+  currentRandomizedBubbleIndex: 0
+  randomizedBubbleSettings: []
+  currentRandomizedBundle: []
+--- !u!1 &1633050329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1633050330}
+  m_Layer: 0
+  m_Name: TH
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1633050330
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633050329}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1467624337}
+  - {fileID: 619396600}
+  - {fileID: 439817313}
+  - {fileID: 292875732}
+  - {fileID: 1650602011}
+  - {fileID: 174489755}
+  m_Father: {fileID: 2075089851}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1639621019
 GameObject:
   m_ObjectHideFlags: 0
@@ -4749,6 +7401,129 @@ RectTransform:
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 217, y: -34.999992}
   m_SizeDelta: {x: 20, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1650602010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1650602011}
+  - component: {fileID: 1650602012}
+  m_Layer: 0
+  m_Name: Bad Ending 2 TH
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1650602011
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650602010}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1633050330}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1650602012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650602010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded43cfd89a761e429acc43865ca85ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
+  isEnding: 1
+  playOnLevelStart: 0
+  startDelay: 0
+  randomizeOrder: 0
+  loop: 0
+  endingType: 4
+  bubbleSettings:
+  - dialogueString: "\u0E14\u0E39\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E27\u0E48\u0E32\u0E19\u0E32\u0E22\u0E08\u0E30\u0E22\u0E2D\u0E21\u0E23\u0E31\u0E1A\u0E41\u0E25\u0E49\u0E27\u0E2A\u0E34\u0E19\u0E30 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E1E\u0E27\u0E01\u0E40\u0E23\u0E32\u0E19\u0E48\u0E30\u0E40\u0E01\u0E34\u0E19\u0E40\u0E22\u0E35\u0E22\u0E27\u0E41\u0E25\u0E49\u0E27 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E44\u0E21\u0E48\u0E27\u0E48\u0E32\u0E08\u0E30\u0E17\u0E33\u0E22\u0E31\u0E07\u0E44\u0E07
+      \u0E17\u0E38\u0E01\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E21\u0E31\u0E19\u0E01\u0E47\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E40\u0E14\u0E34\u0E21 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E21\u0E35\u0E41\u0E04\u0E48\u0E04\u0E27\u0E32\u0E21\u0E1E\u0E34\u0E19\u0E32\u0E28\u0E40\u0E17\u0E48\u0E32\u0E19\u0E31\u0E49\u0E19\u0E41\u0E2B\u0E25\u0E30\u0E17\u0E35\u0E48\u0E23\u0E2D\u0E04\u0E19\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E40\u0E23\u0E32\u0E2D\u0E22\u0E39\u0E48 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E21\u0E32\u0E01\u0E31\u0E1A\u0E09\u0E31\u0E19\u0E2A\u0E34
+      \u0E40\u0E23\u0E32\u0E08\u0E30\u0E44\u0E1B\u0E2A\u0E39\u0E48\u0E08\u0E38\u0E14\u0E08\u0E1A\u0E14\u0E49\u0E27\u0E22\u0E01\u0E31\u0E19 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  currentBubbleIndex: 0
+  currentRandomizedBubbleIndex: 0
+  randomizedBubbleSettings: []
+  currentRandomizedBundle: []
+--- !u!1 &1654846998
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1654846999}
+  m_Layer: 5
+  m_Name: Spawnpoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1654846999
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654846998}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1679481404}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -725, y: -140.00002}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1672205026
 GameObject:
@@ -4785,7 +7560,7 @@ RectTransform:
   m_AnchoredPosition: {x: -222, y: -28.999992}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1783832289
+--- !u!1 &1679481403
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4793,101 +7568,648 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1783832293}
-  - component: {fileID: 1783832292}
-  - component: {fileID: 1783832291}
-  - component: {fileID: 1783832290}
+  - component: {fileID: 1679481404}
   m_Layer: 5
-  m_Name: BubbleCanvas
+  m_Name: Free
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1783832290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1783832289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 2047
---- !u!114 &1783832291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1783832289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 1
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!223 &1783832292
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1783832289}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 1
-  m_Camera: {fileID: 2044070282}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 90
-  m_TargetDisplay: 0
---- !u!224 &1783832293
+--- !u!224 &1679481404
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1783832289}
+  m_GameObject: {fileID: 1679481403}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 385096899}
-  - {fileID: 1194254808}
+  - {fileID: 1654846999}
+  - {fileID: 2048138509}
+  - {fileID: 1603781200}
+  - {fileID: 1804449400}
+  - {fileID: 1795049987}
+  - {fileID: 41216580}
+  m_Father: {fileID: 1130414728}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1778408834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1778408835}
+  - component: {fileID: 1778408836}
+  m_Layer: 0
+  m_Name: GeneralEN
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1778408835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778408834}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 626381759}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1778408836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778408834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded43cfd89a761e429acc43865ca85ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
+  isEnding: 0
+  playOnLevelStart: 1
+  startDelay: 5
+  randomizeOrder: 0
+  loop: 1
+  endingType: 0
+  bubbleSettings:
+  - dialogueString: 'If tomato is a fruit, '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'Do you think ketchup is a smoothie? '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Huh?
+      answerSound: {fileID: 8300000, guid: 7e492ad07b6d548eea10ccbd1962e88f, type: 3}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Yes
+      answerSound: {fileID: 8300000, guid: ccdc1026f90774226b4c0759093380b3, type: 3}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: No
+      answerSound: {fileID: 8300000, guid: adb24518d159048ca9cb62d63113784f, type: 3}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'Looking at all this meat, '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'I must ask... '
+    interval: 0.5
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'You ever thought of becoming a vegan? '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Not really
+      answerSound: {fileID: 8300000, guid: 8ad403f13bc6243c4aadcc0a8348e389, type: 3}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: I was one, actually
+      answerSound: {fileID: 8300000, guid: ea8a04d36984947ddaf296db5484d176, type: 3}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Hmm...
+      answerSound: {fileID: 8300000, guid: f8aafce49a15241159f0f5a7cef8a45b, type: 3}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'I''m thinking of getting a new phone case. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'What color do you think would fit? '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Pastel Pink
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Gray
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Reflective Gold
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'I know tomato can be pronounce in two ways, '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'But how would you pronounce potato? '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Poh-tay-toe
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Poh-tah-toe
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Potato
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'How do you eat ice cream? '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Lick it
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Bite it
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: I eat from the cone up.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'The weather''s pretty bad lately huh? '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: I actually appreciate the rain.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Yeah, I wish there are more sunny days.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: I hope no storm hit here
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'Have you heard? Our president got sick again. '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: How many times has it been this year now?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Bet he's still getting paid as well.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'You like pork? '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: If it's grilled properly, yes
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: I'm more of a chicken guy
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: I'm a beef guy
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'That''s an interesting way to grill those meat. '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Why don't you try do it yourself?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: I'll take that as a compliment.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: I'm just warming up
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'With how often we come here, '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'we should''ve tried the mushroom by now. '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: At this point? Let's just stick with meat.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Didn't take you for a mushroom guy
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Trust me, it's not worth it
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'Random question, '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'who do think invented the Calender? '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Julius Ceasar
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Galileo Galilei
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Albert Einstein
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'Sugar or salt? '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: What even is this question!?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Sugar
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Salt
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'Any interesting games you''re playing? '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Nothing really
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: I started a new gacha game recently
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Same old one from uni
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'Ever had the thought that we''re just in a game? '
+    interval: 0.5
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'That all this is just nothing but an illusion? '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: That's scary to think about
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: As far as I'm concerned, we're real enough
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: To be honest, we probably are.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'Do you think chairs exist? '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Well, what is a chair?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: No, just simples arranged chair-wise
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: I don't think I follow the question.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'Do you ever have the urge to try extreme sports, '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'like bungee-jumping or skydiving? '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: 'I''m not ballsy enough for that, no. '
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: It's on my bucket list.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Not if I'm doing it alone.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  currentBubbleIndex: 0
+  currentRandomizedBubbleIndex: 0
+  randomizedBubbleSettings: []
+  currentRandomizedBundle: []
+--- !u!1 &1780188151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1780188153}
+  - component: {fileID: 1780188152}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1780188152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780188151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3891c99829d35b846ab97dd97ceb2496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicAudioSource: {fileID: 1295297230}
+  audioMixer: {fileID: 24100000, guid: 04057f9136d3671459d44b7ea3a5958e, type: 2}
+  fxAudioPool:
+  - {fileID: 929203444}
+  - {fileID: 1933915207}
+  - {fileID: 1036086664}
+  - {fileID: 797619415}
+  - {fileID: 445373697}
+  - {fileID: 556661998}
+  - {fileID: 389066022}
+  - {fileID: 562206426}
+  - {fileID: 1247688817}
+  - {fileID: 1483593927}
+  freeSources: []
+  reservedSources: []
+--- !u!4 &1780188153
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780188151}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1295297231}
+  - {fileID: 929203445}
+  - {fileID: 1933915208}
+  - {fileID: 1036086665}
+  - {fileID: 797619416}
+  - {fileID: 445373698}
+  - {fileID: 556661999}
+  - {fileID: 389066023}
+  - {fileID: 562206427}
+  - {fileID: 1247688818}
+  - {fileID: 1483593928}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+--- !u!1 &1795049986
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1795049987}
+  m_Layer: 5
+  m_Name: Spawnpoint (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1795049987
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795049986}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1679481404}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 725, y: 109.99998}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1798191266
 GameObject:
   m_ObjectHideFlags: 0
@@ -4963,6 +8285,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1798191266}
   m_CullTransparentMesh: 1
+--- !u!1 &1804449399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1804449400}
+  m_Layer: 5
+  m_Name: Spawnpoint (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1804449400
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804449399}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1679481404}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 725, y: -140.00002}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1839000296
 GameObject:
   m_ObjectHideFlags: 0
@@ -5270,7 +8627,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1912986749}
   m_CullTransparentMesh: 0
---- !u!1 &1968742987
+--- !u!1 &1933915206
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5278,64 +8635,126 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1968742989}
-  - component: {fileID: 1968742988}
-  - component: {fileID: 1968742990}
+  - component: {fileID: 1933915208}
+  - component: {fileID: 1933915207}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: FxAudioSource (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1968742988
-MonoBehaviour:
+--- !u!82 &1933915207
+AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1968742987}
+  m_GameObject: {fileID: 1933915206}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e940fd115826ee4a8a3d168a433b382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1968742989
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -2725762312766684751, guid: 04057f9136d3671459d44b7ea3a5958e, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1933915208
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1968742987}
+  m_GameObject: {fileID: 1933915206}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 292.2447, y: 220.58554, z: -2.7155805}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1780188153}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1968742990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1968742987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63e5bc4f25cb33d42b50dfc9e1b72e06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPoints:
-  - {fileID: 369063789}
-  - {fileID: 1399660137}
-  - {fileID: 1970033904}
-  - {fileID: 407478570}
-  - {fileID: 1840949841}
-  - {fileID: 955366176}
-  foods:
-  - {fileID: 6022221820950772259, guid: 2312f5cb8b5f60243a7df0102d834f4d, type: 3}
 --- !u!1 &1970033903
 GameObject:
   m_ObjectHideFlags: 0
@@ -5371,6 +8790,515 @@ RectTransform:
   m_AnchoredPosition: {x: 92, y: 91}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1979759793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1979759794}
+  - component: {fileID: 1979759795}
+  m_Layer: 0
+  m_Name: StoryEN
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1979759794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979759793}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 626381759}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1979759795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979759793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded43cfd89a761e429acc43865ca85ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
+  isEnding: 0
+  playOnLevelStart: 1
+  startDelay: 0
+  randomizeOrder: 1
+  loop: 1
+  endingType: 0
+  bubbleSettings:
+  - dialogueString: 'How''s life been treating you recently? '
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: I'm surviving.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: I'm doing well.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Could be better.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'You remembered Kim? He became an illustrator. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'I was always berated for drawing back then. '
+    interval: 0.5
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'What do you reckon is the difference? '
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: The world is just unfair lilke that.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+    - answerString: Just keep trying!
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: It just wasn't meant to be.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 1
+  - dialogueString: 'All this time that I''ve been trying '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'What is it even for? '
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: You know, it's for nothing.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 2
+    - answerString: At least you tried, right?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 2
+    - answerString: You're doing well, just try a bit more!
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 1
+  - dialogueString: 'Another job rejection, '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'Why am I even trying? '
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 2
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Give it a rest, man. Complaining won't help.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 1
+    - answerString: Why not take a break then.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 2
+    - answerString: Huh?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 2
+        answerScores:
+        - 1
+  - dialogueString: '"I wish to become a person I can be proud of." '
+    interval: 0.5
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'I could often see my younger self say that. '
+    interval: 0.5
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'What a joke, right? '
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 3
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Snap out of it!
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: 'I get that, really. '
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 1
+    - answerString: Still waiting for the punchline.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+  - dialogueString: 'Don''t you think that life is really unfair? '
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 2
+    hasAnswer: 1
+    answerSettings:
+    - answerString: I know right? Wanna talk about it?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 2
+    - answerString: That's why we all gotta tough it out.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: Who knows?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 2
+        answerScores:
+        - 1
+  - dialogueString: 'Nobody would care if I disappear right? '
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Surely your friends do.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: I would.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+  - dialogueString: 'Everything feels so meaningless. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'I''ve been trying really hard. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'Yet it all amounts to nothing. '
+    interval: 5
+    ignoreParameterType: 1
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Nothing ever amounts to anything, anyway.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 2
+    - answerString: Don't be like that, something does.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+  - dialogueString: 'It just feel like I''m always down in the pit. '
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 2
+    hasAnswer: 1
+    answerSettings:
+    - answerString: But it could've been worse right?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: Wanna hangout tomorrow?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 2
+  - dialogueString: 'I feel so lost right now. '
+    interval: 0.5
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'It''s like being stranded in a tunnel. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'without even seeing the light at the end. '
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: You plan on walking that tunnel?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Just focus on real life, man.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: I think it's okay to take it a bit slow there.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+  - dialogueString: 'Ever look back into the past? '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'Thinking of the good old days? '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'And looking at yourself now, wondering how it got here. '
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 2
+    hasAnswer: 1
+    answerSettings:
+    - answerString: All the times. Life is a downward spiral.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 2
+    - answerString: 'Not really, no. '
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Childhood sure was a simpler time right?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+  - dialogueString: 'I want to die. '
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 2
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Wanna talk about it?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+    - answerString: It'll be better soon, trust me.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: That makes us two, you know.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 3
+  - dialogueString: '"It''s going to get better." '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: '"Everything''s gonna be alright." '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'Hah... what shallow words. '
+    interval: 5
+    ignoreParameterType: 1
+    ignoreParameterScores:
+    - 2
+    hasAnswer: 1
+    answerSettings:
+    - answerString: It is true though, keep fighting on.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: People will just keep saying whatever they want.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 1
+    - answerString: I know right?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'It''s been so long that I forgot, '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'but do you remember the last time I smiled? '
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: It was last summer festival, you were beaming
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+    - answerString: Well, you can do it now!
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 1
+    - answerString: I don't think I remembered mine as well.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 2
+  - dialogueString: 'Do you think that it''s still possible? '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'For my childhood dream to be alive once more. '
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: 'I think that ship has long sailed. '
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 1
+    - answerString: You never know until you try!
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: How about just a dream now?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+  currentBubbleIndex: 0
+  currentRandomizedBubbleIndex: 0
+  randomizedBubbleSettings: []
+  currentRandomizedBundle: []
 --- !u!1 &1992093044
 GameObject:
   m_ObjectHideFlags: 0
@@ -5542,41 +9470,6 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   StartShakingButton: 0
---- !u!1 &2043576455
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2043576456}
-  m_Layer: 5
-  m_Name: Spawnpoint (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2043576456
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2043576455}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 385096899}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 750, y: -351.00003}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2044070280
 GameObject:
   m_ObjectHideFlags: 0
@@ -5714,7 +9607,7 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!1 &2127267213
+--- !u!1 &2048138508
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5722,33 +9615,108 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2127267214}
+  - component: {fileID: 2048138509}
   m_Layer: 5
-  m_Name: Spawnpoint (3)
+  m_Name: Spawnpoint (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &2127267214
+--- !u!224 &2048138509
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2127267213}
+  m_GameObject: {fileID: 2048138508}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 385096899}
+  m_Father: {fileID: 1679481404}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -750, y: 338.99997}
+  m_AnchoredPosition: {x: -725, y: 109.99998}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2075089849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2075089851}
+  - component: {fileID: 2075089850}
+  m_Layer: 0
+  m_Name: BubbleManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2075089850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075089849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 205426aa555ddff418a6ff0491e7de87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubbleCanvas: {fileID: 1130414728}
+  bubbleManagerSettings_TH:
+  - waveSetting: {fileID: 1467624338}
+  - waveSetting: {fileID: 619396601}
+  - waveSetting: {fileID: 439817314}
+  - waveSetting: {fileID: 292875733}
+  - waveSetting: {fileID: 1650602012}
+  - waveSetting: {fileID: 174489754}
+  bubbleManagerSettings_EN:
+  - waveSetting: {fileID: 1979759795}
+  - waveSetting: {fileID: 1778408836}
+  - waveSetting: {fileID: 407305032}
+  - waveSetting: {fileID: 708785978}
+  - waveSetting: {fileID: 1608022165}
+  - waveSetting: {fileID: 92203342}
+  spawnPointPool: {fileID: 1679481404}
+  usedSpawnPointPool: {fileID: 554874767}
+  currentBubbleManagerSettings: []
+  parameterArchetypes:
+  - parameterType: 4
+    parameterScore: 0
+  - parameterType: 2
+    parameterScore: 0
+  - parameterType: 8
+    parameterScore: 0
+  - parameterType: 1
+    parameterScore: 0
+  waveToImport: {fileID: 1778408836}
+  fileName: General EN
+--- !u!4 &2075089851
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075089849}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.4950514, y: -1.3013227, z: 0.036706936}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1633050330}
+  - {fileID: 626381759}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -5756,8 +9724,9 @@ SceneRoots:
   - {fileID: 2044070283}
   - {fileID: 616219037}
   - {fileID: 1162855026}
-  - {fileID: 1855833338}
-  - {fileID: 1968742989}
-  - {fileID: 626735332}
-  - {fileID: 1783832293}
+  - {fileID: 1130414728}
   - {fileID: 1133475502}
+  - {fileID: 2075089851}
+  - {fileID: 1780188153}
+  - {fileID: 1337233508}
+  - {fileID: 1855833338}
