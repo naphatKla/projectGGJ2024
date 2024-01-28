@@ -1927,6 +1927,8 @@ MonoBehaviour:
   correctFeedback: {fileID: 957316155}
   rawFeedback: {fileID: 990522766}
   mediumRareFeedback: {fileID: 813718122}
+  correctSound: {fileID: 8300000, guid: 00e873bcf60279f4c8b5a62ef3707223, type: 3}
+  rawSound: {fileID: 8300000, guid: ef9acc0b8ff44984490bb1db86db6ee0, type: 3}
 --- !u!1 &406375170
 GameObject:
   m_ObjectHideFlags: 0
@@ -7996,6 +7998,9 @@ MonoBehaviour:
   - {fileID: 1672205027}
   - {fileID: 1861479233}
   - {fileID: 1639621020}
+  cookingSound:
+  - {fileID: 8300000, guid: 2de0a23a6201fda458becb9070a837dd, type: 3}
+  fireSound: {fileID: 8300000, guid: 043b015df401e834fbffb9c031e42703, type: 3}
 --- !u!114 &1039849568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8918,6 +8923,8 @@ MonoBehaviour:
   mainMenuButton: {fileID: 790445689}
   timerText: {fileID: 529041031}
   meatGoalText: {fileID: 2102000410}
+  ambientSound: {fileID: 8300000, guid: 5fbe1270f300eb445992bc351dbe48d6, type: 3}
+  winSound: {fileID: 8300000, guid: ca00f35e52e0e424dbb10245910f22bd, type: 3}
 --- !u!4 &1337233508
 Transform:
   m_ObjectHideFlags: 0
@@ -8954,6 +8961,7 @@ MonoBehaviour:
   - {fileID: 955366176}
   foods:
   - {fileID: 6022221820950772259, guid: 2312f5cb8b5f60243a7df0102d834f4d, type: 3}
+  spawnSound: {fileID: 8300000, guid: 613e7f1727a3c3b4da575697d5332199, type: 3}
 --- !u!114 &1337233510
 MonoBehaviour:
   m_ObjectHideFlags: 0

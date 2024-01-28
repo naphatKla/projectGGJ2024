@@ -4,6 +4,7 @@ using Manager;
 using MoreMountains.Feedbacks;
 using Plugins.Singleton;
 using Sirenix.OdinInspector;
+using Sirenix.Reflection.Editor;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -29,11 +30,15 @@ namespace Managers
         [SerializeField] private TextMeshProUGUI timerText;
         [SerializeField] private TextMeshProUGUI meatGoalText;
         private BubbleManager BubbleManager => BubbleManager.Instance;
-    
+        [Header("Sound")]
+        [SerializeField] private AudioClip ambientSound;
+        [SerializeField] private AudioClip winSound;
         
         void Start()
         {
             meatGoalText.text = $"{meatCooked} / {meatGoal}";
+            SoundManager.Instance.PlayMusic(ambientSound);
+            SoundManager.Instance.PlayFx(winSound, out _, true);
         }
         
         void Update()
