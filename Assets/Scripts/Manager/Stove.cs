@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using Managers;
 using UnityEngine;
@@ -8,9 +9,18 @@ public class Stove : MonoBehaviour
     [SerializeField] private Transform[] stoveSlots;
     public int slotCount => stoveSlots.Length;
     public int AvailableSlot => stoveSlots.Count(point => point.childCount <= 0);
+    [SerializeField] private AudioClip[] cookingSound;
+    [SerializeField] private AudioClip fireSound;
+    private AudioSource _cookingSource;
+    
     private void Awake()
     {
         GetComponent<Image>().alphaHitTestMinimumThreshold = 0.1f;
+    }
+
+    private void Start()
+    {
+        SoundManager.Instance.PlayMusic(fireSound);
     }
 
     private void Update()
@@ -23,7 +33,18 @@ public class Stove : MonoBehaviour
             if (meat.IsBurnt) continue;
             meat.OnGrill();
         }
+
+        if (stoveSlots.All(slot => slot.childCount <= 0))
+        {
+            //SoundManager.Instance.StopFx(_cookingSource);
+            return;
+        }
+
+        if (_cookingSource && _cookingSource.isPlaying) return;
+        SoundManager.Instance.PlayFx(cookingSound[UnityEngine.Random.Range(0, cookingSound.Length)], out _cookingSource);
+        _cookingSource.volume = 0.5f;
     }
+
 
     public void OnDrawGizmos()
     {

@@ -32,6 +32,10 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
     private bool _isMouseDown;
     private Stove _lastedStove;
     
+    [SerializeField] private AudioClip dropSound;
+    [SerializeField] private AudioClip flipSound;
+    [SerializeField] private AudioClip burntSound;
+    
     private Vector3 _spawnPosition;
     private Image _image;
     private FoodState[] _currentFoodState = new FoodState[2];
@@ -42,6 +46,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
     private Animator _animator;
     private Tween _holdClickTween;
     private float _lastedOppositeSideCookedTime;
+    
     
     private void Start()
     {
@@ -120,6 +125,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
         transform.DOScale(Vector3.one, 0.25f);
         GetComponent<Image>().raycastTarget = true;
         
+        SoundManager.Instance.PlayFx(dropSound,out _);
         if (!eventData.pointerEnter || !eventData.pointerEnter.CompareTag("Stove") && !IsFlipping)
         {
             FoodSpawnerManager.Instance.AddFoodToTheNearestSlot(this);
@@ -157,6 +163,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
         transform.localScale = Vector3.one;
         _image.raycastTarget = false;
         GameManager.Instance.meatBurned++;
+        SoundManager.Instance.PlayFx(burntSound, out _);
     }
     
     public void FlipSide()
@@ -167,6 +174,8 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
         _currentSide = _currentSide == 0 ? 1 : 0;
         _animator.SetTrigger("IsFlip");
         DOVirtual.DelayedCall(1, () => IsFlipping = false);
+        SoundManager.Instance.PlayFx(flipSound, out AudioSource audioSource);
+        audioSource.volume = 1.5f;
     }
 
     public void CancelFlip()
@@ -182,5 +191,10 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
         ChangeFoodStateHandler();
         if (_cookedTimeOnGrill[_currentSide == 0? 1 : 0] <= 0 || _cookedTimeOnGrill[_currentSide == 0? 1 : 0] <= _lastedOppositeSideCookedTime-1.5f) return;
         _cookedTimeOnGrill[_currentSide == 0? 1 : 0] -= Time.deltaTime;
+    }
+
+    public void OnDish()
+    {
+        
     }
 }

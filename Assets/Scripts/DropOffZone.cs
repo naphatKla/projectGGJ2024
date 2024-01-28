@@ -10,6 +10,8 @@ public class DropOffZone : MonoBehaviour, IDropHandler
     [SerializeField] private MMF_Player correctFeedback;
     [SerializeField] private MMF_Player rawFeedback;
     [SerializeField] private MMF_Player mediumRareFeedback;
+    [SerializeField] private AudioClip correctSound;
+    [SerializeField] private AudioClip rawSound;
     
     public void OnDrop(PointerEventData eventData)
     {
@@ -31,6 +33,7 @@ public class DropOffZone : MonoBehaviour, IDropHandler
             DOVirtual.DelayedCall(0.5f, () => { FoodSpawnerManager.Instance.SpawnFood();});
             correctFeedback.PlayFeedbacks();
             GameManager.Instance.AddMeatCooked();
+            SoundManager.Instance.PlayFx(correctSound,out _);
             return;
         }
 
@@ -39,6 +42,7 @@ public class DropOffZone : MonoBehaviour, IDropHandler
         {
             Debug.Log("We can't eat the meat with one side cooked");
             mediumRareFeedback.PlayFeedbacks();
+            SoundManager.Instance.PlayFx(rawSound,out _);
             return;
         }
         
@@ -46,6 +50,7 @@ public class DropOffZone : MonoBehaviour, IDropHandler
         {
             Debug.Log("What are you doing? The meat is raw");
             rawFeedback.PlayFeedbacks();
+            SoundManager.Instance.PlayFx(rawSound,out _);
             return;
         }
     }

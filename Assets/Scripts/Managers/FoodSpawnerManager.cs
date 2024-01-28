@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Linq;
+using Managers;
 using Plugins.Singleton;
 using Sirenix.Utilities;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class FoodSpawnerManager : MonoSingleton<FoodSpawnerManager>
     [SerializeField] private Meat[] foods;
     public int maxSpawn => spawnPoints.Length;
     public int AvailableSlot => spawnPoints.Count(point => point.childCount <= 0);
+    [SerializeField] private AudioClip spawnSound;
     
     void Start()
     {
@@ -20,6 +22,7 @@ public class FoodSpawnerManager : MonoSingleton<FoodSpawnerManager>
     {
         Transform point = spawnPoints.FirstOrDefault(point => point.childCount <= 0);
         Instantiate(foods[Random.Range(0, foods.Length)], point.position, Quaternion.identity, point);
+        SoundManager.Instance.PlayFx(spawnSound, out _);
     }
     
     public void AddFoodToTheNearestSlot(Meat meat)
@@ -39,8 +42,8 @@ public class FoodSpawnerManager : MonoSingleton<FoodSpawnerManager>
     {
         for (int i = 0; i < loops; i++)
         {
-            SpawnFood();
             yield return new WaitForSeconds(delay);
+            SpawnFood();
         }
     }
 }
