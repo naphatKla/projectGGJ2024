@@ -20,11 +20,11 @@ namespace Managers
         [SerializeField] private VideoPlayer videoPlayer;
         [SerializeField] private EndingSettings[] endingSettings;
         
-        public static ParameterType endingType;
+        public static ParameterType endingType = ParameterType.Ignorant;
         
         
         // Start is called before the first frame update
-        void Start()
+        void Awake()
         {
             PlayEnding();
         }
@@ -38,12 +38,15 @@ namespace Managers
         // Update is called once per frame
         void Update()
         {
+            if (!videoPlayer.isPrepared) return;
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 SceneManager.LoadScene("Credit");
             }
-            if (videoPlayer.isPlaying) return;
-            SceneManager.LoadScene("Credit");
+            if (videoPlayer.frame >= (long)videoPlayer.frameCount - 1)
+            {
+                SceneManager.LoadScene("Credit");
+            }
         }
     }
 }
