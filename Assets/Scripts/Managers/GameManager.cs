@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Plugins.Singleton;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Managers
 {
@@ -47,6 +48,8 @@ namespace Managers
                 .PlayWave();
             BubbleManager.CurrentBubbleManagerSettings
                 .FindAll(x => !x.BubbleWave.IsEnding).ForEach(x => x.BubbleWave.StopWave());
+            EndingManager.endingType = endingType;
+            SceneManager.LoadScene("Ending");
         }
         // Start is called before the first frame update
         void Start()
