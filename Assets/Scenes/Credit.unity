@@ -291,14 +291,14 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1599706852}
-  - {fileID: 861382240}
   - {fileID: 1630549125}
+  - {fileID: 861382240}
   m_Father: {fileID: 1013041618}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 463}
-  m_SizeDelta: {x: 489, y: 725}
+  m_AnchoredPosition: {x: 0, y: 500}
+  m_SizeDelta: {x: 489, y: 863.0786}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &445440299
 MonoBehaviour:
@@ -496,8 +496,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -600.62195}
-  m_SizeDelta: {x: 311, y: -275.2439}
+  m_AnchoredPosition: {x: 0, y: -667.4536}
+  m_SizeDelta: {x: 310.99994, y: -413.07864}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &861382241
 MonoBehaviour:
@@ -1122,7 +1122,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 89}
   m_SizeDelta: {x: 174.9542, y: 174.9542}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1599706853
@@ -1195,11 +1195,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 445440298}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -114.02724}
-  m_SizeDelta: {x: 0, y: -228.0505}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: -124.99996}
+  m_SizeDelta: {x: 488, y: 906.7307}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1630549126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1233,7 +1233,24 @@ MonoBehaviour:
 
     Napasson Kusonprakong
 
-    <size=20>Artist</size>'
+    <size=20>Artist</size>
+
+
+    Rithchate
+    Sirimangklanurak
+
+    <size=20>Design & Narrative</size>
+
+
+    Nathaporn Chaivallop
+
+    <size=20>Character
+    Design & 2D Artis</size>
+
+
+    Theerachot Langlongsatit
+
+    <size=20>Animator</size>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c4cf91a99c073324996317c68f3bcaf7, type: 2}
   m_sharedMaterial: {fileID: 5331920311072039009, guid: c4cf91a99c073324996317c68f3bcaf7, type: 2}
