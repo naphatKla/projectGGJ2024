@@ -26,10 +26,10 @@ namespace Managers
         // Start is called before the first frame update
         void Start()
         {
-            PlayEnding(endingType);
+            PlayEnding();
         }
         
-        private void PlayEnding(ParameterType endingType)
+        private void PlayEnding()
         {
             videoPlayer.clip = endingSettings.First(x => x.EndingType == endingType).VideoClip;
             videoPlayer.Play();
