@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +9,13 @@ namespace Managers
         [SerializeField] private Image languageImage;
         [SerializeField] private Sprite[] languageSprites;
         private readonly string _defaultLanguage = "EN";
-        
+
+        private void Awake()
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+
         public void ToggleLanguage()
         {
             if (!PlayerPrefs.HasKey("Language"))

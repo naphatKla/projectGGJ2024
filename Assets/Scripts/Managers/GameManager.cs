@@ -1,13 +1,10 @@
 using System.Collections.Generic;
 using DG.Tweening;
-using Manager;
 using MoreMountains.Feedbacks;
 using Plugins.Singleton;
 using Sirenix.OdinInspector;
-using Sirenix.Reflection.Editor;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Managers

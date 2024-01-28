@@ -730,8 +730,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press 'ESC' to Skip >>>
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e4e2aea853c9aec4ca491574495589dd, type: 2}
-  m_sharedMaterial: {fileID: -7561265712487772968, guid: e4e2aea853c9aec4ca491574495589dd, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c4cf91a99c073324996317c68f3bcaf7, type: 2}
+  m_sharedMaterial: {fileID: 5331920311072039009, guid: c4cf91a99c073324996317c68f3bcaf7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
