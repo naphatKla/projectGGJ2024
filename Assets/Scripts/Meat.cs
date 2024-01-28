@@ -153,6 +153,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
         DOVirtual.DelayedCall(0.5f, () => { FoodSpawnerManager.Instance.SpawnFood();});
         transform.localScale = Vector3.one;
         _image.raycastTarget = false;
+        GameManager.Instance.meatBurned++;
     }
     
     public void FlipSide()

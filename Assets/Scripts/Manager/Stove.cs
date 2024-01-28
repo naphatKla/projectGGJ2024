@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class Stove : MonoBehaviour
 {
     [SerializeField] private Transform[] stoveSlots;
+    public int slotCount => stoveSlots.Length;
     public int AvailableSlot => stoveSlots.Count(point => point.childCount <= 0);
     private void Awake()
     {

@@ -1,17 +1,62 @@
 using System.Collections.Generic;
+using DG.Tweening;
+using MoreMountains.Feedbacks;
 using Plugins.Singleton;
 using Sirenix.OdinInspector;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Managers
 {
     public class GameManager : MonoSingleton<GameManager>
     {
+        [SerializeField] private Stove stove;
+        public float gamePlayTime;
+        public int meatGoal;
+        [HideInInspector] public int meatCooked;
+        [HideInInspector]  public int meatBurned;
+        public bool IsAllMeatBurned => meatBurned >= stove.slotCount;
+        [SerializeField] private float _timeCount;
+        public bool IsWin => meatCooked >= meatGoal;
+        public bool IsLose;
+        [SerializeField] private MMF_Player loseFeedback;
+        [SerializeField] private Image timerImage;
+        [SerializeField] private TextMeshProUGUI timerText;
         private BubbleManager BubbleManager => BubbleManager.Instance;
+    
+        
+        void Start()
+        {
+        
+        }
+        
+        void Update()
+        {
+            if (IsLose) return;
+            _timeCount += Time.deltaTime;
+            _timeCount = Mathf.Clamp(_timeCount, 0, gamePlayTime);
+            timerImage.fillAmount = 1 - (_timeCount / gamePlayTime);
+            timerText.text = $"{Mathf.FloorToInt(gamePlayTime - _timeCount)}";
+            if (_timeCount >= gamePlayTime || IsAllMeatBurned || IsAllMeatBurned)
+            {
+                IsLose = true;
+                loseFeedback.PlayFeedbacks();
+            }
+        }
+        
+        public void AddMeatCooked()
+        {
+            meatCooked++;
+            if (meatCooked < meatGoal) return;
+            CheckEnding();
+        }
+        
         [Button("Check Ending")]
         private void CheckEnding()
         {
+            if (!IsWin) return;
             List<ParameterArchetype> sortedParameters = BubbleManager.ParameterArchetypes;
             sortedParameters.Sort(new ParameterComparer());
             ParameterType endingType = ParameterType.Good;
@@ -50,17 +95,6 @@ namespace Managers
                 .FindAll(x => !x.BubbleWave.IsEnding).ForEach(x => x.BubbleWave.StopWave());
             EndingManager.endingType = endingType;
             SceneManager.LoadScene("Ending");
-        }
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-        
         }
     }
     public class ParameterComparer : IComparer<ParameterArchetype>

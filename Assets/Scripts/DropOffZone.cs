@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Managers;
 using MoreMountains.Feedbacks;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -29,6 +30,7 @@ public class DropOffZone : MonoBehaviour, IDropHandler
             Destroy(meat.gameObject);
             DOVirtual.DelayedCall(0.5f, () => { FoodSpawnerManager.Instance.SpawnFood();});
             correctFeedback.PlayFeedbacks();
+            GameManager.Instance.AddMeatCooked();
             return;
         }
 
