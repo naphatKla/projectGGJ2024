@@ -27,12 +27,13 @@ namespace Managers
         [SerializeField] private Button restartButton;
         [SerializeField] private Button mainMenuButton;
         [SerializeField] private TextMeshProUGUI timerText;
+        [SerializeField] private TextMeshProUGUI meatGoalText;
         private BubbleManager BubbleManager => BubbleManager.Instance;
     
         
         void Start()
         {
-        
+            meatGoalText.text = $"{meatCooked} / {meatGoal}";
         }
         
         void Update()
@@ -61,6 +62,7 @@ namespace Managers
         public void AddMeatCooked()
         {
             meatCooked++;
+            meatGoalText.text = $"{meatCooked} / {meatGoal}";
             if (meatCooked < meatGoal) return;
             CheckEnding();
         }
@@ -106,7 +108,6 @@ namespace Managers
             BubbleManager.CurrentBubbleManagerSettings
                 .FindAll(x => !x.BubbleWave.IsEnding).ForEach(x => x.BubbleWave.StopWave());
             EndingManager.endingType = endingType;
-            SceneManager.LoadScene("Ending");
         }
     }
     public class ParameterComparer : IComparer<ParameterArchetype>
