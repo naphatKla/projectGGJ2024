@@ -62,6 +62,8 @@ namespace Bubbles
         [SerializeField][MinValue(0)] private float fadeInDuration;
         [SerializeField][MinValue(0)] private float fadeOutDuration;
         [SerializeField][MinValue(0)] private float shrinkDuration;
+        [SerializeField] private AudioClip popUpSound;
+        [SerializeField] private AudioClip popDownSound;
 
         private bool _hasPointerEntered;
         private bool _answered;
@@ -146,6 +148,7 @@ namespace Bubbles
             dialogueText.DOFade(1f, duration);
             _image.color = new Color(1f, 1f, 1f, 0f);
             _image.DOFade(1f, duration);
+            SoundManager.Instance.PlayFx(popUpSound, out _);
         }
         
         private void StartFadeOut(float duration)
@@ -183,6 +186,7 @@ namespace Bubbles
         public void ShrinkBubble()
         {
             _answered = true;
+            SoundManager.Instance.PlayFx(popDownSound, out _);
             transform.DOScale(new Vector3(0, 0, 0), shrinkDuration).OnComplete(() => DestroyBubble(false));
         }
 
