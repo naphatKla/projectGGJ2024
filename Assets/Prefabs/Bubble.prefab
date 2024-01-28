@@ -169,8 +169,13 @@ MonoBehaviour:
   fadeInDuration: 0.25
   fadeOutDuration: 1.5
   shrinkDuration: 0.25
-  popUpSound: {fileID: 8300000, guid: adb24518d159048ca9cb62d63113784f, type: 3}
-  popDownSound: {fileID: 8300000, guid: 83e12bc2a9e7c466f85a0a9056f121ef, type: 3}
+  popUpSounds:
+  - {fileID: 8300000, guid: f434bdd7cef1feb40b82d0fec9759c7c, type: 3}
+  - {fileID: 8300000, guid: 8ac960f612740c345970531dfd658989, type: 3}
+  - {fileID: 8300000, guid: 4f781ccc0606e304faa94d869ca0b5d4, type: 3}
+  - {fileID: 8300000, guid: 90788a95b4e6ac14ab9b77ffd2b2ae18, type: 3}
+  - {fileID: 8300000, guid: 52cebca3a3bb57243b2d75a95f53daf8, type: 3}
+  - {fileID: 8300000, guid: a0db843d05ad9f24899f4d6402184ea2, type: 3}
 --- !u!1 &4563259670460125904
 GameObject:
   m_ObjectHideFlags: 0
