@@ -10,6 +10,7 @@ public class FlipController : MonoSingleton<FlipController>
     [SerializeField] private Image flipBar;
     [SerializeField] private Image perfectBar;
     [SerializeField] private Image Indicator;
+    [SerializeField] private Image hitCheckFrame;
     [Header("Bar Settings")]
     [SerializeField] [Range(0,1)] private float perfectBarHighPercent;
     [SerializeField] private float indicatorSpeed;
@@ -41,6 +42,8 @@ public class FlipController : MonoSingleton<FlipController>
 
     public void Update()
     {
+        hitCheckFrame.transform.position = Indicator.transform.position;
+        
         if (Input.GetMouseButtonUp(0))
             OperateBar();
         
@@ -60,12 +63,15 @@ public class FlipController : MonoSingleton<FlipController>
     public void OpenBar(Meat meat, Vector2 position = default)
     {
         flipBar.gameObject.SetActive(true);
+        hitCheckFrame.gameObject.SetActive(true);
         flipBar.rectTransform.position = position + barOffset;
+        flipBar.rectTransform.position = new Vector3(flipBar.rectTransform.position.x, Mathf.Clamp(flipBar.rectTransform.position.y,-200,200) , flipBar.rectTransform.position.z);
         _currentMeat = meat;
     }
     
     public void CloseBar()
     {
+        hitCheckFrame.gameObject.SetActive(false);
         flipBar.gameObject.SetActive(false);
         OnPerfect = null;
         OnFail = null;
