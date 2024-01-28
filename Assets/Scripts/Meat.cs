@@ -73,6 +73,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        if (GameManager.Instance.IsLose || GameManager.Instance.IsWin) return;
         if (IsFlipping) return;
         if (eventData.button != PointerEventData.InputButton.Left) return;
         _isMouseDown = true;
@@ -91,6 +92,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
 
     public void OnDrag(PointerEventData eventData)
     {
+        if (GameManager.Instance.IsLose || GameManager.Instance.IsWin) return;
         if (!_isMouseDown) return;
         if (IsFlipping) return;
         if (IsOnFlip) return;
@@ -142,6 +144,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
 
     public void ChangeFoodStateHandler()
     {
+        if (GameManager.Instance.IsLose || GameManager.Instance.IsWin) return;
         if (_cookedTimeOnGrill[_currentSide] < _currentCookedTime[_currentSide]) return;
         _currentFoodState[_currentSide] = _currentCookedState[_currentSide].NextFoodState;
         _currentCookedState[_currentSide] = cookedStates.Find(cookedState => cookedState.FoodState == _currentFoodState[_currentSide]);

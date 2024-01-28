@@ -1,4 +1,5 @@
 using System.Linq;
+using Managers;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +15,7 @@ public class Stove : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.IsWin || GameManager.Instance.IsLose) return;
         Meat[] meats = stoveSlots.Where(slot => slot.childCount > 0)
             .Select(slot => slot.GetChild(0).GetComponent<Meat>()).ToArray();
         foreach (Meat meat in meats)

@@ -70,7 +70,7 @@ namespace Managers
         [Button("Check Ending")]
         private void CheckEnding()
         {
-            if (!IsWin) return;
+            //if (!IsWin) return;
             List<ParameterArchetype> sortedParameters = BubbleManager.ParameterArchetypes;
             sortedParameters.Sort(new ParameterComparer());
             ParameterType endingType = ParameterType.Good;
