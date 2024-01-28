@@ -1,6 +1,5 @@
 using System;
 using Plugins.Singleton;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -13,14 +12,14 @@ public class FlipController : MonoSingleton<FlipController>
     [Header("Bar Settings")]
     [SerializeField] [Range(0,1)] private float perfectBarHighPercent;
     [SerializeField] private float indicatorSpeed;
+    [SerializeField] private Vector2 barOffset;
     public event Action OnPerfect, OnFail, OnOpenBar;
 
     private float _barHigh;
     private float _perfectBarHigh;
     private Vector2 _perfectBarAvailableRange;
     private Vector2 _perfectBarRange;
-    [SerializeField] private Vector2 _perfectBarRangePercent;
-    [SerializeField] Texture2D cursorTexture;
+    private Vector2 _perfectBarRangePercent;
     private int _indicatorDirection = 1;
     private Meat _currentMeat;
 
@@ -61,7 +60,7 @@ public class FlipController : MonoSingleton<FlipController>
     public void OpenBar(Meat meat, Vector2 position = default)
     {
         flipBar.gameObject.SetActive(true);
-        flipBar.rectTransform.position = position + new Vector2(-100,0);
+        flipBar.rectTransform.position = position + barOffset;
         _currentMeat = meat;
     }
     

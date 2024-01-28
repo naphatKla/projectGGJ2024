@@ -27,7 +27,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
     public bool IsBurnt => _currentFoodState.Any(foodState => foodState == FoodState.Burnt);
     public bool IsOnGrill => transform.parent.CompareTag("Stove");
     public bool IsOnFlip {get; set;}
-    [SerializeField] ParticleSystem burntParticle;
+    [SerializeField] ParticleSystem[] burntParticle;
     
     private Vector3 _spawnPosition;
     private Image _image;
@@ -64,7 +64,8 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
         _animator.SetBool("IsOnFlip", IsOnFlip);
         _animator.SetBool("IsCurrentSideCooked", _currentSide == 1? _currentFoodState[0] == FoodState.Cooked : _currentFoodState[1] == FoodState.Cooked);
         _animator.SetBool("IsOppositeSideCooked", _currentSide == 1? _currentFoodState[1] == FoodState.Cooked : _currentFoodState[0] == FoodState.Cooked);
-        burntParticle.gameObject.SetActive(_currentFoodState[_currentSide] == FoodState.Cooked && IsOnGrill);
+        foreach (ParticleSystem particle in burntParticle)
+            particle.gameObject.SetActive(_currentFoodState[_currentSide] == FoodState.Cooked && IsOnGrill);
     }
 
     public void OnPointerDown(PointerEventData eventData)

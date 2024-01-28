@@ -399,8 +399,7 @@ MonoBehaviour:
   Indicator: {fileID: 1458512552}
   perfectBarHighPercent: 0.35
   indicatorSpeed: 500
-  _perfectBarRangePercent: {x: 0, y: 0}
-  cursorTexture: {fileID: 0}
+  barOffset: {x: -40, y: 0}
 --- !u!114 &98388675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -701,7 +700,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 57ae1e0979ed09043b66fb0ed84fa16a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 96ce123d98c90df4c9dd33c22a2109fb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4454,7 +4453,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 57ae1e0979ed09043b66fb0ed84fa16a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 96ce123d98c90df4c9dd33c22a2109fb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
