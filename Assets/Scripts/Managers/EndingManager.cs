@@ -38,6 +38,10 @@ namespace Managers
         // Update is called once per frame
         void Update()
         {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                SceneManager.LoadScene("Credit");
+            }
             if (videoPlayer.isPlaying) return;
             SceneManager.LoadScene("Credit");
         }
