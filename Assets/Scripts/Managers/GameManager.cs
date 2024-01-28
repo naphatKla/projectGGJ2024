@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using DG.Tweening;
+using Manager;
 using MoreMountains.Feedbacks;
 using Plugins.Singleton;
 using Sirenix.OdinInspector;
@@ -23,6 +24,8 @@ namespace Managers
         public bool IsLose;
         [SerializeField] private MMF_Player loseFeedback;
         [SerializeField] private Image timerImage;
+        [SerializeField] private Button restartButton;
+        [SerializeField] private Button mainMenuButton;
         [SerializeField] private TextMeshProUGUI timerText;
         private BubbleManager BubbleManager => BubbleManager.Instance;
     
@@ -43,6 +46,15 @@ namespace Managers
             {
                 IsLose = true;
                 loseFeedback.PlayFeedbacks();
+                DOVirtual.DelayedCall(1.5f, () =>
+                {
+                    restartButton.gameObject.SetActive(true);
+                    mainMenuButton.gameObject.SetActive(true);
+                    restartButton.transform.localScale = Vector3.zero;
+                    mainMenuButton.transform.localScale = Vector3.zero;
+                    restartButton.transform.DOScale(Vector3.one, 0.5f);
+                    mainMenuButton.transform.DOScale(Vector3.one, 0.5f);
+                });
             }
         }
         
