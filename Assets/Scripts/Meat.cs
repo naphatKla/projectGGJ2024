@@ -26,7 +26,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
     public bool IsBurnt => _currentFoodState.Any(foodState => foodState == FoodState.Burnt);
     public bool IsOnGrill => transform.parent.CompareTag("Stove");
     public bool IsOnFlip {get; set;}
-    [SerializeField] ParticleSystem burntParticle;
+    [SerializeField] ParticleSystem[] burntParticle;
     
     private Vector3 _spawnPosition;
     private Image _image;
@@ -53,6 +53,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
         _image = GetComponent<Image>();
         _animator = GetComponent<Animator>();
         _image.alphaHitTestMinimumThreshold = 0.1f;
+        DOVirtual.DelayedCall(0.5f, ()=> _animator.SetBool("IsSpawning", false));
     }
 
     private void FixedUpdate()
@@ -62,7 +63,8 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
         _animator.SetBool("IsOnFlip", IsOnFlip);
         _animator.SetBool("IsCurrentSideCooked", _currentSide == 1? _currentFoodState[0] == FoodState.Cooked : _currentFoodState[1] == FoodState.Cooked);
         _animator.SetBool("IsOppositeSideCooked", _currentSide == 1? _currentFoodState[1] == FoodState.Cooked : _currentFoodState[0] == FoodState.Cooked);
-        burntParticle.gameObject.SetActive(_currentFoodState[_currentSide] == FoodState.Cooked);
+        foreach (ParticleSystem particle in burntParticle)
+            particle.gameObject.SetActive(_currentFoodState[_currentSide] == FoodState.Cooked && IsOnGrill);
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -102,10 +104,17 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
         
         if (!eventData.pointerEnter || !eventData.pointerEnter.CompareTag("Stove") && !IsOnFlip)
         {
-            transform.position = _spawnPosition;
+            FoodSpawnerManager.Instance.AddFoodToTheNearestSlot(this);
             return;
         }
-        eventData.pointerEnter.GetComponent<Stove>().DropFood(this);
+        
+        Stove stove = eventData.pointerEnter.GetComponent<Stove>();
+        if (stove.AvailableSlot <= 0)
+        {
+            FoodSpawnerManager.Instance.AddFoodToTheNearestSlot(this);
+            return;
+        }
+        stove.DropFood(this);
     }
 
     public void ChangeFoodStateHandler()
@@ -118,6 +127,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
         
         if (FoodState != FoodState.Burnt) return;
         this.DOKill();
+        DOVirtual.DelayedCall(0.5f, () => { FoodSpawnerManager.Instance.SpawnFood();});
         transform.localScale = Vector3.one;
         _image.raycastTarget = false;
     }
