@@ -1,5 +1,0 @@
-Type,Leading 1,Leading 2,Prompt,Response 1,Response 2,Response 3,"Results (R1, R2, R3, Ignore) (I - Ignore, D - Despair, F - False Optimism, G - Good)"
-Story,,,How's life been treating you recently?<0.5>,I'm surviving.,I'm doing well.,Could be better.,"-,-, -, I50"
-,You remembered Kim? He became an illustrator<0.25>,I was always berated for drawing back then.<0.25>,What do you reckon is the difference?<0.25>,The world is unfair lilke that,Just keep trying!,It just wasn't meant to be,"G10, F10, D10, I10"
-,All this time that I've been trying<0.25>,,What is it even for?<0.25>,You know it's for nothing,"At least you tried, right?","You're doing well, just try a bit more!","D10, G10, F10,I10"
-,"""I wish to become a person I can be proud of.""<0.25>",I could often see my younger self say that to me.<0.25>,"What a joke, right?<0.25>",Snap out of it,"I get that, really. ",Still waiting for the punchline.,"F10, D10, G10, I10"

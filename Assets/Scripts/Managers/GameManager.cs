@@ -7,35 +7,46 @@ namespace Managers
 {
     public class GameManager : MonoSingleton<GameManager>
     {
+        private BubbleManager BubbleManager => BubbleManager.Instance;
         [Button("Check Ending")]
         private void CheckEnding()
         {
-            List<ParameterArchetype> sortedParameters = BubbleManager.Instance.ParameterArchetypes;
+            List<ParameterArchetype> sortedParameters = BubbleManager.ParameterArchetypes;
             sortedParameters.Sort(new ParameterComparer());
+            ParameterType endingType = ParameterType.Good;
+            Debug.Log($"Sorted Parameters: {sortedParameters[0].ParameterType}");
             if (sortedParameters[0].ParameterType != ParameterType.Good)
             {
-                if (BubbleManager.Instance.LastBubbleIgnored)
+                if (BubbleManager.LastBubbleIgnored)
                 {
-                    Debug.Log("Bad Ending 1");
-                    return;
+                    endingType = ParameterType.Ignorant;
                 }
-                switch (sortedParameters[0].ParameterType)
+                else
                 {
-                    case ParameterType.FalseHope:
-                        Debug.Log("Bad Ending 3");
-                        break;
-                    case ParameterType.Despair:
-                        Debug.Log("Bad Ending 2");
-                        break;
-                    case ParameterType.Ignorant:
-                        Debug.Log("Bad Ending 1");
-                        break;
+                    switch (sortedParameters[0].ParameterType)
+                    {
+                        case ParameterType.FalseHope:
+                            endingType = ParameterType.FalseHope;
+                            break;
+                        case ParameterType.Despair:
+                            endingType = ParameterType.Despair;
+                            break;
+                        case ParameterType.Ignorant:
+                            endingType = ParameterType.Ignorant;
+                            break;
+                    }
                 }
             }
             else
             {
-                Debug.Log("Good Ending");
+                endingType = ParameterType.Good;
             }
+            BubbleManager.CurrentBubbleManagerSettings
+                .Find(x => x.BubbleWave.IsEnding && x.BubbleWave.EndingType == endingType)
+                .BubbleWave
+                .PlayWave();
+            BubbleManager.CurrentBubbleManagerSettings
+                .FindAll(x => !x.BubbleWave.IsEnding).ForEach(x => x.BubbleWave.StopWave());
         }
         // Start is called before the first frame update
         void Start()
@@ -69,14 +80,16 @@ namespace Managers
         {
             switch (type)
             {
-                case ParameterType.FalseHope:
+                case ParameterType.Good:
                     return 0;
-                case ParameterType.Despair:
+                case ParameterType.FalseHope:
                     return 1;
-                case ParameterType.Ignorant:
+                case ParameterType.Despair:
                     return 2;
+                case ParameterType.Ignorant:
+                    return 3;
                 default:
-                    return 3; // Handle other types (if any) with the same value
+                    return 4; // Handle other types (if any) with the same value
             }
         }
     }

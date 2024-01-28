@@ -123,41 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &77334023
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 77334024}
-  m_Layer: 5
-  m_Name: Spawnpoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &77334024
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 77334023}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 580798296}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -750, y: -351}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &119489218
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +294,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &305657310
+--- !u!1 &181188107
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -337,21 +302,123 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 305657311}
-  m_Layer: 5
-  m_Name: Spawnpoint (4)
+  - component: {fileID: 181188108}
+  - component: {fileID: 181188109}
+  m_Layer: 0
+  m_Name: Bad Ending 1 EN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &305657311
+--- !u!4 &181188108
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181188107}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1719067263}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &181188109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181188107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded43cfd89a761e429acc43865ca85ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
+  isEnding: 1
+  playOnLevelStart: 0
+  startDelay: 0
+  randomizeOrder: 0
+  loop: 0
+  endingType: 2
+  bubbleSettings:
+  - dialogueString: Ignored yet again.
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "You\u2019re doing it just like everyone else."
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u2026"
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "Don\u2019t you think it\u2019s selfish?"
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "Pretending that your problems don\u2019t exist."
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "Pretending that \u201CI\u201D don't exist."
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "Haha\u2026 but who am I kidding. "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'Perhaps this is for the best then. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  currentBubbleIndex: 0
+  currentRandomizedBubbleIndex: 0
+--- !u!1 &358208249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 358208250}
+  m_Layer: 5
+  m_Name: Spawnpoint (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &358208250
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 305657310}
+  m_GameObject: {fileID: 358208249}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -361,7 +428,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 750, y: -351.00003}
+  m_AnchoredPosition: {x: 725, y: -140.00002}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &368483939
@@ -396,7 +463,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -750, y: -121.00002}
+  m_AnchoredPosition: {x: -725, y: -140.00002}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &580798295
@@ -427,14 +494,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 77334024}
   - {fileID: 368483940}
   - {fileID: 1109100984}
   - {fileID: 908419355}
-  - {fileID: 305657311}
-  - {fileID: 581923138}
-  - {fileID: 1461039801}
-  - {fileID: 931832670}
+  - {fileID: 358208250}
+  - {fileID: 680801605}
+  - {fileID: 1591424306}
   m_Father: {fileID: 119489222}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -442,7 +507,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &581923137
+--- !u!1 &678854885
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -450,21 +515,132 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 581923138}
-  m_Layer: 5
-  m_Name: Spawnpoint (5)
+  - component: {fileID: 678854886}
+  - component: {fileID: 678854887}
+  m_Layer: 0
+  m_Name: Bad Ending 3 TH
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &581923138
+--- !u!4 &678854886
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678854885}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1449935068}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &678854887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678854885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded43cfd89a761e429acc43865ca85ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
+  isEnding: 1
+  playOnLevelStart: 0
+  startDelay: 0
+  randomizeOrder: 0
+  loop: 0
+  endingType: 8
+  bubbleSettings:
+  - dialogueString: "\u0E09\u0E31\u0E19\u0E01\u0E47\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E19\u0E32\u0E22\u0E08\u0E30\u0E40\u0E02\u0E49\u0E32\u0E43\u0E08 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E41\u0E15\u0E48\u0E09\u0E31\u0E19\u0E04\u0E34\u0E14\u0E1C\u0E34\u0E14 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E04\u0E27\u0E32\u0E21\u0E04\u0E34\u0E14\u0E41\u0E07\u0E48\u0E1A\u0E27\u0E01\u0E02\u0E2D\u0E07\u0E19\u0E32\u0E22... "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E44\u0E21\u0E48\u0E23\u0E39\u0E49\u0E2B\u0E23\u0E37\u0E2D\u0E44\u0E07\u0E27\u0E48\u0E32\u0E09\u0E31\u0E19\u0E40\u0E08\u0E47\u0E1A\u0E1B\u0E27\u0E14\u0E41\u0E04\u0E48\u0E44\u0E2B\u0E19? "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E17\u0E33\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E01\u0E31\u0E1A\u0E27\u0E48\u0E32\u0E09\u0E31\u0E19\u0E1E\u0E22\u0E32\u0E22\u0E32\u0E21\u0E44\u0E21\u0E48\u0E1E\u0E2D "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E17\u0E33\u0E44\u0E21\u0E44\u0E21\u0E48\u0E25\u0E2D\u0E07\u0E40\u0E02\u0E49\u0E32\u0E43\u0E08\u0E04\u0E27\u0E32\u0E21\u0E23\u0E39\u0E49\u0E2A\u0E36\u0E01\u0E09\u0E31\u0E19\u0E1A\u0E49\u0E32\u0E07? "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E40\u0E1C\u0E0A\u0E34\u0E0D\u0E2B\u0E19\u0E49\u0E32\u0E01\u0E31\u0E1A\u0E15\u0E31\u0E27\u0E15\u0E19\u0E17\u0E35\u0E48\u0E41\u0E17\u0E49\u0E08\u0E23\u0E34\u0E07\u0E02\u0E2D\u0E07\u0E19\u0E32\u0E22\u0E1A\u0E49\u0E32\u0E07\u0E2A\u0E34 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E2E\u0E48\u0E32\u0E2E\u0E48\u0E32\u0E2E\u0E48\u0E32\u2026
+      \u0E41\u0E15\u0E48\u0E19\u0E32\u0E22\u0E01\u0E47\u0E04\u0E07\u0E08\u0E30\u0E1A\u0E2D\u0E01\u0E43\u0E2B\u0E49\u0E09\u0E31\u0E19\u0E2A\u0E39\u0E49\u0E15\u0E48\u0E2D\u0E44\u0E1B
+      \u0E43\u0E0A\u0E48\u0E44\u0E2B\u0E21\u0E25\u0E48\u0E30? "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E44\u0E14\u0E49 \u0E40\u0E14\u0E35\u0E4B\u0E22\u0E27\u0E08\u0E30\u0E42\u0E0A\u0E27\u0E4C\u0E43\u0E2B\u0E49\u0E14\u0E39\u0E27\u0E48\u0E32
+      \"\u0E09\u0E31\u0E19\" \u0E08\u0E30\u0E2A\u0E39\u0E49\u0E15\u0E48\u0E2D\u0E44\u0E1B\u0E22\u0E31\u0E07\u0E44\u0E07 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  currentBubbleIndex: 0
+  currentRandomizedBubbleIndex: 0
+--- !u!1 &680801604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 680801605}
+  m_Layer: 5
+  m_Name: Spawnpoint (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &680801605
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 581923137}
+  m_GameObject: {fileID: 680801604}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -474,9 +650,704 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 750, y: -121.00002}
+  m_AnchoredPosition: {x: 725, y: 109.99998}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &689520967
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 689520969}
+  - component: {fileID: 689520968}
+  m_Layer: 0
+  m_Name: Bad Ending 2 EN
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &689520968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689520967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded43cfd89a761e429acc43865ca85ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
+  isEnding: 1
+  playOnLevelStart: 0
+  startDelay: 0
+  randomizeOrder: 0
+  loop: 0
+  endingType: 4
+  bubbleSettings:
+  - dialogueString: 'Looks like you finally accepted it. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'Both of us are beyond saving. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'All roads lead to the same destination. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'Only a path of damnation awaits people like us. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'Join me then, and together we shall walk to its end. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  currentBubbleIndex: 0
+  currentRandomizedBubbleIndex: 0
+--- !u!4 &689520969
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689520967}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1719067263}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &820953759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 820953761}
+  - component: {fileID: 820953760}
+  m_Layer: 0
+  m_Name: Bad Ending 3 EN
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &820953760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820953759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded43cfd89a761e429acc43865ca85ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
+  isEnding: 1
+  playOnLevelStart: 0
+  startDelay: 0
+  randomizeOrder: 0
+  loop: 0
+  endingType: 8
+  bubbleSettings:
+  - dialogueString: 'I thought you would understand. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'But it seems like I was wrong. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'You and your optimism. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "Don\u2019t you know that it hurts more than anything? "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "As if I\u2019m like this because I didn\u2019t try hard enough. "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "Why don\u2019t you try to understand how I feel? "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'Just face your own feelings for once. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "Hahaha\u2026 but you will just tell me to work on it, won't
+      you? "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "Fine, I\u2019ll show you how \"I\" work on it. "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  currentBubbleIndex: 0
+  currentRandomizedBubbleIndex: 0
+--- !u!4 &820953761
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820953759}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1719067263}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &849565380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 849565382}
+  - component: {fileID: 849565381}
+  m_Layer: 0
+  m_Name: GeneralEN
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &849565381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849565380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded43cfd89a761e429acc43865ca85ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
+  isEnding: 0
+  playOnLevelStart: 1
+  startDelay: 5
+  randomizeOrder: 1
+  loop: 1
+  endingType: 0
+  bubbleSettings:
+  - dialogueString: 'If tomato is a fruit, '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'Do you think ketchup is a smoothie? '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Huh?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Yes
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: No
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'Looking at all this meat, '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'I must ask... '
+    interval: 0.5
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'You ever thought of becoming a vegan? '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Not really
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: I was one, actually
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Hmm...
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'I''m thinking of getting a new phone case. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'What color do you think would fit? '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Pastel Pink
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Gray
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Reflective Gold
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'I know tomato can be pronounce in two ways, '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'But how would you pronounce potato? '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Poh-tay-toe
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Poh-tah-toe
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Potato
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'How do you eat ice cream? '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Lick it
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Bite it
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: I eat from the cone up.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'The weather''s pretty bad lately huh? '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: I actually appreciate the rain.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Yeah, I wish there are more sunny days.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: I hope no storm hit here
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'Have you heard? Our president got sick again. '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: How many times has it been this year now?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Bet he's still getting paid as well.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'You like pork? '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: If it's grilled properly, yes
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: I'm more of a chicken guy
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: I'm a beef guy
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'That''s an interesting way to grill those meat. '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Why don't you try do it yourself?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: I'll take that as a compliment.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: I'm just warming up
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'With how often we come here, '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'we should''ve tried the mushroom by now. '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: At this point? Let's just stick with meat.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Didn't take you for a mushroom guy
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Trust me, it's not worth it
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'Random question, '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'who do think invented the Calender? '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Julius Ceasar
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Galileo Galilei
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Albert Einstein
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'Sugar or salt? '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: What even is this question!?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Sugar
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Salt
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'Any interesting games you''re playing? '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Nothing really
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: I started a new gacha game recently
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Same old one from uni
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'Ever had the thought that we''re just in a game? '
+    interval: 0.5
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'That all this is just nothing but an illusion? '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: That's scary to think about
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: As far as I'm concerned, we're real enough
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: To be honest, we probably are.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'Do you think chairs exist? '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Well, what is a chair?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: No, just simples arranged chair-wise
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: I don't think I follow the question.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'Do you ever have the urge to try extreme sports, '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'like bungee-jumping or skydiving? '
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: 'I''m not ballsy enough for that, no. '
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: It's on my bucket list.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Not if I'm doing it alone.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  currentBubbleIndex: 0
+  currentRandomizedBubbleIndex: 0
+--- !u!4 &849565382
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849565380}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1719067263}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &908419354
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,10 +1380,10 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -750, y: 338.99997}
+  m_AnchoredPosition: {x: -725, y: 360}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &931832669
+--- !u!1 &1010372114
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -520,33 +1391,175 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 931832670}
-  m_Layer: 5
-  m_Name: Spawnpoint (7)
+  - component: {fileID: 1010372115}
+  - component: {fileID: 1010372116}
+  m_Layer: 0
+  m_Name: Bad Ending 2 TH
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &931832670
-RectTransform:
+--- !u!4 &1010372115
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 931832669}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 1010372114}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 580798296}
+  m_Father: {fileID: 1449935068}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 750, y: 338.99997}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1010372116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010372114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded43cfd89a761e429acc43865ca85ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
+  isEnding: 1
+  playOnLevelStart: 0
+  startDelay: 0
+  randomizeOrder: 0
+  loop: 0
+  endingType: 4
+  bubbleSettings:
+  - dialogueString: "\u0E14\u0E39\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E27\u0E48\u0E32\u0E19\u0E32\u0E22\u0E08\u0E30\u0E22\u0E2D\u0E21\u0E23\u0E31\u0E1A\u0E41\u0E25\u0E49\u0E27\u0E2A\u0E34\u0E19\u0E30 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E1E\u0E27\u0E01\u0E40\u0E23\u0E32\u0E19\u0E48\u0E30\u0E40\u0E01\u0E34\u0E19\u0E40\u0E22\u0E35\u0E22\u0E27\u0E41\u0E25\u0E49\u0E27 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E44\u0E21\u0E48\u0E27\u0E48\u0E32\u0E08\u0E30\u0E17\u0E33\u0E22\u0E31\u0E07\u0E44\u0E07
+      \u0E17\u0E38\u0E01\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E21\u0E31\u0E19\u0E01\u0E47\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E40\u0E14\u0E34\u0E21 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E21\u0E35\u0E41\u0E04\u0E48\u0E04\u0E27\u0E32\u0E21\u0E1E\u0E34\u0E19\u0E32\u0E28\u0E40\u0E17\u0E48\u0E32\u0E19\u0E31\u0E49\u0E19\u0E41\u0E2B\u0E25\u0E30\u0E17\u0E35\u0E48\u0E23\u0E2D\u0E04\u0E19\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E40\u0E23\u0E32\u0E2D\u0E22\u0E39\u0E48 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E21\u0E32\u0E01\u0E31\u0E1A\u0E09\u0E31\u0E19\u0E2A\u0E34
+      \u0E40\u0E23\u0E32\u0E08\u0E30\u0E44\u0E1B\u0E2A\u0E39\u0E48\u0E08\u0E38\u0E14\u0E08\u0E1A\u0E14\u0E49\u0E27\u0E22\u0E01\u0E31\u0E19 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  currentBubbleIndex: 0
+  currentRandomizedBubbleIndex: 0
+--- !u!1 &1054510179
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1054510180}
+  - component: {fileID: 1054510181}
+  m_Layer: 0
+  m_Name: Good Ending TH
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1054510180
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054510179}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1449935068}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1054510181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054510179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded43cfd89a761e429acc43865ca85ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
+  isEnding: 1
+  playOnLevelStart: 0
+  startDelay: 0
+  randomizeOrder: 0
+  loop: 0
+  endingType: 1
+  bubbleSettings:
+  - dialogueString: "\u0E02\u0E2D\u0E1A\u0E04\u0E38\u0E13\u0E17\u0E35\u0E48\u0E21\u0E32\u0E04\u0E38\u0E22\u0E01\u0E31\u0E1A\u0E09\u0E31\u0E19\u0E27\u0E31\u0E19\u0E19\u0E35\u0E49\u0E19\u0E30 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E19\u0E36\u0E01\u0E27\u0E48\u0E32\u0E08\u0E30\u0E44\u0E21\u0E48\u0E21\u0E32\u0E41\u0E25\u0E49\u0E27\u0E0B\u0E30\u0E2D\u0E35\u0E01 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E14\u0E35\u0E43\u0E08\u0E17\u0E35\u0E48\u0E04\u0E23\u0E31\u0E49\u0E07\u0E19\u0E35\u0E49\u0E09\u0E31\u0E19\u0E04\u0E34\u0E14\u0E1C\u0E34\u0E14 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E2E\u0E48\u0E32\u0E2E\u0E48\u0E32\u0E2E\u0E48\u0E32\u0E2E\u0E48\u0E32
+      \u0E23\u0E39\u0E49\u0E2A\u0E36\u0E01\u0E14\u0E35\u0E40\u0E1B\u0E47\u0E19\u0E1A\u0E49\u0E32\u0E40\u0E25\u0E22 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E17\u0E35\u0E48\u0E23\u0E39\u0E49\u0E27\u0E48\u0E32\u0E22\u0E31\u0E07\u0E21\u0E35\u0E04\u0E19\u0E41\u0E04\u0E23\u0E4C\u0E2D\u0E22\u0E39\u0E48 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E44\u0E27\u0E49\u0E04\u0E23\u0E31\u0E49\u0E07\u0E2B\u0E19\u0E49\u0E32\u0E21\u0E32\u0E40\u0E08\u0E2D\u0E01\u0E31\u0E19\u0E43\u0E2B\u0E21\u0E48\u0E19\u0E30 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  currentBubbleIndex: 0
+  currentRandomizedBubbleIndex: 0
 --- !u!1 &1109100983
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,10 +1592,10 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -750, y: 108.99998}
+  m_AnchoredPosition: {x: -725, y: 109.99998}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1461039800
+--- !u!1 &1293434874
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -590,33 +1603,632 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1461039801}
-  m_Layer: 5
-  m_Name: Spawnpoint (6)
+  - component: {fileID: 1293434875}
+  - component: {fileID: 1293434876}
+  m_Layer: 0
+  m_Name: StoryEN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1461039801
-RectTransform:
+--- !u!4 &1293434875
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1461039800}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 1293434874}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 580798296}
+  m_Father: {fileID: 1719067263}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 750, y: 108.99998}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1293434876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293434874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded43cfd89a761e429acc43865ca85ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
+  isEnding: 0
+  playOnLevelStart: 1
+  startDelay: 0
+  randomizeOrder: 1
+  loop: 1
+  endingType: 0
+  bubbleSettings:
+  - dialogueString: 'How''s life been treating you recently? '
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: I'm surviving.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: I'm doing well.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Could be better.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'You remembered Kim? He became an illustrator. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'I was always berated for drawing back then. '
+    interval: 0.5
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'What do you reckon is the difference? '
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: The world is just unfair lilke that.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+    - answerString: Just keep trying!
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: It just wasn't meant to be.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 1
+  - dialogueString: 'All this time that I''ve been trying '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'What is it even for? '
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: You know, it's for nothing.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 2
+    - answerString: At least you tried, right?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 2
+    - answerString: You're doing well, just try a bit more!
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 1
+  - dialogueString: 'Another job rejection, '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'Why am I even trying? '
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 2
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Give it a rest, man. Complaining won't help.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 1
+    - answerString: Why not take a break then.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 2
+    - answerString: Huh?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 2
+        answerScores:
+        - 1
+  - dialogueString: '"I wish to become a person I can be proud of." '
+    interval: 0.5
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'I could often see my younger self say that. '
+    interval: 0.5
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'What a joke, right? '
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 3
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Snap out of it!
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: 'I get that, really. '
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 1
+    - answerString: Still waiting for the punchline.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+  - dialogueString: 'Don''t you think that life is really unfair? '
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 2
+    hasAnswer: 1
+    answerSettings:
+    - answerString: I know right? Wanna talk about it?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 2
+    - answerString: That's why we all gotta tough it out.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: Who knows?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 2
+        answerScores:
+        - 1
+  - dialogueString: 'Nobody would care if I disappear right? '
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Surely your friends do.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: I would.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+  - dialogueString: 'Everything feels so meaningless. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'I''ve been trying really hard. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'Yet it all amounts to nothing. '
+    interval: 5
+    ignoreParameterType: 1
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Nothing ever amounts to anything, anyway.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 2
+    - answerString: Don't be like that, something does.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+  - dialogueString: 'It just feel like I''m always down in the pit. '
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 2
+    hasAnswer: 1
+    answerSettings:
+    - answerString: But it could've been worse right?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: Wanna hangout tomorrow?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 2
+  - dialogueString: 'I feel so lost right now. '
+    interval: 0.5
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'It''s like being stranded in a tunnel. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'without even seeing the light at the end. '
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: You plan on walking that tunnel?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Just focus on real life, man.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: I think it's okay to take it a bit slow there.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+  - dialogueString: 'Ever look back into the past? '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'Thinking of the good old days? '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'And looking at yourself now, wondering how it got here. '
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 2
+    hasAnswer: 1
+    answerSettings:
+    - answerString: All the times. Life is a downward spiral.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 2
+    - answerString: 'Not really, no. '
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: Childhood sure was a simpler time right?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+  - dialogueString: 'I want to die. '
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 2
+    hasAnswer: 1
+    answerSettings:
+    - answerString: Wanna talk about it?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+    - answerString: It'll be better soon, trust me.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: That makes us two, you know.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 3
+  - dialogueString: '"It''s going to get better." '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: '"Everything''s gonna be alright." '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'Hah... what shallow words. '
+    interval: 5
+    ignoreParameterType: 1
+    ignoreParameterScores:
+    - 2
+    hasAnswer: 1
+    answerSettings:
+    - answerString: It is true though, keep fighting on.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: People will just keep saying whatever they want.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 1
+    - answerString: I know right?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: 'It''s been so long that I forgot, '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'but do you remember the last time I smiled? '
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: It was last summer festival, you were beaming
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+    - answerString: Well, you can do it now!
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 1
+    - answerString: I don't think I remembered mine as well.
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 2
+  - dialogueString: 'Do you think that it''s still possible? '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'For my childhood dream to be alive once more. '
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: 'I think that ship has long sailed. '
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 1
+    - answerString: You never know until you try!
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: How about just a dream now?
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+  currentBubbleIndex: 0
+  currentRandomizedBubbleIndex: 0
+--- !u!1 &1307737582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1307737584}
+  - component: {fileID: 1307737583}
+  m_Layer: 0
+  m_Name: Good Ending EN
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1307737583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307737582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded43cfd89a761e429acc43865ca85ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
+  isEnding: 1
+  playOnLevelStart: 0
+  startDelay: 0
+  randomizeOrder: 0
+  loop: 0
+  endingType: 1
+  bubbleSettings:
+  - dialogueString: 'You know, thanks for talking to me today. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "I thought you wouldn\u2019t come. "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "I\u2019m glad that I was wrong this time. "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'Hahahaha, it really feels good. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'Knowing that someone still cares. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: 'We should hang out again soon. '
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  currentBubbleIndex: 0
+  currentRandomizedBubbleIndex: 0
+--- !u!4 &1307737584
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307737582}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1719067263}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1449935067
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1449935068}
+  m_Layer: 0
+  m_Name: TH
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1449935068
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449935067}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1590506078}
+  - {fileID: 2139027909}
+  - {fileID: 1054510180}
+  - {fileID: 1598649260}
+  - {fileID: 1010372115}
+  - {fileID: 678854886}
+  m_Father: {fileID: 1586232081}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1586232079
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,10 +2259,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bubbleCanvas: {fileID: 119489222}
-  bubbleManagerSettings:
+  bubbleManagerSettings_TH:
+  - waveSetting: {fileID: 1590506077}
   - waveSetting: {fileID: 2139027910}
+  - waveSetting: {fileID: 1054510181}
+  - waveSetting: {fileID: 1598649261}
+  - waveSetting: {fileID: 1010372116}
+  - waveSetting: {fileID: 678854887}
+  bubbleManagerSettings_EN:
+  - waveSetting: {fileID: 1293434876}
+  - waveSetting: {fileID: 849565381}
+  - waveSetting: {fileID: 1307737583}
+  - waveSetting: {fileID: 181188109}
+  - waveSetting: {fileID: 689520968}
+  - waveSetting: {fileID: 820953760}
   spawnPointPool: {fileID: 580798296}
   usedSpawnPointPool: {fileID: 1692959580}
+  currentBubbleManagerSettings: []
   parameterArchetypes:
   - parameterType: 4
     parameterScore: 0
@@ -660,8 +2285,8 @@ MonoBehaviour:
     parameterScore: 0
   - parameterType: 1
     parameterScore: 0
-  waveToImport: {fileID: 1590506077}
-  fileName: Story
+  waveToImport: {fileID: 820953760}
+  fileName: Bad Ending 3 EN
 --- !u!4 &1586232081
 Transform:
   m_ObjectHideFlags: 0
@@ -675,8 +2300,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1590506078}
-  - {fileID: 2139027909}
+  - {fileID: 1449935068}
+  - {fileID: 1719067263}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1590506076
@@ -690,7 +2315,7 @@ GameObject:
   - component: {fileID: 1590506078}
   - component: {fileID: 1590506077}
   m_Layer: 0
-  m_Name: BubbleWave1
+  m_Name: StoryTH
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -708,141 +2333,478 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded43cfd89a761e429acc43865ca85ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bubblePrefab: {fileID: 0}
+  bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
+  isEnding: 0
   playOnLevelStart: 1
+  startDelay: 0
+  randomizeOrder: 1
+  loop: 1
+  endingType: 0
   bubbleSettings:
-  - dialogueString: How's life been treating you recently?
+  - dialogueString: "\u0E40\u0E1B\u0E47\u0E19\u0E44\u0E07\u0E1A\u0E49\u0E32\u0E07\u0E0A\u0E48\u0E27\u0E07\u0E19\u0E35\u0E49? "
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E25\u0E33\u0E1A\u0E32\u0E01\u0E2D\u0E22\u0E39\u0E48\u0E1E\u0E2D\u0E15\u0E31\u0E27"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E01\u0E47\u0E43\u0E0A\u0E49\u0E44\u0E14\u0E49"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E44\u0E21\u0E48\u0E04\u0E48\u0E2D\u0E22\u0E14\u0E35\u0E40\u0E17\u0E48\u0E32\u0E44\u0E2B\u0E23\u0E48"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: "\u0E08\u0E33\u0E04\u0E34\u0E21\u0E44\u0E14\u0E49\u0E44\u0E2B\u0E21?
+      \u0E15\u0E2D\u0E19\u0E19\u0E35\u0E49\u0E40\u0E1B\u0E47\u0E19\u0E19\u0E31\u0E01\u0E27\u0E32\u0E14\u0E14\u0E31\u0E07\u0E44\u0E1B\u0E41\u0E25\u0E49\u0E27 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E2A\u0E21\u0E31\u0E22\u0E01\u0E48\u0E2D\u0E19\u0E21\u0E35\u0E41\u0E15\u0E48\u0E04\u0E19\u0E15\u0E34\u0E40\u0E15\u0E35\u0E22\u0E19\u0E07\u0E32\u0E19\u0E09\u0E31\u0E19 "
     interval: 0.5
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E17\u0E33\u0E44\u0E21\u0E40\u0E02\u0E32\u0E44\u0E14\u0E49\u0E14\u0E35\u0E01\u0E27\u0E48\u0E32\u0E09\u0E31\u0E19\u0E01\u0E31\u0E19\u0E19\u0E30? "
+    interval: 5
     ignoreParameterType: 2
     ignoreParameterScores:
-    - 50
+    - 1
     hasAnswer: 1
     answerSettings:
-    - answerString: I'm surviving.
+    - answerString: "\u0E42\u0E25\u0E01\u0E19\u0E35\u0E49\u0E21\u0E31\u0E19\u0E44\u0E21\u0E48\u0E22\u0E38\u0E15\u0E34\u0E18\u0E23\u0E23\u0E21\u0E2D\u0E22\u0E39\u0E48\u0E41\u0E25\u0E49\u0E27"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+    - answerString: "\u0E2A\u0E39\u0E49\u0E46!"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: "\u0E21\u0E31\u0E19\u0E2D\u0E32\u0E08\u0E08\u0E30\u0E44\u0E21\u0E48\u0E40\u0E2B\u0E21\u0E32\u0E30\u0E01\u0E31\u0E1A\u0E19\u0E32\u0E22\u0E15\u0E31\u0E49\u0E07\u0E41\u0E15\u0E48\u0E41\u0E23\u0E01"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 1
+  - dialogueString: "\u0E17\u0E35\u0E48\u0E09\u0E31\u0E19\u0E1E\u0E22\u0E32\u0E22\u0E32\u0E21\u0E21\u0E32\u0E17\u0E31\u0E49\u0E07\u0E2B\u0E21\u0E14\u0E19\u0E35\u0E48 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E2D\u0E30\u0E44\u0E23\u0E01\u0E31\u0E19? "
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E04\u0E27\u0E32\u0E21\u0E2A\u0E34\u0E49\u0E19\u0E2B\u0E27\u0E31\u0E07"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 2
+    - answerString: "\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E19\u0E49\u0E2D\u0E22\u0E01\u0E47\u0E44\u0E14\u0E49\u0E25\u0E2D\u0E07\u0E25\u0E30\u0E01\u0E31\u0E19"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 2
+    - answerString: "\u0E17\u0E33\u0E14\u0E35\u0E41\u0E25\u0E49\u0E27 \u0E17\u0E33\u0E15\u0E48\u0E2D\u0E44\u0E1B!"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 1
+  - dialogueString: "\u0E2B\u0E32\u0E07\u0E32\u0E19\u0E44\u0E21\u0E48\u0E44\u0E14\u0E49\u0E2D\u0E35\u0E01\u0E41\u0E25\u0E49\u0E27 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E08\u0E30\u0E14\u0E31\u0E19\u0E17\u0E38\u0E23\u0E31\u0E07\u0E44\u0E1B\u0E17\u0E33\u0E44\u0E21\u0E19\u0E30? "
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 2
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E1A\u0E48\u0E19\u0E44\u0E1B\u0E44\u0E21\u0E48\u0E0A\u0E48\u0E27\u0E22\u0E2D\u0E30\u0E44\u0E23\u0E2B\u0E23\u0E2D\u0E01\u0E19\u0E48\u0E32"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 1
+    - answerString: "\u0E44\u0E21\u0E48\u0E25\u0E2D\u0E07\u0E1E\u0E31\u0E01\u0E14\u0E39\u0E2B\u0E19\u0E48\u0E2D\u0E22\u0E40\u0E2B\u0E23\u0E2D"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 2
+    - answerString: "\u0E2B\u0E4A\u0E30?"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 2
+        answerScores:
+        - 1
+  - dialogueString: "\"\u0E09\u0E31\u0E19\u0E2D\u0E22\u0E32\u0E01\u0E40\u0E15\u0E34\u0E1A\u0E42\u0E15\u0E44\u0E1B\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E20\u0E32\u0E04\u0E20\u0E39\u0E21\u0E34\u0E43\u0E08\" "
+    interval: 0.5
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E15\u0E2D\u0E19\u0E40\u0E14\u0E47\u0E01\u0E46 \u0E09\u0E31\u0E19\u0E04\u0E07\u0E08\u0E30\u0E1E\u0E39\u0E14\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E07\u0E31\u0E49\u0E19 "
+    interval: 0.5
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E19\u0E48\u0E32\u0E02\u0E33\u0E14\u0E35 \u0E43\u0E0A\u0E48\u0E44\u0E2B\u0E21\u0E25\u0E48\u0E30? "
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 3
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E2B\u0E22\u0E38\u0E14\u0E15\u0E31\u0E14\u0E1E\u0E49\u0E2D\u0E44\u0E14\u0E49\u0E41\u0E25\u0E49\u0E27!"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: "\u0E40\u0E02\u0E49\u0E32\u0E43\u0E08\u0E46"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 1
+    - answerString: "\u0E01\u0E33\u0E25\u0E31\u0E07\u0E08\u0E30\u0E02\u0E33\u0E40\u0E25\u0E22"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+  - dialogueString: "\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E0A\u0E35\u0E27\u0E34\u0E15\u0E21\u0E31\u0E19\u0E44\u0E21\u0E48\u0E41\u0E1F\u0E23\u0E4C\u0E2B\u0E23\u0E37\u0E2D\u0E40\u0E1B\u0E25\u0E48\u0E32? "
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 2
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E43\u0E0A\u0E48\u0E21\u0E30 \u0E2D\u0E22\u0E32\u0E01\u0E04\u0E38\u0E22\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E07\u0E19\u0E35\u0E49\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E01\u0E31\u0E19"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 2
+    - answerString: "\u0E25\u0E33\u0E1A\u0E32\u0E01\u0E01\u0E47\u0E15\u0E49\u0E2D\u0E07\u0E17\u0E19"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: "\u0E43\u0E04\u0E23\u0E08\u0E30\u0E23\u0E39\u0E49?"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 2
+        answerScores:
+        - 1
+  - dialogueString: "\u0E16\u0E49\u0E32\u0E09\u0E31\u0E19\u0E2B\u0E32\u0E22\u0E44\u0E1B\u0E01\u0E47\u0E44\u0E21\u0E48\u0E21\u0E35\u0E43\u0E04\u0E23\u0E41\u0E04\u0E23\u0E4C\u0E2B\u0E23\u0E2D\u0E01
+      \u0E43\u0E0A\u0E48\u0E44\u0E2B\u0E21? "
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E40\u0E14\u0E35\u0E4B\u0E22\u0E27\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E19\u0E40\u0E1B\u0E47\u0E19\u0E2B\u0E48\u0E27\u0E07\u0E19\u0E30"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: "\u0E41\u0E15\u0E48\u0E09\u0E31\u0E19\u0E41\u0E04\u0E23\u0E4C\u0E19\u0E30"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+  - dialogueString: "\u0E17\u0E38\u0E01\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E21\u0E31\u0E19\u0E23\u0E39\u0E49\u0E2A\u0E36\u0E01\u0E2D\u0E49\u0E32\u0E07\u0E27\u0E49\u0E32\u0E07 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E09\u0E31\u0E19\u0E1E\u0E22\u0E32\u0E22\u0E32\u0E21\u0E41\u0E25\u0E49\u0E27 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E41\u0E15\u0E48\u0E01\u0E47\u0E04\u0E27\u0E49\u0E32\u0E19\u0E49\u0E33\u0E40\u0E2B\u0E25\u0E27 "
+    interval: 5
+    ignoreParameterType: 1
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E43\u0E04\u0E23\u0E01\u0E47\u0E23\u0E39\u0E49\u0E27\u0E48\u0E32\u0E21\u0E31\u0E19\u0E44\u0E23\u0E49\u0E1B\u0E23\u0E30\u0E42\u0E22\u0E0A\u0E19\u0E4C"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 2
+    - answerString: "\u0E01\u0E33\u0E02\u0E35\u0E49\u0E14\u0E35\u0E01\u0E27\u0E48\u0E32\u0E01\u0E33\u0E15\u0E14\u0E19\u0E30"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+  - dialogueString: "\u0E09\u0E31\u0E19\u0E23\u0E39\u0E49\u0E2A\u0E36\u0E01\u0E2B\u0E14\u0E2B\u0E39\u0E48\u0E2D\u0E22\u0E39\u0E48\u0E15\u0E25\u0E2D\u0E14\u0E40\u0E25\u0E22 "
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 2
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E40\u0E14\u0E35\u0E4B\u0E22\u0E27\u0E01\u0E47\u0E14\u0E35\u0E02\u0E36\u0E49\u0E19
+        \u0E43\u0E0A\u0E48\u0E44\u0E2B\u0E21?"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: "\u0E1E\u0E23\u0E38\u0E48\u0E07\u0E19\u0E35\u0E49\u0E2D\u0E2D\u0E01\u0E44\u0E1B\u0E40\u0E17\u0E35\u0E48\u0E22\u0E27\u0E01\u0E31\u0E19\u0E44\u0E2B\u0E21?"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 2
+  - dialogueString: "\u0E23\u0E39\u0E49\u0E2A\u0E36\u0E01\u0E2B\u0E25\u0E07\u0E17\u0E32\u0E07\u0E21\u0E32\u0E01\u0E40\u0E25\u0E22 "
+    interval: 0.5
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E2D\u0E22\u0E39\u0E48\u0E43\u0E19\u0E2D\u0E38\u0E42\u0E21\u0E07\u0E04\u0E4C "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E17\u0E35\u0E48\u0E44\u0E21\u0E48\u0E21\u0E35\u0E41\u0E21\u0E49\u0E41\u0E15\u0E48\u0E41\u0E2A\u0E07\u0E1B\u0E25\u0E32\u0E22\u0E2D\u0E38\u0E42\u0E21\u0E07\u0E04\u0E4C "
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 1
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E41\u0E25\u0E49\u0E27\u0E08\u0E30\u0E2B\u0E25\u0E07\u0E15\u0E48\u0E2D\u0E44\u0E1B\u0E41\u0E1A\u0E1A\u0E19\u0E35\u0E49\u0E40\u0E2B\u0E23\u0E2D?"
       answerSound: {fileID: 0}
       answerArchetype:
         parameterType: 0
         answerScores:
         - 0
-    - answerString: I'm doing well.
+    - answerString: "\u0E2D\u0E22\u0E48\u0E39\u0E01\u0E31\u0E1A\u0E1B\u0E31\u0E08\u0E08\u0E38\u0E1A\u0E31\u0E19\u0E14\u0E35\u0E01\u0E27\u0E48\u0E32\u0E19\u0E30"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: "\u0E43\u0E0A\u0E49\u0E40\u0E27\u0E25\u0E32\u0E44\u0E1B\u0E1E\u0E31\u0E01\u0E1F\u0E37\u0E49\u0E19\u0E08\u0E34\u0E15\u0E43\u0E08\u0E01\u0E47\u0E14\u0E35\u0E19\u0E30"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+  - dialogueString: "\u0E19\u0E32\u0E22\u0E40\u0E04\u0E22\u0E04\u0E34\u0E14\u0E16\u0E36\u0E07\u0E2D\u0E14\u0E35\u0E15\u0E1A\u0E49\u0E32\u0E07\u0E2B\u0E23\u0E37\u0E2D\u0E40\u0E1B\u0E25\u0E48\u0E32? "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E04\u0E34\u0E14\u0E16\u0E36\u0E07\u0E27\u0E31\u0E19\u0E27\u0E32\u0E19 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E41\u0E25\u0E49\u0E27\u0E01\u0E25\u0E31\u0E1A\u0E21\u0E32\u0E21\u0E2D\u0E07\u0E15\u0E31\u0E27\u0E40\u0E2D\u0E07\u0E43\u0E19\u0E1B\u0E31\u0E08\u0E08\u0E38\u0E1A\u0E31\u0E19\u0E41\u0E25\u0E49\u0E27\u0E1C\u0E34\u0E14\u0E2B\u0E27\u0E31\u0E07 "
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 2
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E0A\u0E35\u0E27\u0E34\u0E15\u0E01\u0E47\u0E04\u0E37\u0E2D\u0E01\u0E32\u0E23\u0E14\u0E34\u0E48\u0E07\u0E25\u0E07\u0E40\u0E2B\u0E27"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 2
+    - answerString: "\u0E01\u0E47\u0E44\u0E21\u0E48\u0E02\u0E19\u0E32\u0E14\u0E19\u0E31\u0E49\u0E19\u0E19\u0E30"
       answerSound: {fileID: 0}
       answerArchetype:
         parameterType: 0
         answerScores:
         - 0
-    - answerString: Could be better.
+    - answerString: "\u0E15\u0E2D\u0E19\u0E40\u0E14\u0E47\u0E01\u0E46 \u0E2A\u0E1A\u0E32\u0E22\u0E01\u0E27\u0E48\u0E32\u0E19\u0E35\u0E49\u0E40\u0E22\u0E2D\u0E30\u0E40\u0E25\u0E22
+        \u0E27\u0E48\u0E32\u0E44\u0E2B\u0E21?"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+  - dialogueString: "\u0E09\u0E31\u0E19\u0E2D\u0E22\u0E32\u0E01\u0E15\u0E32\u0E22 "
+    interval: 5
+    ignoreParameterType: 2
+    ignoreParameterScores:
+    - 2
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E40\u0E25\u0E48\u0E32\u0E21\u0E32\u0E44\u0E14\u0E49\u0E19\u0E30
+        \u0E09\u0E31\u0E19\u0E1E\u0E23\u0E49\u0E2D\u0E21\u0E1F\u0E31\u0E07"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 1
+        answerScores:
+        - 1
+    - answerString: "\u0E40\u0E14\u0E35\u0E4B\u0E22\u0E27\u0E01\u0E47\u0E14\u0E35\u0E02\u0E36\u0E49\u0E19\u0E19\u0E48\u0E32"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: "\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E01\u0E31\u0E19\u0E40\u0E25\u0E22"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 3
+  - dialogueString: "\"\u0E40\u0E14\u0E35\u0E4B\u0E22\u0E27\u0E01\u0E47\u0E14\u0E35\u0E02\u0E36\u0E49\u0E19\" "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\"\u0E40\u0E14\u0E35\u0E4B\u0E22\u0E27\u0E01\u0E47\u0E1C\u0E48\u0E32\u0E19\u0E21\u0E31\u0E19\u0E44\u0E1B\u0E44\u0E14\u0E49\" "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E40\u0E2B\u0E2D\u0E30... \u0E21\u0E35\u0E41\u0E15\u0E48\u0E04\u0E33\u0E1E\u0E39\u0E14\u0E01\u0E25\u0E27\u0E07\u0E46 "
+    interval: 5
+    ignoreParameterType: 1
+    ignoreParameterScores:
+    - 2
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E41\u0E15\u0E48\u0E01\u0E47\u0E08\u0E23\u0E34\u0E07\u0E44\u0E21\u0E48\u0E43\u0E0A\u0E48\u0E40\u0E2B\u0E23\u0E2D
+        \u0E2A\u0E39\u0E49\u0E15\u0E48\u0E2D\u0E44\u0E1B"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: "\u0E40\u0E02\u0E32\u0E01\u0E47\u0E1E\u0E39\u0E14\u0E44\u0E1B\u0E07\u0E31\u0E49\u0E19\u0E46
+        \u0E41\u0E2B\u0E25\u0E30"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 4
+        answerScores:
+        - 1
+    - answerString: "\u0E40\u0E2B\u0E47\u0E19\u0E14\u0E49\u0E27\u0E22"
       answerSound: {fileID: 0}
       answerArchetype:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: You remembered Kim? He became an illustrator
+  - dialogueString: "\u0E19\u0E32\u0E19\u0E08\u0E19\u0E09\u0E31\u0E19\u0E25\u0E37\u0E21\u0E44\u0E1B\u0E41\u0E25\u0E49\u0E27 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: I was always berated for drawing back then.
-    interval: 0.25
-    ignoreParameterType: 0
-    ignoreParameterScores: []
-    hasAnswer: 0
-    answerSettings: []
-  - dialogueString: What do you reckon is the difference?
-    interval: 0.25
+  - dialogueString: "\u0E41\u0E15\u0E48\u0E08\u0E33\u0E15\u0E2D\u0E19\u0E17\u0E35\u0E48\u0E09\u0E31\u0E19\u0E22\u0E34\u0E49\u0E21\u0E04\u0E23\u0E31\u0E49\u0E07\u0E25\u0E48\u0E32\u0E2A\u0E38\u0E14\u0E44\u0E14\u0E49\u0E44\u0E2B\u0E21? "
+    interval: 5
     ignoreParameterType: 2
     ignoreParameterScores:
-    - 10
+    - 1
     hasAnswer: 1
     answerSettings:
-    - answerString: The world is unfair lilke that
+    - answerString: "\u0E07\u0E32\u0E19\u0E40\u0E17\u0E28\u0E01\u0E32\u0E25\u0E23\u0E2D\u0E1A\u0E01\u0E48\u0E2D\u0E19\u0E19\u0E32\u0E22\u0E23\u0E48\u0E32\u0E40\u0E23\u0E34\u0E07\u0E21\u0E32\u0E01\u0E40\u0E25\u0E22\u0E19\u0E30"
       answerSound: {fileID: 0}
       answerArchetype:
         parameterType: 1
         answerScores:
-        - 10
-    - answerString: Just keep trying!
+        - 1
+    - answerString: "\u0E16\u0E49\u0E32\u0E08\u0E33\u0E44\u0E21\u0E48\u0E44\u0E14\u0E49
+        \u0E01\u0E47\u0E22\u0E34\u0E49\u0E21\u0E15\u0E2D\u0E19\u0E19\u0E35\u0E49\u0E40\u0E25\u0E22!"
       answerSound: {fileID: 0}
       answerArchetype:
         parameterType: 8
         answerScores:
-        - 10
-    - answerString: It just wasn't meant to be
+        - 1
+    - answerString: "\u0E09\u0E31\u0E19\u0E22\u0E31\u0E07\u0E08\u0E33\u0E02\u0E2D\u0E07\u0E15\u0E31\u0E27\u0E40\u0E2D\u0E07\u0E44\u0E21\u0E48\u0E44\u0E14\u0E49\u0E40\u0E25\u0E22"
       answerSound: {fileID: 0}
       answerArchetype:
         parameterType: 4
         answerScores:
-        - 10
-  - dialogueString: All this time that I've been trying
+        - 2
+  - dialogueString: "\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E40\u0E1B\u0E47\u0E19\u0E44\u0E1B\u0E44\u0E14\u0E49\u0E44\u0E2B\u0E21? "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: What is it even for?
-    interval: 0.25
+  - dialogueString: "\u0E17\u0E35\u0E48\u0E04\u0E27\u0E32\u0E21\u0E1D\u0E31\u0E19\u0E43\u0E19\u0E27\u0E31\u0E22\u0E40\u0E14\u0E47\u0E01\u0E08\u0E30\u0E01\u0E25\u0E31\u0E1A\u0E21\u0E32\u0E40\u0E1B\u0E47\u0E19\u0E08\u0E23\u0E34\u0E07 "
+    interval: 5
     ignoreParameterType: 2
     ignoreParameterScores:
-    - 10
+    - 1
     hasAnswer: 1
     answerSettings:
-    - answerString: You know it's for nothing
+    - answerString: "\u0E1B\u0E25\u0E48\u0E2D\u0E22\u0E21\u0E31\u0E19\u0E44\u0E1B\u0E40\u0E16\u0E2D\u0E30"
       answerSound: {fileID: 0}
       answerArchetype:
         parameterType: 4
         answerScores:
-        - 10
-    - answerString: At least you tried, right?
+        - 1
+    - answerString: "\u0E44\u0E21\u0E48\u0E25\u0E2D\u0E07\u0E44\u0E21\u0E48\u0E23\u0E39\u0E49!"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 8
+        answerScores:
+        - 2
+    - answerString: "\u0E04\u0E07\u0E44\u0E14\u0E49\u0E41\u0E15\u0E48\u0E1D\u0E31\u0E19\u0E25\u0E21\u0E46
+        \u0E41\u0E25\u0E49\u0E07\u0E46 \u0E41\u0E2B\u0E25\u0E30"
       answerSound: {fileID: 0}
       answerArchetype:
         parameterType: 1
         answerScores:
-        - 10
-    - answerString: You're doing well, just try a bit more!
-      answerSound: {fileID: 0}
-      answerArchetype:
-        parameterType: 8
-        answerScores:
-        - 10
-  - dialogueString: '"I wish to become a person I can be proud of."'
-    interval: 0.25
-    ignoreParameterType: 0
-    ignoreParameterScores: []
-    hasAnswer: 0
-    answerSettings: []
-  - dialogueString: I could often see my younger self say that to me.
-    interval: 0.25
-    ignoreParameterType: 0
-    ignoreParameterScores: []
-    hasAnswer: 0
-    answerSettings: []
-  - dialogueString: What a joke, right?
-    interval: 0.25
-    ignoreParameterType: 2
-    ignoreParameterScores:
-    - 10
-    hasAnswer: 1
-    answerSettings:
-    - answerString: Snap out of it
-      answerSound: {fileID: 0}
-      answerArchetype:
-        parameterType: 8
-        answerScores:
-        - 10
-    - answerString: 'I get that, really. '
-      answerSound: {fileID: 0}
-      answerArchetype:
-        parameterType: 4
-        answerScores:
-        - 10
-    - answerString: Still waiting for the punchline.
-      answerSound: {fileID: 0}
-      answerArchetype:
-        parameterType: 1
-        answerScores:
-        - 10
-  randomizeOrder: 0
+        - 1
   currentBubbleIndex: 0
+  currentRandomizedBubbleIndex: 0
 --- !u!4 &1590506078
 Transform:
   m_ObjectHideFlags: 0
@@ -851,13 +2813,152 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1590506076}
   serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1449935068}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1591424305
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1591424306}
+  m_Layer: 5
+  m_Name: Spawnpoint (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1591424306
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591424305}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1586232081}
+  m_Father: {fileID: 580798296}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 725, y: 360}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1598649259
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1598649260}
+  - component: {fileID: 1598649261}
+  m_Layer: 0
+  m_Name: Bad Ending 1 TH
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1598649260
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598649259}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1449935068}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1598649261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598649259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded43cfd89a761e429acc43865ca85ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
+  isEnding: 1
+  playOnLevelStart: 0
+  startDelay: 0
+  randomizeOrder: 0
+  loop: 0
+  endingType: 2
+  bubbleSettings:
+  - dialogueString: "\u0E42\u0E14\u0E19\u0E40\u0E21\u0E34\u0E19\u0E2D\u0E35\u0E01\u0E41\u0E25\u0E49\u0E27\u0E2A\u0E34\u0E19\u0E30 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E19\u0E32\u0E22\u0E17\u0E33\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E01\u0E31\u0E1A\u0E04\u0E19\u0E2D\u0E37\u0E48\u0E19\u0E46
+      \u0E40\u0E25\u0E22 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u2026 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E44\u0E21\u0E48\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E40\u0E2B\u0E47\u0E19\u0E41\u0E01\u0E48\u0E15\u0E31\u0E27\u0E44\u0E1B\u0E2B\u0E19\u0E48\u0E2D\u0E22\u0E40\u0E2B\u0E23\u0E2D? "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E17\u0E33\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E27\u0E48\u0E32\u0E1B\u0E31\u0E0D\u0E2B\u0E32\u0E44\u0E21\u0E48\u0E21\u0E35\u0E2D\u0E22\u0E39\u0E48 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E17\u0E33\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E27\u0E48\u0E32
+      \"\u0E09\u0E31\u0E19\" \u0E44\u0E21\u0E48\u0E21\u0E35\u0E2D\u0E22\u0E39\u0E48 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E2E\u0E30\u0E2E\u0E48\u0E32\u2026 \u0E41\u0E15\u0E48\u0E40\u0E2D\u0E32\u0E40\u0E2B\u0E2D\u0E30 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E40\u0E1B\u0E47\u0E19\u0E41\u0E1A\u0E1A\u0E19\u0E35\u0E49\u0E41\u0E2B\u0E25\u0E30\u0E14\u0E35\u0E41\u0E25\u0E49\u0E27 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  currentBubbleIndex: 0
+  currentRandomizedBubbleIndex: 0
 --- !u!1 &1692959579
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,6 +3131,43 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!1 &1719067262
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1719067263}
+  m_Layer: 0
+  m_Name: EN
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1719067263
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719067262}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1293434875}
+  - {fileID: 849565382}
+  - {fileID: 1307737584}
+  - {fileID: 181188108}
+  - {fileID: 689520969}
+  - {fileID: 820953761}
+  m_Father: {fileID: 1586232081}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1726776590
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,7 +3223,7 @@ GameObject:
   - component: {fileID: 2139027909}
   - component: {fileID: 2139027910}
   m_Layer: 0
-  m_Name: BubbleWave2
+  m_Name: GeneralTH
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1099,12 +3237,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139027908}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1586232081}
+  m_Father: {fileID: 1449935068}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2139027910
 MonoBehaviour:
@@ -1119,140 +3257,468 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
+  isEnding: 0
   playOnLevelStart: 1
+  startDelay: 5
+  randomizeOrder: 1
+  loop: 1
+  endingType: 0
   bubbleSettings:
-  - dialogueString: How's life been treating you recently?
+  - dialogueString: "\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E21\u0E30\u0E40\u0E02\u0E37\u0E2D\u0E40\u0E17\u0E28... "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E40\u0E1B\u0E47\u0E19\u0E1C\u0E31\u0E01\u0E2B\u0E23\u0E37\u0E2D\u0E1C\u0E25\u0E44\u0E21\u0E49? "
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E2B\u0E4A\u0E30?"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E1C\u0E31\u0E01"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E1C\u0E25\u0E44\u0E21\u0E49"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: "\u0E14\u0E39\u0E40\u0E19\u0E37\u0E49\u0E2D\u0E1E\u0E27\u0E01\u0E19\u0E35\u0E49\u0E2A\u0E34 "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E2D\u0E22\u0E32\u0E01\u0E23\u0E39\u0E49... "
     interval: 0.5
-    ignoreParameterType: 2
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E27\u0E48\u0E32\u0E40\u0E04\u0E22\u0E2D\u0E22\u0E32\u0E01\u0E40\u0E1B\u0E47\u0E19\u0E27\u0E35\u0E41\u0E01\u0E19\u0E44\u0E2B\u0E21? "
+    interval: 5
+    ignoreParameterType: 0
     ignoreParameterScores:
-    - 50
+    - 0
     hasAnswer: 1
     answerSettings:
-    - answerString: I'm surviving.
+    - answerString: "\u0E01\u0E47\u0E44\u0E21\u0E48\u0E19\u0E30"
       answerSound: {fileID: 0}
       answerArchetype:
         parameterType: 0
         answerScores:
         - 0
-    - answerString: I'm doing well.
+    - answerString: "\u0E01\u0E47\u0E40\u0E04\u0E22\u0E40\u0E1B\u0E47\u0E19"
       answerSound: {fileID: 0}
       answerArchetype:
         parameterType: 0
         answerScores:
         - 0
-    - answerString: Could be better.
+    - answerString: "\u0E2D\u0E37\u0E21\u0E21..."
       answerSound: {fileID: 0}
       answerArchetype:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: You remembered Kim? He became an illustrator
+  - dialogueString: "\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E08\u0E30\u0E0B\u0E37\u0E49\u0E2D\u0E40\u0E04\u0E2A\u0E42\u0E17\u0E23\u0E28\u0E31\u0E1E\u0E17\u0E4C\u0E43\u0E2B\u0E21\u0E48 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: I was always berated for drawing back then.
-    interval: 0.25
+  - dialogueString: "\u0E2A\u0E35\u0E44\u0E2B\u0E19\u0E14\u0E35? "
+    interval: 5
     ignoreParameterType: 0
-    ignoreParameterScores: []
-    hasAnswer: 0
-    answerSettings: []
-  - dialogueString: What do you reckon is the difference?
-    interval: 0.25
-    ignoreParameterType: 2
     ignoreParameterScores:
-    - 10
+    - 0
     hasAnswer: 1
     answerSettings:
-    - answerString: The world is unfair lilke that
+    - answerString: "\u0E0A\u0E21\u0E1E\u0E39\u0E1E\u0E32\u0E2A\u0E40\u0E17\u0E25"
       answerSound: {fileID: 0}
       answerArchetype:
-        parameterType: 1
+        parameterType: 0
         answerScores:
-        - 10
-    - answerString: Just keep trying!
+        - 0
+    - answerString: "\u0E40\u0E17\u0E32"
       answerSound: {fileID: 0}
       answerArchetype:
-        parameterType: 8
+        parameterType: 0
         answerScores:
-        - 10
-    - answerString: It just wasn't meant to be
+        - 0
+    - answerString: "\u0E17\u0E2D\u0E07\u0E2D\u0E23\u0E48\u0E32\u0E21"
       answerSound: {fileID: 0}
       answerArchetype:
-        parameterType: 4
+        parameterType: 0
         answerScores:
-        - 10
-  - dialogueString: All this time that I've been trying
+        - 0
+  - dialogueString: "\u0E04\u0E33\u0E19\u0E35\u0E49\u0E04\u0E19\u0E40\u0E02\u0E35\u0E22\u0E19\u0E1C\u0E34\u0E14\u0E1A\u0E48\u0E2D\u0E22 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: What is it even for?
-    interval: 0.25
-    ignoreParameterType: 2
+  - dialogueString: "\u0E1C\u0E31\u0E14 \"\u0E01\u0E23\u0E30\u0E40\u0E1E\u0E23\u0E32\"
+      \u0E40\u0E02\u0E35\u0E22\u0E19\u0E22\u0E31\u0E07\u0E44\u0E07? "
+    interval: 5
+    ignoreParameterType: 0
     ignoreParameterScores:
-    - 10
+    - 0
     hasAnswer: 1
     answerSettings:
-    - answerString: You know it's for nothing
+    - answerString: "\u0E01\u0E23\u0E30\u0E40\u0E1E\u0E23\u0E32"
       answerSound: {fileID: 0}
       answerArchetype:
-        parameterType: 4
+        parameterType: 0
         answerScores:
-        - 10
-    - answerString: At least you tried, right?
+        - 0
+    - answerString: "\u0E01\u0E30\u0E40\u0E1E\u0E23\u0E32"
       answerSound: {fileID: 0}
       answerArchetype:
-        parameterType: 1
+        parameterType: 0
         answerScores:
-        - 10
-    - answerString: You're doing well, just try a bit more!
+        - 0
+    - answerString: "\u0E01\u0E25\u0E30\u0E40\u0E20\u0E23\u0E32"
       answerSound: {fileID: 0}
       answerArchetype:
-        parameterType: 8
+        parameterType: 0
         answerScores:
-        - 10
-  - dialogueString: '"I wish to become a person I can be proud of."'
-    interval: 0.25
+        - 0
+  - dialogueString: "\u0E1B\u0E01\u0E15\u0E34\u0E01\u0E34\u0E19\u0E44\u0E2D\u0E15\u0E34\u0E21\u0E22\u0E31\u0E07\u0E44\u0E07? "
+    interval: 5
     ignoreParameterType: 0
-    ignoreParameterScores: []
-    hasAnswer: 0
-    answerSettings: []
-  - dialogueString: I could often see my younger self say that to me.
-    interval: 0.25
-    ignoreParameterType: 0
-    ignoreParameterScores: []
-    hasAnswer: 0
-    answerSettings: []
-  - dialogueString: What a joke, right?
-    interval: 0.25
-    ignoreParameterType: 2
     ignoreParameterScores:
-    - 10
+    - 0
     hasAnswer: 1
     answerSettings:
-    - answerString: Snap out of it
+    - answerString: "\u0E40\u0E25\u0E35\u0E22"
       answerSound: {fileID: 0}
       answerArchetype:
-        parameterType: 8
+        parameterType: 0
         answerScores:
-        - 10
-    - answerString: 'I get that, really. '
+        - 0
+    - answerString: "\u0E01\u0E31\u0E14"
       answerSound: {fileID: 0}
       answerArchetype:
-        parameterType: 4
+        parameterType: 0
         answerScores:
-        - 10
-    - answerString: Still waiting for the punchline.
+        - 0
+    - answerString: "\u0E01\u0E34\u0E19\u0E08\u0E32\u0E01\u0E42\u0E04\u0E19\u0E02\u0E35\u0E49\u0E19\u0E21\u0E32"
       answerSound: {fileID: 0}
       answerArchetype:
-        parameterType: 1
+        parameterType: 0
         answerScores:
-        - 10
-  randomizeOrder: 0
+        - 0
+  - dialogueString: "\u0E0A\u0E48\u0E27\u0E07\u0E19\u0E35\u0E49\u0E2D\u0E32\u0E01\u0E32\u0E28\u0E44\u0E21\u0E48\u0E04\u0E48\u0E2D\u0E22\u0E14\u0E35\u0E40\u0E25\u0E22
+      \u0E27\u0E48\u0E32\u0E21\u0E30? "
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E1D\u0E19\u0E15\u0E01\u0E1A\u0E49\u0E32\u0E07\u0E01\u0E47\u0E14\u0E35\u0E19\u0E30"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E08\u0E23\u0E34\u0E07 \u0E2D\u0E22\u0E32\u0E01\u0E40\u0E2B\u0E47\u0E19\u0E41\u0E2A\u0E07\u0E41\u0E14\u0E14\u0E1A\u0E49\u0E32\u0E07"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E2B\u0E27\u0E31\u0E07\u0E27\u0E48\u0E32\u0E1E\u0E32\u0E22\u0E38\u0E08\u0E30\u0E44\u0E21\u0E48\u0E40\u0E02\u0E49\u0E32\u0E19\u0E30"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: "\u0E44\u0E14\u0E49\u0E14\u0E39\u0E02\u0E48\u0E32\u0E27\u0E44\u0E2B\u0E21\u0E0A\u0E48\u0E27\u0E07\u0E19\u0E35\u0E49? "
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E44\u0E21\u0E48\u0E2D\u0E30 \u0E21\u0E35\u0E41\u0E15\u0E48\u0E02\u0E48\u0E32\u0E27\u0E44\u0E23\u0E49\u0E2A\u0E32\u0E23\u0E30"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E14\u0E39\u0E2D\u0E22\u0E39\u0E48\u0E1A\u0E49\u0E32\u0E07\u0E46"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: "\u0E21\u0E35\u0E16\u0E31\u0E48\u0E27\u0E44\u0E2B\u0E21? "
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E44\u0E21\u0E48\u0E21\u0E35"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E21\u0E35"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E21\u0E35 \u0E41\u0E15\u0E48 20 \u0E1A\u0E32\u0E17"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: "\u0E08\u0E31\u0E1A\u0E15\u0E30\u0E40\u0E01\u0E35\u0E22\u0E1A\u0E41\u0E1B\u0E25\u0E01\u0E14\u0E35\u0E19\u0E30 "
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E41\u0E25\u0E49\u0E27\u0E44\u0E07?"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E16\u0E37\u0E2D\u0E27\u0E48\u0E32\u0E0A\u0E21\u0E41\u0E25\u0E49\u0E27\u0E01\u0E31\u0E19\u0E19\u0E30"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E21\u0E35\u0E41\u0E1B\u0E25\u0E01\u0E01\u0E27\u0E48\u0E32\u0E19\u0E35\u0E49\u0E2D\u0E35\u0E01"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: "\u0E44\u0E2B\u0E19\u0E46 \u0E01\u0E47\u0E21\u0E32\u0E41\u0E25\u0E49\u0E27... "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E44\u0E21\u0E48\u0E01\u0E34\u0E19\u0E1C\u0E31\u0E01\u0E2B\u0E19\u0E48\u0E2D\u0E22\u0E2B\u0E23\u0E2D? "
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E44\u0E21\u0E48\u0E04\u0E38\u0E49\u0E21 \u0E40\u0E19\u0E37\u0E49\u0E2D\u0E41\u0E1E\u0E07\u0E01\u0E27\u0E48\u0E32"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E44\u0E21\u0E48\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E19\u0E32\u0E22\u0E01\u0E34\u0E19\u0E1C\u0E31\u0E01\u0E14\u0E49\u0E27\u0E22"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E44\u0E21\u0E48\u0E2D\u0E23\u0E48\u0E2D\u0E22\u0E2B\u0E23\u0E2D\u0E01
+        \u0E40\u0E0A\u0E37\u0E48\u0E2D\u0E09\u0E31\u0E19"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: "\u0E21\u0E35\u0E04\u0E33\u0E16\u0E32\u0E21... "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E1E\u0E23\u0E30\u0E2D\u0E20\u0E31\u0E22\u0E21\u0E13\u0E35\u0E40\u0E1B\u0E48\u0E32\u0E1B\u0E35\u0E48\u0E2B\u0E23\u0E37\u0E2D\u0E40\u0E1B\u0E48\u0E32\u0E02\u0E25\u0E38\u0E48\u0E22? "
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E1B\u0E35\u0E48"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E1B\u0E25\u0E38\u0E48\u0E22"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E2E\u0E31\u0E48\u0E19\u0E41\u0E19\u0E48 \u0E19\u0E31\u0E48\u0E19\u0E21\u0E31\u0E19\u0E2A\u0E38\u0E19\u0E17\u0E23...
+        \u0E40\u0E2D\u0E4A\u0E30..."
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: "\u0E40\u0E04\u0E47\u0E21\u0E2B\u0E23\u0E37\u0E2D\u0E2B\u0E27\u0E32\u0E19? "
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E16\u0E32\u0E21\u0E17\u0E33\u0E44\u0E21\u0E04\u0E23\u0E31\u0E1A\u0E40\u0E19\u0E35\u0E48\u0E22\u0E22\u0E22\u0E22!?"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E2B\u0E27\u0E32\u0E19"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E40\u0E04\u0E47\u0E21"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: "\u0E44\u0E14\u0E49\u0E40\u0E25\u0E48\u0E19\u0E40\u0E01\u0E21\u0E2D\u0E30\u0E44\u0E23\u0E44\u0E2B\u0E21\u0E0A\u0E48\u0E27\u0E07\u0E19\u0E35\u0E49? "
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E44\u0E21\u0E48\u0E40\u0E04\u0E22\u0E44\u0E14\u0E49\u0E40\u0E25\u0E48\u0E19"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E0A\u0E48\u0E27\u0E07\u0E19\u0E35\u0E49\u0E21\u0E35\u0E41\u0E15\u0E48\u0E01\u0E32\u0E0A\u0E32"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E40\u0E01\u0E21\u0E40\u0E14\u0E34\u0E21\u0E15\u0E31\u0E49\u0E07\u0E41\u0E15\u0E48\u0E21\u0E2B\u0E32\u0E25\u0E31\u0E22\u0E41\u0E2B\u0E25\u0E30"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: "\u0E40\u0E04\u0E22\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E40\u0E23\u0E32\u0E2D\u0E22\u0E39\u0E48\u0E43\u0E19\u0E40\u0E01\u0E21\u0E44\u0E2B\u0E21? "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E43\u0E19 Matrix \u0E44\u0E23\u0E07\u0E35\u0E49? "
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E01\u0E47\u0E40\u0E1B\u0E47\u0E19\u0E44\u0E1B\u0E44\u0E14\u0E49"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E40\u0E1A\u0E35\u0E22\u0E27\u0E25\u0E30"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E41\u0E19\u0E48\u0E19\u0E2D\u0E19"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: "\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E19\u0E01\u0E21\u0E35\u0E08\u0E23\u0E34\u0E07\u0E44\u0E2B\u0E21? "
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E40\u0E14\u0E34\u0E19\u0E21\u0E32\u0E19\u0E35\u0E48\u0E44\u0E21\u0E48\u0E40\u0E2B\u0E47\u0E19\u0E0B\u0E31\u0E01\u0E15\u0E31\u0E27\u0E40\u0E25\u0E22\u0E40\u0E2B\u0E23\u0E2D?"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E44\u0E21\u0E48 \u0E19\u0E01\u0E40\u0E1B\u0E47\u0E19\u0E42\u0E14\u0E23\u0E19\u0E2A\u0E2D\u0E14\u0E41\u0E19\u0E21\u0E08\u0E32\u0E01\u0E23\u0E31\u0E10\u0E1A\u0E32\u0E25"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E15\u0E49\u0E2D\u0E07\u0E01\u0E32\u0E23\u0E08\u0E30\u0E2A\u0E37\u0E48\u0E2D\u0E2D\u0E30\u0E44\u0E23\u0E40\u0E19\u0E35\u0E48\u0E22?"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+  - dialogueString: "\u0E40\u0E04\u0E22\u0E2D\u0E22\u0E32\u0E01\u0E40\u0E25\u0E48\u0E19\u0E01\u0E35\u0E2C\u0E32
+      extreme \u0E44\u0E2B\u0E21? "
+    interval: 0.25
+    ignoreParameterType: 0
+    ignoreParameterScores: []
+    hasAnswer: 0
+    answerSettings: []
+  - dialogueString: "\u0E41\u0E1A\u0E1A\u0E1A\u0E31\u0E19\u0E08\u0E35\u0E49\u0E08\u0E31\u0E4A\u0E21\u0E2B\u0E23\u0E37\u0E2D\u0E42\u0E14\u0E14\u0E23\u0E48\u0E21\u0E44\u0E23\u0E07\u0E35\u0E49? "
+    interval: 5
+    ignoreParameterType: 0
+    ignoreParameterScores:
+    - 0
+    hasAnswer: 1
+    answerSettings:
+    - answerString: "\u0E44\u0E21\u0E48\u0E01\u0E25\u0E49\u0E32"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E01\u0E47\u0E2D\u0E22\u0E32\u0E01\u0E2D\u0E22\u0E39\u0E48"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
+    - answerString: "\u0E16\u0E49\u0E32\u0E21\u0E35\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E19\u0E44\u0E1B\u0E01\u0E47\u0E42\u0E2D\u0E40\u0E04"
+      answerSound: {fileID: 0}
+      answerArchetype:
+        parameterType: 0
+        answerScores:
+        - 0
   currentBubbleIndex: 0
+  currentRandomizedBubbleIndex: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
