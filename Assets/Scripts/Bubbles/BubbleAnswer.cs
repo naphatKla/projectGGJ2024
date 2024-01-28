@@ -85,6 +85,7 @@ namespace Bubbles
         public void OnPointerClick(PointerEventData eventData)
         {
             ModifyParameterScore();
+            SoundManager.Instance.PlayFx(_settings.AnswerSounds, out _);
             _bubble.ShrinkBubble();
         }
 
