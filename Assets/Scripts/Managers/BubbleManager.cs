@@ -59,6 +59,7 @@ namespace Managers
         [SerializeField] private List<BubbleManagerSetting> bubbleManagerSettings_EN;
         [SerializeField] private Transform spawnPointPool;
         [SerializeField] private Transform usedSpawnPointPool;
+        public Bubble currentBubble;
         
         [Title("Debug")]
         [SerializeField][ReadOnly] private List<BubbleManagerSetting> currentBubbleManagerSettings;

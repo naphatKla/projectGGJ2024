@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
+using Managers;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -26,7 +27,10 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
     public bool IsBurnt => _currentFoodState.Any(foodState => foodState == FoodState.Burnt);
     public bool IsOnGrill => transform.parent.CompareTag("Stove");
     public bool IsOnFlip {get; set;}
+    public bool IsFlipping{get; set;}
     [SerializeField] ParticleSystem[] burntParticle;
+    private bool _isMouseDown;
+    private Stove _lastedStove;
     
     private Vector3 _spawnPosition;
     private Image _image;
@@ -69,10 +73,13 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        if (IsFlipping) return;
         if (eventData.button != PointerEventData.InputButton.Left) return;
+        _isMouseDown = true;
         if (IsOnGrill && !_holdClickTween.IsActive())
             _holdClickTween = DOVirtual.DelayedCall(0.25f, () =>
             {
+                IsFlipping = true;
                 FlipController.Instance.OpenBar(this, GetComponent<RectTransform>().position);
                 FlipController.Instance.OnPerfect += FlipSide;
             }).OnComplete(() => IsOnFlip = true);
@@ -83,9 +90,13 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
 
     public void OnDrag(PointerEventData eventData)
     {
+        if (!_isMouseDown) return;
+        if (IsFlipping) return;
         if (IsOnFlip) return;
         if (eventData.button != PointerEventData.InputButton.Left) return;
         transform.position = (Vector2)Camera.main.ScreenToWorldPoint(eventData.position);
+        if (BubbleManager.Instance.currentBubble)
+            BubbleManager.Instance.currentBubble.GetComponent<Image>().raycastTarget = false;
         _holdClickTween.Kill();
     }
 
@@ -96,25 +107,36 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        if (!_isMouseDown) return;
         if (eventData.button != PointerEventData.InputButton.Left) return;
+        _isMouseDown = false;
+        if (BubbleManager.Instance.currentBubble)
+            BubbleManager.Instance.currentBubble.GetComponent<Image>().raycastTarget = true;
         IsOnFlip = false;
         _holdClickTween.Kill();
         transform.DOScale(Vector3.one, 0.25f);
         GetComponent<Image>().raycastTarget = true;
         
-        if (!eventData.pointerEnter || !eventData.pointerEnter.CompareTag("Stove") && !IsOnFlip)
+        if (!eventData.pointerEnter || !eventData.pointerEnter.CompareTag("Stove") && !IsFlipping)
         {
             FoodSpawnerManager.Instance.AddFoodToTheNearestSlot(this);
             return;
         }
         
         Stove stove = eventData.pointerEnter.GetComponent<Stove>();
+        if (!stove)
+        {
+            _lastedStove.DropFood(this);
+            return;
+        }
+            
         if (stove.AvailableSlot <= 0)
         {
             FoodSpawnerManager.Instance.AddFoodToTheNearestSlot(this);
             return;
         }
         stove.DropFood(this);
+        _lastedStove = stove;
     }
 
     public void ChangeFoodStateHandler()
@@ -134,11 +156,12 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
     
     public void FlipSide()
     {
-        if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Flip")) return;
+        if (_animator.GetCurrentAnimatorStateInfo(0).IsTag("Flip")) return;
         if (IsBurnt) return;
         _lastedOppositeSideCookedTime = _cookedTimeOnGrill[_currentSide];
         _currentSide = _currentSide == 0 ? 1 : 0;
         _animator.SetTrigger("IsFlip");
+        DOVirtual.DelayedCall(1, () => IsFlipping = false);
     }
 
     public void OnGrill()

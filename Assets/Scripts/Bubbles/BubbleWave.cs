@@ -30,7 +30,7 @@ namespace Bubbles
         private bool _isPlaying;
         private bool _nextBubble = true;
         private float _currentInterval;
-
+        
         public BubbleManager BubbleManager => BubbleManager.Instance;
 
         public bool PlayOnLevelStart => playOnLevelStart;
@@ -54,13 +54,10 @@ namespace Bubbles
         private void Update()
         {
             if (!_isPlaying || !_nextBubble) return;
-            Debug.Log("Pass 1");
             _currentInterval -= Time.deltaTime;
             if (_currentInterval > 0) return;
-            Debug.Log("Pass 2");
             if (randomizeOrder)
             {
-                Debug.Log("Pass 3");
                 if (currentRandomizedBubbleIndex == 0 && randomizedBubbleSettings.Count > 0)
                 {
                     int randomIndex = Random.Range(0, randomizedBubbleSettings.Count);
@@ -163,6 +160,7 @@ namespace Bubbles
             Transform spawnPoint = BubbleManager.AvailableSpawnPoints[randomIndex];
             BubbleManager.ReserveSpawnPoint(spawnPoint);
             Bubble bubble = Instantiate(bubblePrefab, spawnPoint.position, Quaternion.identity, BubbleManager.BubbleCanvas).GetComponent<Bubble>();
+            BubbleManager.currentBubble = bubble;
             bubble.CurrentSpawnPoint = spawnPoint;
             bubble.Init(this, bubbleSettings[index]);
         }
