@@ -190,11 +190,65 @@ VideoPlayer:
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
-  m_SkipOnDrop: 1
+  m_SkipOnDrop: 0
   m_Looping: 0
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
+--- !u!1 &405771759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 405771760}
+  - component: {fileID: 405771761}
+  m_Layer: 0
+  m_Name: EndingManager (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &405771760
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405771759}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960, y: 540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &405771761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405771759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627a2db550c320c43ada839c038e98d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoPlayer: {fileID: 291217719}
+  endingSettings:
+  - endingType: 1
+    videoClip: {fileID: 32900000, guid: 154a7000926ce4644bcc31b3d06cfdca, type: 3}
+  - endingType: 2
+    videoClip: {fileID: 32900000, guid: 82225a8968ab15740af9e9dbc3f23f86, type: 3}
+  - endingType: 4
+    videoClip: {fileID: 32900000, guid: bae38ff820f0f124ca19ee2492061985, type: 3}
+  - endingType: 8
+    videoClip: {fileID: 32900000, guid: 4e4921bcb8b2fa84d8c5c07177241f5a, type: 3}
 --- !u!1 &637833716
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,7 +700,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1700651230}
-  - component: {fileID: 1700651229}
   m_Layer: 0
   m_Name: EndingManager
   m_TagString: Untagged
@@ -654,28 +707,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1700651229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1700651228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627a2db550c320c43ada839c038e98d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  videoPlayer: {fileID: 291217719}
-  endingSettings:
-  - endingType: 1
-    videoClip: {fileID: 0}
-  - endingType: 2
-    videoClip: {fileID: 32900000, guid: 31fdd4e42ec1af545b5c8d837871eb61, type: 3}
-  - endingType: 4
-    videoClip: {fileID: 0}
-  - endingType: 8
-    videoClip: {fileID: 0}
 --- !u!4 &1700651230
 Transform:
   m_ObjectHideFlags: 0
@@ -696,6 +727,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1700651230}
+  - {fileID: 405771760}
   - {fileID: 877772035}
   - {fileID: 1322151662}
   - {fileID: 1386813552}
