@@ -38,7 +38,7 @@ namespace Managers
         
         void Update()
         {
-            if (IsLose) return;
+            if (IsLose || IsWin) return;
             _timeCount += Time.deltaTime;
             _timeCount = Mathf.Clamp(_timeCount, 0, gamePlayTime);
             timerImage.fillAmount = 1 - (_timeCount / gamePlayTime);
