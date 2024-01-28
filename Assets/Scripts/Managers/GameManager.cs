@@ -24,6 +24,7 @@ namespace Managers
         public bool IsWin => meatCooked >= meatGoal;
         public bool IsLose;
         [SerializeField] private MMF_Player loseFeedback;
+        [SerializeField] private MMF_Player winFeedback;
         [SerializeField] private Image timerImage;
         [SerializeField] private Button restartButton;
         [SerializeField] private Button mainMenuButton;
@@ -70,6 +71,7 @@ namespace Managers
             meatGoalText.text = $"{meatCooked} / {meatGoal}";
             if (meatCooked < meatGoal) return;
             CheckEnding();
+            winFeedback.PlayFeedbacks();
         }
         
         [Button("Check Ending")]
