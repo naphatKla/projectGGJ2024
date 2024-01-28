@@ -3,6 +3,7 @@ using DG.Tweening;
 using Managers;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 namespace Bubbles
@@ -114,6 +115,10 @@ namespace Bubbles
             else
             {
                 _isPlaying = false;
+                if (isEnding)
+                {
+                    SceneManager.LoadScene("Ending");
+                }
             }
         }
         

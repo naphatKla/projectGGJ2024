@@ -101,6 +101,7 @@ namespace Managers
             {
                 endingType = ParameterType.Good;
             }
+
             BubbleManager.CurrentBubbleManagerSettings
                 .Find(x => x.BubbleWave.IsEnding && x.BubbleWave.EndingType == endingType)
                 .BubbleWave

@@ -169,6 +169,8 @@ MonoBehaviour:
   fadeInDuration: 0.25
   fadeOutDuration: 1.5
   shrinkDuration: 0.25
+  popUpSound: {fileID: 8300000, guid: adb24518d159048ca9cb62d63113784f, type: 3}
+  popDownSound: {fileID: 8300000, guid: 83e12bc2a9e7c466f85a0a9056f121ef, type: 3}
 --- !u!1 &4563259670460125904
 GameObject:
   m_ObjectHideFlags: 0
