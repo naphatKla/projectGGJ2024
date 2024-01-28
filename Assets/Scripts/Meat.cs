@@ -82,6 +82,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
                 IsFlipping = true;
                 FlipController.Instance.OpenBar(this, GetComponent<RectTransform>().position);
                 FlipController.Instance.OnPerfect += FlipSide;
+                FlipController.Instance.OnFail += CancelFlip;
             }).OnComplete(() => IsOnFlip = true);
         GetComponent<Image>().raycastTarget = false;
         transform.DOScale(Vector3.one * 1.5f, 0.25f);
@@ -162,6 +163,12 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
         _currentSide = _currentSide == 0 ? 1 : 0;
         _animator.SetTrigger("IsFlip");
         DOVirtual.DelayedCall(1, () => IsFlipping = false);
+    }
+
+    public void CancelFlip()
+    {
+        if (IsBurnt) return;
+        IsFlipping = false;
     }
 
     public void OnGrill()
