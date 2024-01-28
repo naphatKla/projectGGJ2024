@@ -8,6 +8,7 @@ namespace Managers
     public class GameManager : MonoSingleton<GameManager>
     {
         private BubbleManager BubbleManager => BubbleManager.Instance;
+
         [Button("Check Ending")]
         private void CheckEnding()
         {
@@ -41,6 +42,7 @@ namespace Managers
             {
                 endingType = ParameterType.Good;
             }
+
             BubbleManager.CurrentBubbleManagerSettings
                 .Find(x => x.BubbleWave.IsEnding && x.BubbleWave.EndingType == endingType)
                 .BubbleWave
@@ -48,6 +50,7 @@ namespace Managers
             BubbleManager.CurrentBubbleManagerSettings
                 .FindAll(x => !x.BubbleWave.IsEnding).ForEach(x => x.BubbleWave.StopWave());
         }
+
         // Start is called before the first frame update
         void Start()
         {

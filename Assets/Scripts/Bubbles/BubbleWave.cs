@@ -3,6 +3,7 @@ using DG.Tweening;
 using Managers;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 namespace Bubbles
@@ -54,13 +55,10 @@ namespace Bubbles
         private void Update()
         {
             if (!_isPlaying || !_nextBubble) return;
-            Debug.Log("Pass 1");
             _currentInterval -= Time.deltaTime;
             if (_currentInterval > 0) return;
-            Debug.Log("Pass 2");
             if (randomizeOrder)
             {
-                Debug.Log("Pass 3");
                 if (currentRandomizedBubbleIndex == 0 && randomizedBubbleSettings.Count > 0)
                 {
                     int randomIndex = Random.Range(0, randomizedBubbleSettings.Count);
@@ -117,6 +115,10 @@ namespace Bubbles
             else
             {
                 _isPlaying = false;
+                if (isEnding)
+                {
+                    SceneManager.LoadScene("Ending");
+                }
             }
         }
         
