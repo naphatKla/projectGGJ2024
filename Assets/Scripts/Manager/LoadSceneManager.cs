@@ -1,5 +1,6 @@
 using System;
 using DG.Tweening;
+using Managers;
 using Plugins.Singleton;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -25,13 +26,12 @@ namespace Manager
             public bool useLoadingScene;
         }
 
+        [SerializeField] private Image loadSceneTransition;
         [SerializeField] private SceneButton[] sceneButtons;
         public static SceneName SceneNameAfterLoad {get; set;}
    
         void Start()
         {
-            /*Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;*/
             foreach (var sceneButton in sceneButtons)
             {
                 if (sceneButton.sceneName == SceneName.Exit)
@@ -49,13 +49,19 @@ namespace Manager
                 sceneButton.button.onClick.AddListener(() =>
                 {
                     DOTween.KillAll();
-                    if (sceneButton.useLoadingScene)
+                    SoundManager.Instance.FadeOutMusic(0.5f, AfterFadeAction.Stop);
+                    SoundManager.Instance.FadeOutFx(0.5f, AfterFadeAction.Stop);
+                    loadSceneTransition.GetComponent<Animator>().SetTrigger("ChangeScene");
+                    DOVirtual.DelayedCall(0.6f, (() =>
                     {
-                        SceneNameAfterLoad = sceneButton.sceneName == SceneName.LoadingScene? SceneName.MainMenu : sceneButton.sceneName;
-                        SceneManager.LoadScene(SceneName.LoadingScene.ToString());
-                        return;
-                    }
-                    SceneManager.LoadScene(sceneButton.sceneName.ToString());
+                        if (sceneButton.useLoadingScene)
+                        {
+                            SceneNameAfterLoad = sceneButton.sceneName == SceneName.LoadingScene? SceneName.MainMenu : sceneButton.sceneName;
+                            SceneManager.LoadScene(SceneName.LoadingScene.ToString());
+                            return;
+                        }
+                        SceneManager.LoadScene(sceneButton.sceneName.ToString());
+                    }));
                 });
             }
         }

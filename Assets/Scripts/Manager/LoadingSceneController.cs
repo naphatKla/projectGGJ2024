@@ -1,8 +1,10 @@
 using System.Collections;
+using DG.Tweening;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Manager
 {
@@ -19,6 +21,8 @@ namespace Manager
         [SerializeField][TextArea]
         private string[] tips;
         
+        [SerializeField] private Image transition;
+        
         [SerializeField]
         [PropertyTooltip("Time between each dot of the loading text")]
         private float dotInterval = 0.5f;
@@ -30,6 +34,7 @@ namespace Manager
         private int _currentTipsIndex;
         private AsyncOperation _asyncOperation;
         private bool _isDoneLoading;
+        private bool _isTransitioning;
         
         void Start()
         {
@@ -42,7 +47,13 @@ namespace Manager
         {
             if (!_isDoneLoading) return;
             if (!(Time.timeSinceLevelLoad > minimumLoadingTime) || !Input.anyKeyDown) return;
-            _asyncOperation.allowSceneActivation = true;
+            if (_isTransitioning) return;
+            _isTransitioning = true;
+            transition.GetComponent<Animator>().SetTrigger("ChangeScene");
+            DOVirtual.DelayedCall(0.6f, (() =>
+            {
+                _asyncOperation.allowSceneActivation = true;
+            }));
         }
 
         private IEnumerator LoadSceneAsync()

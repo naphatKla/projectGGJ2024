@@ -5,6 +5,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 namespace Managers
 {
