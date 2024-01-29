@@ -2189,65 +2189,74 @@ MonoBehaviour:
   loop: 0
   endingType: 8
   bubbleSettings:
-  - dialogueString: 'I thought you would understand. '
+  - id: 0
+    dialogueString: 'I thought you would understand. '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'But it seems like I was wrong. '
+  - id: 1
+    dialogueString: 'But it seems like I was wrong. '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'You and your optimism. '
+  - id: 2
+    dialogueString: 'You and your optimism. '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "Don\u2019t you know that it hurts more than anything? "
+  - id: 3
+    dialogueString: "Don\u2019t you know that it hurts more than anything? "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "As if I\u2019m like this because I didn\u2019t try hard enough. "
+  - id: 4
+    dialogueString: "As if I\u2019m like this because I didn\u2019t try hard enough. "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "Why don\u2019t you try to understand how I feel? "
+  - id: 5
+    dialogueString: "Why don\u2019t you try to understand how I feel? "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'Just face your own feelings for once. '
+  - id: 6
+    dialogueString: 'Just face your own feelings for once. '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "Hahaha\u2026 but you will just tell me to work on it, won't
+  - id: 7
+    dialogueString: "Hahaha\u2026 but you will just tell me to work on it, won't
       you? "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "Fine, I\u2019ll show you how \"I\" work on it. "
+  - id: 8
+    dialogueString: "Fine, I\u2019ll show you how \"I\" work on it. "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
   currentBubbleIndex: 0
-  currentRandomizedBubbleIndex: 0
-  randomizedBubbleSettings: []
-  currentRandomizedBundle: []
+  currentStackIndex: 0
+  randomizedPrompts: []
+  randomizedStack: []
 --- !u!4 &484055268
 Transform:
   m_ObjectHideFlags: 0
@@ -2749,32 +2758,37 @@ MonoBehaviour:
   loop: 0
   endingType: 4
   bubbleSettings:
-  - dialogueString: "\u0E14\u0E39\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E27\u0E48\u0E32\u0E19\u0E32\u0E22\u0E08\u0E30\u0E22\u0E2D\u0E21\u0E23\u0E31\u0E1A\u0E41\u0E25\u0E49\u0E27\u0E2A\u0E34\u0E19\u0E30 "
+  - id: 0
+    dialogueString: "\u0E14\u0E39\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E27\u0E48\u0E32\u0E19\u0E32\u0E22\u0E08\u0E30\u0E22\u0E2D\u0E21\u0E23\u0E31\u0E1A\u0E41\u0E25\u0E49\u0E27\u0E2A\u0E34\u0E19\u0E30 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E1E\u0E27\u0E01\u0E40\u0E23\u0E32\u0E19\u0E48\u0E30\u0E40\u0E01\u0E34\u0E19\u0E40\u0E22\u0E35\u0E22\u0E27\u0E41\u0E25\u0E49\u0E27 "
+  - id: 1
+    dialogueString: "\u0E1E\u0E27\u0E01\u0E40\u0E23\u0E32\u0E19\u0E48\u0E30\u0E40\u0E01\u0E34\u0E19\u0E40\u0E22\u0E35\u0E22\u0E27\u0E41\u0E25\u0E49\u0E27 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E44\u0E21\u0E48\u0E27\u0E48\u0E32\u0E08\u0E30\u0E17\u0E33\u0E22\u0E31\u0E07\u0E44\u0E07
+  - id: 2
+    dialogueString: "\u0E44\u0E21\u0E48\u0E27\u0E48\u0E32\u0E08\u0E30\u0E17\u0E33\u0E22\u0E31\u0E07\u0E44\u0E07
       \u0E17\u0E38\u0E01\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E21\u0E31\u0E19\u0E01\u0E47\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E40\u0E14\u0E34\u0E21 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E21\u0E35\u0E41\u0E04\u0E48\u0E04\u0E27\u0E32\u0E21\u0E1E\u0E34\u0E19\u0E32\u0E28\u0E40\u0E17\u0E48\u0E32\u0E19\u0E31\u0E49\u0E19\u0E41\u0E2B\u0E25\u0E30\u0E17\u0E35\u0E48\u0E23\u0E2D\u0E04\u0E19\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E40\u0E23\u0E32\u0E2D\u0E22\u0E39\u0E48 "
+  - id: 3
+    dialogueString: "\u0E21\u0E35\u0E41\u0E04\u0E48\u0E04\u0E27\u0E32\u0E21\u0E1E\u0E34\u0E19\u0E32\u0E28\u0E40\u0E17\u0E48\u0E32\u0E19\u0E31\u0E49\u0E19\u0E41\u0E2B\u0E25\u0E30\u0E17\u0E35\u0E48\u0E23\u0E2D\u0E04\u0E19\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E40\u0E23\u0E32\u0E2D\u0E22\u0E39\u0E48 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E21\u0E32\u0E01\u0E31\u0E1A\u0E09\u0E31\u0E19\u0E2A\u0E34
+  - id: 4
+    dialogueString: "\u0E21\u0E32\u0E01\u0E31\u0E1A\u0E09\u0E31\u0E19\u0E2A\u0E34
       \u0E40\u0E23\u0E32\u0E08\u0E30\u0E44\u0E1B\u0E2A\u0E39\u0E48\u0E08\u0E38\u0E14\u0E08\u0E1A\u0E14\u0E49\u0E27\u0E22\u0E01\u0E31\u0E19 "
     interval: 0.25
     ignoreParameterType: 0
@@ -2782,9 +2796,9 @@ MonoBehaviour:
     hasAnswer: 0
     answerSettings: []
   currentBubbleIndex: 0
-  currentRandomizedBubbleIndex: 0
-  randomizedBubbleSettings: []
-  currentRandomizedBundle: []
+  currentStackIndex: 0
+  randomizedPrompts: []
+  randomizedStack: []
 --- !u!1 &641784246
 GameObject:
   m_ObjectHideFlags: 0
@@ -2837,40 +2851,45 @@ MonoBehaviour:
   loop: 0
   endingType: 4
   bubbleSettings:
-  - dialogueString: 'Looks like you finally accepted it. '
+  - id: 0
+    dialogueString: 'Looks like you finally accepted it. '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'Both of us are beyond saving. '
+  - id: 1
+    dialogueString: 'Both of us are beyond saving. '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'All roads lead to the same destination. '
+  - id: 2
+    dialogueString: 'All roads lead to the same destination. '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'Only a path of damnation awaits people like us. '
+  - id: 3
+    dialogueString: 'Only a path of damnation awaits people like us. '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'Join me then, and together we shall walk to its end. '
+  - id: 4
+    dialogueString: 'Join me then, and together we shall walk to its end. '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
   currentBubbleIndex: 0
-  currentRandomizedBubbleIndex: 0
-  randomizedBubbleSettings: []
-  currentRandomizedBundle: []
+  currentStackIndex: 0
+  randomizedPrompts: []
+  randomizedStack: []
 --- !u!1 &669820099
 GameObject:
   m_ObjectHideFlags: 0
@@ -2923,60 +2942,68 @@ MonoBehaviour:
   loop: 0
   endingType: 2
   bubbleSettings:
-  - dialogueString: "\u0E42\u0E14\u0E19\u0E40\u0E21\u0E34\u0E19\u0E2D\u0E35\u0E01\u0E41\u0E25\u0E49\u0E27\u0E2A\u0E34\u0E19\u0E30 "
+  - id: 0
+    dialogueString: "\u0E42\u0E14\u0E19\u0E40\u0E21\u0E34\u0E19\u0E2D\u0E35\u0E01\u0E41\u0E25\u0E49\u0E27\u0E2A\u0E34\u0E19\u0E30 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E19\u0E32\u0E22\u0E17\u0E33\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E01\u0E31\u0E1A\u0E04\u0E19\u0E2D\u0E37\u0E48\u0E19\u0E46
+  - id: 1
+    dialogueString: "\u0E19\u0E32\u0E22\u0E17\u0E33\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E01\u0E31\u0E1A\u0E04\u0E19\u0E2D\u0E37\u0E48\u0E19\u0E46
       \u0E40\u0E25\u0E22 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u2026 "
+  - id: 2
+    dialogueString: "\u2026 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E44\u0E21\u0E48\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E40\u0E2B\u0E47\u0E19\u0E41\u0E01\u0E48\u0E15\u0E31\u0E27\u0E44\u0E1B\u0E2B\u0E19\u0E48\u0E2D\u0E22\u0E40\u0E2B\u0E23\u0E2D? "
+  - id: 3
+    dialogueString: "\u0E44\u0E21\u0E48\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E40\u0E2B\u0E47\u0E19\u0E41\u0E01\u0E48\u0E15\u0E31\u0E27\u0E44\u0E1B\u0E2B\u0E19\u0E48\u0E2D\u0E22\u0E40\u0E2B\u0E23\u0E2D? "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E17\u0E33\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E27\u0E48\u0E32\u0E1B\u0E31\u0E0D\u0E2B\u0E32\u0E44\u0E21\u0E48\u0E21\u0E35\u0E2D\u0E22\u0E39\u0E48 "
+  - id: 4
+    dialogueString: "\u0E17\u0E33\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E27\u0E48\u0E32\u0E1B\u0E31\u0E0D\u0E2B\u0E32\u0E44\u0E21\u0E48\u0E21\u0E35\u0E2D\u0E22\u0E39\u0E48 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E17\u0E33\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E27\u0E48\u0E32
-      \"\u0E09\u0E31\u0E19\" \u0E44\u0E21\u0E48\u0E21\u0E35\u0E2D\u0E22\u0E39\u0E48 "
+  - id: 5
+    dialogueString: "\u0E17\u0E33\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E27\u0E48\u0E32
+      \"\"\u0E09\u0E31\u0E19\"\" \u0E44\u0E21\u0E48\u0E21\u0E35\u0E2D\u0E22\u0E39\u0E48 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E2E\u0E30\u0E2E\u0E48\u0E32\u2026 \u0E41\u0E15\u0E48\u0E40\u0E2D\u0E32\u0E40\u0E2B\u0E2D\u0E30 "
+  - id: 6
+    dialogueString: "\u0E2E\u0E30\u0E2E\u0E48\u0E32\u2026 \u0E41\u0E15\u0E48\u0E40\u0E2D\u0E32\u0E40\u0E2B\u0E2D\u0E30 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E40\u0E1B\u0E47\u0E19\u0E41\u0E1A\u0E1A\u0E19\u0E35\u0E49\u0E41\u0E2B\u0E25\u0E30\u0E14\u0E35\u0E41\u0E25\u0E49\u0E27 "
+  - id: 7
+    dialogueString: "\u0E40\u0E1B\u0E47\u0E19\u0E41\u0E1A\u0E1A\u0E19\u0E35\u0E49\u0E41\u0E2B\u0E25\u0E30\u0E14\u0E35\u0E41\u0E25\u0E49\u0E27 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
   currentBubbleIndex: 0
-  currentRandomizedBubbleIndex: 0
-  randomizedBubbleSettings: []
-  currentRandomizedBundle: []
+  currentStackIndex: 0
+  randomizedPrompts: []
+  randomizedStack: []
 --- !u!1 &687207137
 GameObject:
   m_ObjectHideFlags: 0
@@ -4271,46 +4298,52 @@ MonoBehaviour:
   loop: 0
   endingType: 1
   bubbleSettings:
-  - dialogueString: 'You know, thanks for talking to me today. '
+  - id: 0
+    dialogueString: 'You know, thanks for talking to me today. '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "I thought you wouldn\u2019t come. "
+  - id: 1
+    dialogueString: "I thought you wouldn\u2019t come. "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "I\u2019m glad that I was wrong this time. "
+  - id: 2
+    dialogueString: "I\u2019m glad that I was wrong this time. "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'Hahahaha, it really feels good. '
+  - id: 3
+    dialogueString: 'Hahahaha, it really feels good. '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'Knowing that someone still cares. '
+  - id: 4
+    dialogueString: 'Knowing that someone still cares. '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'We should hang out again soon. '
+  - id: 5
+    dialogueString: 'We should hang out again soon. '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
   currentBubbleIndex: 0
-  currentRandomizedBubbleIndex: 0
-  randomizedBubbleSettings: []
-  currentRandomizedBundle: []
+  currentStackIndex: 0
+  randomizedPrompts: []
+  randomizedStack: []
 --- !u!1 &846448156
 GameObject:
   m_ObjectHideFlags: 0
@@ -4358,12 +4391,13 @@ MonoBehaviour:
   bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
   isEnding: 0
   playOnLevelStart: 1
-  startDelay: 0
+  startDelay: 5
   randomizeOrder: 1
   loop: 1
   endingType: 0
   bubbleSettings:
-  - dialogueString: "\u0E40\u0E1B\u0E47\u0E19\u0E44\u0E07\u0E1A\u0E49\u0E32\u0E07\u0E0A\u0E48\u0E27\u0E07\u0E19\u0E35\u0E49? "
+  - id: 0
+    dialogueString: "\u0E40\u0E1B\u0E47\u0E19\u0E44\u0E07\u0E1A\u0E49\u0E32\u0E07\u0E0A\u0E48\u0E27\u0E07\u0E19\u0E35\u0E49? "
     interval: 5
     ignoreParameterType: 2
     ignoreParameterScores:
@@ -4388,20 +4422,23 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: "\u0E08\u0E33\u0E04\u0E34\u0E21\u0E44\u0E14\u0E49\u0E44\u0E2B\u0E21?
+  - id: 1
+    dialogueString: "\u0E08\u0E33\u0E04\u0E34\u0E21\u0E44\u0E14\u0E49\u0E44\u0E2B\u0E21?
       \u0E15\u0E2D\u0E19\u0E19\u0E35\u0E49\u0E40\u0E1B\u0E47\u0E19\u0E19\u0E31\u0E01\u0E27\u0E32\u0E14\u0E14\u0E31\u0E07\u0E44\u0E1B\u0E41\u0E25\u0E49\u0E27 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E40\u0E21\u0E37\u0E48\u0E2D\u0E01\u0E48\u0E2D\u0E19\u0E44\u0E21\u0E48\u0E21\u0E35\u0E43\u0E04\u0E23\u0E0A\u0E2D\u0E1A\u0E17\u0E35\u0E48\u0E09\u0E31\u0E19\u0E27\u0E32\u0E14\u0E23\u0E39\u0E1B\u0E40\u0E25\u0E22 "
+  - id: 2
+    dialogueString: "\u0E40\u0E21\u0E37\u0E48\u0E2D\u0E01\u0E48\u0E2D\u0E19\u0E44\u0E21\u0E48\u0E21\u0E35\u0E43\u0E04\u0E23\u0E0A\u0E2D\u0E1A\u0E17\u0E35\u0E48\u0E09\u0E31\u0E19\u0E27\u0E32\u0E14\u0E23\u0E39\u0E1B\u0E40\u0E25\u0E22 "
     interval: 0.5
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E09\u0E31\u0E19\u0E15\u0E48\u0E32\u0E07\u0E08\u0E32\u0E01\u0E40\u0E02\u0E32\u0E15\u0E23\u0E07\u0E44\u0E2B\u0E19\u0E01\u0E31\u0E19? "
+  - id: 3
+    dialogueString: "\u0E09\u0E31\u0E19\u0E15\u0E48\u0E32\u0E07\u0E08\u0E32\u0E01\u0E40\u0E02\u0E32\u0E15\u0E23\u0E07\u0E44\u0E2B\u0E19\u0E01\u0E31\u0E19? "
     interval: 5
     ignoreParameterType: 2
     ignoreParameterScores:
@@ -4427,13 +4464,15 @@ MonoBehaviour:
         parameterType: 4
         answerScores:
         - 2
-  - dialogueString: "\u0E17\u0E35\u0E48\u0E09\u0E31\u0E19\u0E1E\u0E22\u0E32\u0E22\u0E32\u0E21\u0E21\u0E32\u0E17\u0E31\u0E49\u0E07\u0E2B\u0E21\u0E14\u0E19\u0E35\u0E48 "
+  - id: 4
+    dialogueString: "\u0E17\u0E35\u0E48\u0E09\u0E31\u0E19\u0E1E\u0E22\u0E32\u0E22\u0E32\u0E21\u0E21\u0E32\u0E17\u0E31\u0E49\u0E07\u0E2B\u0E21\u0E14\u0E19\u0E35\u0E48 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E2D\u0E30\u0E44\u0E23\u0E01\u0E31\u0E19? "
+  - id: 5
+    dialogueString: "\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E2D\u0E30\u0E44\u0E23\u0E01\u0E31\u0E19? "
     interval: 5
     ignoreParameterType: 2
     ignoreParameterScores:
@@ -4458,13 +4497,15 @@ MonoBehaviour:
         parameterType: 8
         answerScores:
         - 1
-  - dialogueString: "\u0E2B\u0E32\u0E07\u0E32\u0E19\u0E44\u0E21\u0E48\u0E44\u0E14\u0E49\u0E2D\u0E35\u0E01\u0E41\u0E25\u0E49\u0E27 "
+  - id: 6
+    dialogueString: "\u0E2B\u0E32\u0E07\u0E32\u0E19\u0E44\u0E21\u0E48\u0E44\u0E14\u0E49\u0E2D\u0E35\u0E01\u0E41\u0E25\u0E49\u0E27 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E08\u0E30\u0E14\u0E31\u0E19\u0E17\u0E38\u0E23\u0E31\u0E07\u0E44\u0E1B\u0E17\u0E33\u0E44\u0E21\u0E19\u0E30? "
+  - id: 7
+    dialogueString: "\u0E08\u0E30\u0E14\u0E31\u0E19\u0E17\u0E38\u0E23\u0E31\u0E07\u0E44\u0E1B\u0E17\u0E33\u0E44\u0E21\u0E19\u0E30? "
     interval: 5
     ignoreParameterType: 2
     ignoreParameterScores:
@@ -4489,19 +4530,22 @@ MonoBehaviour:
         parameterType: 8
         answerScores:
         - 1
-  - dialogueString: "\"\u0E09\u0E31\u0E19\u0E2D\u0E22\u0E32\u0E01\u0E40\u0E15\u0E34\u0E1A\u0E42\u0E15\u0E44\u0E1B\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E20\u0E32\u0E04\u0E20\u0E39\u0E21\u0E34\u0E43\u0E08\" "
+  - id: 8
+    dialogueString: "\"\u0E09\u0E31\u0E19\u0E2D\u0E22\u0E32\u0E01\u0E40\u0E15\u0E34\u0E1A\u0E42\u0E15\u0E44\u0E1B\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E20\u0E32\u0E04\u0E20\u0E39\u0E21\u0E34\u0E43\u0E08\" "
     interval: 0.5
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E15\u0E2D\u0E19\u0E40\u0E14\u0E47\u0E01\u0E46 \u0E09\u0E31\u0E19\u0E04\u0E07\u0E08\u0E30\u0E1E\u0E39\u0E14\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E07\u0E31\u0E49\u0E19 "
+  - id: 9
+    dialogueString: "\u0E15\u0E2D\u0E19\u0E40\u0E14\u0E47\u0E01\u0E46 \u0E09\u0E31\u0E19\u0E04\u0E07\u0E08\u0E30\u0E1E\u0E39\u0E14\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E07\u0E31\u0E49\u0E19 "
     interval: 0.5
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E19\u0E48\u0E32\u0E02\u0E33\u0E14\u0E35 \u0E43\u0E0A\u0E48\u0E44\u0E2B\u0E21\u0E25\u0E48\u0E30? "
+  - id: 10
+    dialogueString: "\u0E19\u0E48\u0E32\u0E02\u0E33\u0E14\u0E35 \u0E43\u0E0A\u0E48\u0E44\u0E2B\u0E21\u0E25\u0E48\u0E30? "
     interval: 5
     ignoreParameterType: 2
     ignoreParameterScores:
@@ -4526,7 +4570,8 @@ MonoBehaviour:
         parameterType: 4
         answerScores:
         - 2
-  - dialogueString: "\u0E19\u0E32\u0E22\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E0A\u0E35\u0E27\u0E34\u0E15\u0E21\u0E31\u0E19\u0E44\u0E21\u0E48\u0E41\u0E1F\u0E23\u0E4C\u0E2B\u0E23\u0E37\u0E2D\u0E40\u0E1B\u0E25\u0E48\u0E32? "
+  - id: 11
+    dialogueString: "\u0E19\u0E32\u0E22\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E0A\u0E35\u0E27\u0E34\u0E15\u0E21\u0E31\u0E19\u0E44\u0E21\u0E48\u0E41\u0E1F\u0E23\u0E4C\u0E2B\u0E23\u0E37\u0E2D\u0E40\u0E1B\u0E25\u0E48\u0E32? "
     interval: 5
     ignoreParameterType: 2
     ignoreParameterScores:
@@ -4552,7 +4597,8 @@ MonoBehaviour:
         parameterType: 2
         answerScores:
         - 1
-  - dialogueString: "\u0E16\u0E49\u0E32\u0E09\u0E31\u0E19\u0E2B\u0E32\u0E22\u0E44\u0E1B\u0E01\u0E47\u0E44\u0E21\u0E48\u0E21\u0E35\u0E43\u0E04\u0E23\u0E41\u0E04\u0E23\u0E4C\u0E2B\u0E23\u0E2D\u0E01
+  - id: 12
+    dialogueString: "\u0E16\u0E49\u0E32\u0E09\u0E31\u0E19\u0E2B\u0E32\u0E22\u0E44\u0E1B\u0E01\u0E47\u0E44\u0E21\u0E48\u0E21\u0E35\u0E43\u0E04\u0E23\u0E41\u0E04\u0E23\u0E4C\u0E2B\u0E23\u0E2D\u0E01
       \u0E43\u0E0A\u0E48\u0E44\u0E2B\u0E21? "
     interval: 5
     ignoreParameterType: 2
@@ -4572,19 +4618,22 @@ MonoBehaviour:
         parameterType: 1
         answerScores:
         - 1
-  - dialogueString: "\u0E17\u0E38\u0E01\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E21\u0E31\u0E19\u0E44\u0E23\u0E49\u0E04\u0E27\u0E32\u0E21\u0E2B\u0E21\u0E32\u0E22 "
+  - id: 13
+    dialogueString: "\u0E17\u0E38\u0E01\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E21\u0E31\u0E19\u0E44\u0E23\u0E49\u0E04\u0E27\u0E32\u0E21\u0E2B\u0E21\u0E32\u0E22 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E09\u0E31\u0E19\u0E1E\u0E22\u0E32\u0E22\u0E32\u0E21\u0E41\u0E25\u0E49\u0E27 "
+  - id: 14
+    dialogueString: "\u0E09\u0E31\u0E19\u0E1E\u0E22\u0E32\u0E22\u0E32\u0E21\u0E41\u0E25\u0E49\u0E27 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E41\u0E15\u0E48\u0E21\u0E31\u0E19\u0E44\u0E21\u0E48\u0E21\u0E35\u0E1B\u0E23\u0E30\u0E42\u0E22\u0E0A\u0E19\u0E4C\u0E40\u0E25\u0E22 "
+  - id: 15
+    dialogueString: "\u0E41\u0E15\u0E48\u0E21\u0E31\u0E19\u0E44\u0E21\u0E48\u0E21\u0E35\u0E1B\u0E23\u0E30\u0E42\u0E22\u0E0A\u0E19\u0E4C\u0E40\u0E25\u0E22 "
     interval: 5
     ignoreParameterType: 2
     ignoreParameterScores:
@@ -4609,7 +4658,8 @@ MonoBehaviour:
         parameterType: 1
         answerScores:
         - 1
-  - dialogueString: "\u0E09\u0E31\u0E19\u0E23\u0E39\u0E49\u0E2A\u0E36\u0E01\u0E2B\u0E14\u0E2B\u0E39\u0E48\u0E2D\u0E22\u0E39\u0E48\u0E15\u0E25\u0E2D\u0E14\u0E40\u0E25\u0E22 "
+  - id: 16
+    dialogueString: "\u0E09\u0E31\u0E19\u0E23\u0E39\u0E49\u0E2A\u0E36\u0E01\u0E2B\u0E14\u0E2B\u0E39\u0E48\u0E2D\u0E22\u0E39\u0E48\u0E15\u0E25\u0E2D\u0E14\u0E40\u0E25\u0E22 "
     interval: 5
     ignoreParameterType: 2
     ignoreParameterScores:
@@ -4628,19 +4678,22 @@ MonoBehaviour:
         parameterType: 1
         answerScores:
         - 2
-  - dialogueString: "\u0E09\u0E31\u0E19\u0E23\u0E39\u0E49\u0E2A\u0E36\u0E01\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E40\u0E1B\u0E47\u0E19\u0E04\u0E19\u0E2B\u0E25\u0E07\u0E17\u0E32\u0E07 "
+  - id: 17
+    dialogueString: "\u0E09\u0E31\u0E19\u0E23\u0E39\u0E49\u0E2A\u0E36\u0E01\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E40\u0E1B\u0E47\u0E19\u0E04\u0E19\u0E2B\u0E25\u0E07\u0E17\u0E32\u0E07 "
     interval: 0.5
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E2D\u0E22\u0E39\u0E48\u0E43\u0E19\u0E2D\u0E38\u0E42\u0E21\u0E07\u0E04\u0E4C "
+  - id: 18
+    dialogueString: "\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E2D\u0E22\u0E39\u0E48\u0E43\u0E19\u0E2D\u0E38\u0E42\u0E21\u0E07\u0E04\u0E4C "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E17\u0E35\u0E48\u0E44\u0E21\u0E48\u0E21\u0E35\u0E41\u0E21\u0E49\u0E41\u0E15\u0E48\u0E41\u0E2A\u0E07\u0E17\u0E35\u0E48\u0E1B\u0E25\u0E32\u0E22\u0E17\u0E32\u0E07\u0E14\u0E49\u0E27\u0E22\u0E0B\u0E49\u0E33 "
+  - id: 19
+    dialogueString: "\u0E17\u0E35\u0E48\u0E44\u0E21\u0E48\u0E21\u0E35\u0E41\u0E21\u0E49\u0E41\u0E15\u0E48\u0E41\u0E2A\u0E07\u0E17\u0E35\u0E48\u0E1B\u0E25\u0E32\u0E22\u0E17\u0E32\u0E07\u0E14\u0E49\u0E27\u0E22\u0E0B\u0E49\u0E33 "
     interval: 5
     ignoreParameterType: 2
     ignoreParameterScores:
@@ -4666,19 +4719,22 @@ MonoBehaviour:
         parameterType: 1
         answerScores:
         - 1
-  - dialogueString: "\u0E19\u0E32\u0E22\u0E40\u0E04\u0E22\u0E04\u0E34\u0E14\u0E16\u0E36\u0E07\u0E2D\u0E14\u0E35\u0E15\u0E1A\u0E49\u0E32\u0E07\u0E2B\u0E23\u0E37\u0E2D\u0E40\u0E1B\u0E25\u0E48\u0E32? "
+  - id: 20
+    dialogueString: "\u0E19\u0E32\u0E22\u0E40\u0E04\u0E22\u0E04\u0E34\u0E14\u0E16\u0E36\u0E07\u0E2D\u0E14\u0E35\u0E15\u0E1A\u0E49\u0E32\u0E07\u0E2B\u0E23\u0E37\u0E2D\u0E40\u0E1B\u0E25\u0E48\u0E32? "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E04\u0E34\u0E14\u0E16\u0E36\u0E07\u0E27\u0E31\u0E19\u0E27\u0E32\u0E19 "
+  - id: 21
+    dialogueString: "\u0E04\u0E34\u0E14\u0E16\u0E36\u0E07\u0E27\u0E31\u0E19\u0E27\u0E32\u0E19 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E41\u0E25\u0E49\u0E27\u0E01\u0E25\u0E31\u0E1A\u0E21\u0E32\u0E21\u0E2D\u0E07\u0E1B\u0E31\u0E08\u0E08\u0E38\u0E1A\u0E31\u0E19
+  - id: 22
+    dialogueString: "\u0E41\u0E25\u0E49\u0E27\u0E01\u0E25\u0E31\u0E1A\u0E21\u0E32\u0E21\u0E2D\u0E07\u0E1B\u0E31\u0E08\u0E08\u0E38\u0E1A\u0E31\u0E19
       \u0E27\u0E48\u0E32\u0E17\u0E33\u0E44\u0E21\u0E16\u0E36\u0E07\u0E40\u0E1B\u0E47\u0E19\u0E41\u0E1A\u0E1A\u0E19\u0E35\u0E49\u0E44\u0E1B\u0E44\u0E14\u0E49"
     interval: 5
     ignoreParameterType: 2
@@ -4705,7 +4761,8 @@ MonoBehaviour:
         parameterType: 8
         answerScores:
         - 1
-  - dialogueString: "\u0E09\u0E31\u0E19\u0E2D\u0E22\u0E32\u0E01\u0E15\u0E32\u0E22 "
+  - id: 23
+    dialogueString: "\u0E09\u0E31\u0E19\u0E2D\u0E22\u0E32\u0E01\u0E15\u0E32\u0E22 "
     interval: 5
     ignoreParameterType: 2
     ignoreParameterScores:
@@ -4731,19 +4788,22 @@ MonoBehaviour:
         parameterType: 4
         answerScores:
         - 3
-  - dialogueString: "\"\u0E40\u0E14\u0E35\u0E4B\u0E22\u0E27\u0E01\u0E47\u0E14\u0E35\u0E02\u0E36\u0E49\u0E19\" "
+  - id: 24
+    dialogueString: "\"\u0E40\u0E14\u0E35\u0E4B\u0E22\u0E27\u0E01\u0E47\u0E14\u0E35\u0E02\u0E36\u0E49\u0E19\" "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\"\u0E40\u0E14\u0E35\u0E4B\u0E22\u0E27\u0E01\u0E47\u0E1C\u0E48\u0E32\u0E19\u0E21\u0E31\u0E19\u0E44\u0E1B\u0E44\u0E14\u0E49\" "
+  - id: 25
+    dialogueString: "\"\u0E40\u0E14\u0E35\u0E4B\u0E22\u0E27\u0E01\u0E47\u0E1C\u0E48\u0E32\u0E19\u0E21\u0E31\u0E19\u0E44\u0E1B\u0E44\u0E14\u0E49\" "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E40\u0E2B\u0E2D\u0E30... \u0E21\u0E35\u0E41\u0E15\u0E48\u0E04\u0E33\u0E1E\u0E39\u0E14\u0E01\u0E25\u0E27\u0E07\u0E46 "
+  - id: 26
+    dialogueString: "\u0E40\u0E2B\u0E2D\u0E30... \u0E21\u0E35\u0E41\u0E15\u0E48\u0E04\u0E33\u0E1E\u0E39\u0E14\u0E01\u0E25\u0E27\u0E07\u0E46 "
     interval: 5
     ignoreParameterType: 1
     ignoreParameterScores:
@@ -4769,13 +4829,15 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: "\u0E19\u0E32\u0E19\u0E08\u0E19\u0E09\u0E31\u0E19\u0E25\u0E37\u0E21\u0E44\u0E1B\u0E41\u0E25\u0E49\u0E27 "
+  - id: 27
+    dialogueString: "\u0E19\u0E32\u0E19\u0E08\u0E19\u0E09\u0E31\u0E19\u0E25\u0E37\u0E21\u0E44\u0E1B\u0E41\u0E25\u0E49\u0E27 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E41\u0E15\u0E48\u0E08\u0E33\u0E15\u0E2D\u0E19\u0E17\u0E35\u0E48\u0E09\u0E31\u0E19\u0E22\u0E34\u0E49\u0E21\u0E04\u0E23\u0E31\u0E49\u0E07\u0E25\u0E48\u0E32\u0E2A\u0E38\u0E14\u0E44\u0E14\u0E49\u0E44\u0E2B\u0E21? "
+  - id: 28
+    dialogueString: "\u0E41\u0E15\u0E48\u0E08\u0E33\u0E15\u0E2D\u0E19\u0E17\u0E35\u0E48\u0E09\u0E31\u0E19\u0E22\u0E34\u0E49\u0E21\u0E04\u0E23\u0E31\u0E49\u0E07\u0E25\u0E48\u0E32\u0E2A\u0E38\u0E14\u0E44\u0E14\u0E49\u0E44\u0E2B\u0E21? "
     interval: 5
     ignoreParameterType: 2
     ignoreParameterScores:
@@ -4801,13 +4863,15 @@ MonoBehaviour:
         parameterType: 4
         answerScores:
         - 2
-  - dialogueString: "\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E40\u0E1B\u0E47\u0E19\u0E44\u0E1B\u0E44\u0E14\u0E49\u0E44\u0E2B\u0E21? "
+  - id: 29
+    dialogueString: "\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E40\u0E1B\u0E47\u0E19\u0E44\u0E1B\u0E44\u0E14\u0E49\u0E44\u0E2B\u0E21? "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E17\u0E35\u0E48\u0E04\u0E27\u0E32\u0E21\u0E1D\u0E31\u0E19\u0E43\u0E19\u0E27\u0E31\u0E22\u0E40\u0E14\u0E47\u0E01\u0E08\u0E30\u0E01\u0E25\u0E31\u0E1A\u0E21\u0E32\u0E40\u0E1B\u0E47\u0E19\u0E08\u0E23\u0E34\u0E07 "
+  - id: 30
+    dialogueString: "\u0E17\u0E35\u0E48\u0E04\u0E27\u0E32\u0E21\u0E1D\u0E31\u0E19\u0E43\u0E19\u0E27\u0E31\u0E22\u0E40\u0E14\u0E47\u0E01\u0E08\u0E30\u0E01\u0E25\u0E31\u0E1A\u0E21\u0E32\u0E40\u0E1B\u0E47\u0E19\u0E08\u0E23\u0E34\u0E07 "
     interval: 5
     ignoreParameterType: 2
     ignoreParameterScores:
@@ -4833,13 +4897,15 @@ MonoBehaviour:
         parameterType: 1
         answerScores:
         - 1
-  - dialogueString: "\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E21\u0E30\u0E40\u0E02\u0E37\u0E2D\u0E40\u0E17\u0E28... "
+  - id: 31
+    dialogueString: "\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E21\u0E30\u0E40\u0E02\u0E37\u0E2D\u0E40\u0E17\u0E28... "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E40\u0E1B\u0E47\u0E19\u0E1C\u0E31\u0E01\u0E2B\u0E23\u0E37\u0E2D\u0E1C\u0E25\u0E44\u0E21\u0E49? "
+  - id: 32
+    dialogueString: "\u0E40\u0E1B\u0E47\u0E19\u0E1C\u0E31\u0E01\u0E2B\u0E23\u0E37\u0E2D\u0E1C\u0E25\u0E44\u0E21\u0E49? "
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -4864,19 +4930,22 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: "\u0E14\u0E39\u0E40\u0E19\u0E37\u0E49\u0E2D\u0E1E\u0E27\u0E01\u0E19\u0E35\u0E49\u0E2A\u0E34 "
+  - id: 33
+    dialogueString: "\u0E14\u0E39\u0E40\u0E19\u0E37\u0E49\u0E2D\u0E1E\u0E27\u0E01\u0E19\u0E35\u0E49\u0E2A\u0E34 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E2D\u0E22\u0E32\u0E01\u0E23\u0E39\u0E49... "
+  - id: 34
+    dialogueString: "\u0E2D\u0E22\u0E32\u0E01\u0E23\u0E39\u0E49... "
     interval: 0.5
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E27\u0E48\u0E32\u0E40\u0E04\u0E22\u0E2D\u0E22\u0E32\u0E01\u0E40\u0E1B\u0E47\u0E19\u0E27\u0E35\u0E41\u0E01\u0E19\u0E44\u0E2B\u0E21? "
+  - id: 35
+    dialogueString: "\u0E27\u0E48\u0E32\u0E40\u0E04\u0E22\u0E2D\u0E22\u0E32\u0E01\u0E40\u0E1B\u0E47\u0E19\u0E27\u0E35\u0E41\u0E01\u0E19\u0E44\u0E2B\u0E21? "
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -4901,13 +4970,15 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: "\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E08\u0E30\u0E0B\u0E37\u0E49\u0E2D\u0E40\u0E04\u0E2A\u0E42\u0E17\u0E23\u0E28\u0E31\u0E1E\u0E17\u0E4C\u0E43\u0E2B\u0E21\u0E48 "
+  - id: 36
+    dialogueString: "\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E08\u0E30\u0E0B\u0E37\u0E49\u0E2D\u0E40\u0E04\u0E2A\u0E42\u0E17\u0E23\u0E28\u0E31\u0E1E\u0E17\u0E4C\u0E43\u0E2B\u0E21\u0E48 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E2A\u0E35\u0E44\u0E2B\u0E19\u0E14\u0E35? "
+  - id: 37
+    dialogueString: "\u0E2A\u0E35\u0E44\u0E2B\u0E19\u0E14\u0E35? "
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -4932,13 +5003,15 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: "\u0E04\u0E33\u0E19\u0E35\u0E49\u0E04\u0E19\u0E40\u0E02\u0E35\u0E22\u0E19\u0E1C\u0E34\u0E14\u0E1A\u0E48\u0E2D\u0E22 "
+  - id: 38
+    dialogueString: "\u0E04\u0E33\u0E19\u0E35\u0E49\u0E04\u0E19\u0E40\u0E02\u0E35\u0E22\u0E19\u0E1C\u0E34\u0E14\u0E1A\u0E48\u0E2D\u0E22 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E1C\u0E31\u0E14 \"\"\u0E01\u0E23\u0E30\u0E40\u0E1E\u0E23\u0E32\"\"
+  - id: 39
+    dialogueString: "\u0E1C\u0E31\u0E14 \"\"\u0E01\u0E23\u0E30\u0E40\u0E1E\u0E23\u0E32\"\"
       \u0E40\u0E02\u0E35\u0E22\u0E19\u0E22\u0E31\u0E07\u0E44\u0E07? "
     interval: 5
     ignoreParameterType: 0
@@ -4964,7 +5037,8 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: "\u0E1B\u0E01\u0E15\u0E34\u0E01\u0E34\u0E19\u0E44\u0E2D\u0E15\u0E34\u0E21\u0E22\u0E31\u0E07\u0E44\u0E07? "
+  - id: 40
+    dialogueString: "\u0E1B\u0E01\u0E15\u0E34\u0E01\u0E34\u0E19\u0E44\u0E2D\u0E15\u0E34\u0E21\u0E22\u0E31\u0E07\u0E44\u0E07? "
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -4989,7 +5063,8 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: "\u0E0A\u0E48\u0E27\u0E07\u0E19\u0E35\u0E49\u0E2D\u0E32\u0E01\u0E32\u0E28\u0E44\u0E21\u0E48\u0E04\u0E48\u0E2D\u0E22\u0E14\u0E35\u0E40\u0E25\u0E22
+  - id: 41
+    dialogueString: "\u0E0A\u0E48\u0E27\u0E07\u0E19\u0E35\u0E49\u0E2D\u0E32\u0E01\u0E32\u0E28\u0E44\u0E21\u0E48\u0E04\u0E48\u0E2D\u0E22\u0E14\u0E35\u0E40\u0E25\u0E22
       \u0E27\u0E48\u0E32\u0E21\u0E30? "
     interval: 5
     ignoreParameterType: 0
@@ -5015,7 +5090,8 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: "\u0E44\u0E14\u0E49\u0E14\u0E39\u0E02\u0E48\u0E32\u0E27\u0E44\u0E2B\u0E21\u0E0A\u0E48\u0E27\u0E07\u0E19\u0E35\u0E49? "
+  - id: 42
+    dialogueString: "\u0E44\u0E14\u0E49\u0E14\u0E39\u0E02\u0E48\u0E32\u0E27\u0E44\u0E2B\u0E21\u0E0A\u0E48\u0E27\u0E07\u0E19\u0E35\u0E49? "
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -5034,7 +5110,8 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: "\u0E21\u0E35\u0E16\u0E31\u0E48\u0E27\u0E44\u0E2B\u0E21? "
+  - id: 43
+    dialogueString: "\u0E21\u0E35\u0E16\u0E31\u0E48\u0E27\u0E44\u0E2B\u0E21? "
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -5059,7 +5136,8 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: "\u0E08\u0E31\u0E1A\u0E15\u0E30\u0E40\u0E01\u0E35\u0E22\u0E1A\u0E41\u0E1B\u0E25\u0E01\u0E14\u0E35\u0E19\u0E30 "
+  - id: 44
+    dialogueString: "\u0E08\u0E31\u0E1A\u0E15\u0E30\u0E40\u0E01\u0E35\u0E22\u0E1A\u0E41\u0E1B\u0E25\u0E01\u0E14\u0E35\u0E19\u0E30 "
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -5084,13 +5162,15 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: "\u0E44\u0E2B\u0E19\u0E46 \u0E01\u0E47\u0E21\u0E32\u0E41\u0E25\u0E49\u0E27... "
+  - id: 45
+    dialogueString: "\u0E44\u0E2B\u0E19\u0E46 \u0E01\u0E47\u0E21\u0E32\u0E41\u0E25\u0E49\u0E27... "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E44\u0E21\u0E48\u0E01\u0E34\u0E19\u0E1C\u0E31\u0E01\u0E2B\u0E19\u0E48\u0E2D\u0E22\u0E2B\u0E23\u0E2D? "
+  - id: 46
+    dialogueString: "\u0E44\u0E21\u0E48\u0E01\u0E34\u0E19\u0E1C\u0E31\u0E01\u0E2B\u0E19\u0E48\u0E2D\u0E22\u0E2B\u0E23\u0E2D? "
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -5116,13 +5196,15 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: "\u0E21\u0E35\u0E04\u0E33\u0E16\u0E32\u0E21... "
+  - id: 47
+    dialogueString: "\u0E21\u0E35\u0E04\u0E33\u0E16\u0E32\u0E21... "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E1E\u0E23\u0E30\u0E2D\u0E20\u0E31\u0E22\u0E21\u0E13\u0E35\u0E40\u0E1B\u0E48\u0E32\u0E1B\u0E35\u0E48\u0E2B\u0E23\u0E37\u0E2D\u0E40\u0E1B\u0E48\u0E32\u0E02\u0E25\u0E38\u0E48\u0E22? "
+  - id: 48
+    dialogueString: "\u0E1E\u0E23\u0E30\u0E2D\u0E20\u0E31\u0E22\u0E21\u0E13\u0E35\u0E40\u0E1B\u0E48\u0E32\u0E1B\u0E35\u0E48\u0E2B\u0E23\u0E37\u0E2D\u0E40\u0E1B\u0E48\u0E32\u0E02\u0E25\u0E38\u0E48\u0E22? "
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -5148,7 +5230,8 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: "\u0E40\u0E04\u0E47\u0E21\u0E2B\u0E23\u0E37\u0E2D\u0E2B\u0E27\u0E32\u0E19? "
+  - id: 49
+    dialogueString: "\u0E40\u0E04\u0E47\u0E21\u0E2B\u0E23\u0E37\u0E2D\u0E2B\u0E27\u0E32\u0E19? "
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -5173,7 +5256,8 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: "\u0E44\u0E14\u0E49\u0E40\u0E25\u0E48\u0E19\u0E40\u0E01\u0E21\u0E2D\u0E30\u0E44\u0E23\u0E44\u0E2B\u0E21\u0E0A\u0E48\u0E27\u0E07\u0E19\u0E35\u0E49? "
+  - id: 50
+    dialogueString: "\u0E44\u0E14\u0E49\u0E40\u0E25\u0E48\u0E19\u0E40\u0E01\u0E21\u0E2D\u0E30\u0E44\u0E23\u0E44\u0E2B\u0E21\u0E0A\u0E48\u0E27\u0E07\u0E19\u0E35\u0E49? "
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -5198,13 +5282,15 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: "\u0E40\u0E04\u0E22\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E40\u0E23\u0E32\u0E2D\u0E22\u0E39\u0E48\u0E43\u0E19\u0E40\u0E01\u0E21\u0E44\u0E2B\u0E21? "
+  - id: 51
+    dialogueString: "\u0E40\u0E04\u0E22\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E40\u0E23\u0E32\u0E2D\u0E22\u0E39\u0E48\u0E43\u0E19\u0E40\u0E01\u0E21\u0E44\u0E2B\u0E21? "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E43\u0E19 Matrix \u0E44\u0E23\u0E07\u0E35\u0E49? "
+  - id: 52
+    dialogueString: "\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E43\u0E19 Matrix \u0E44\u0E23\u0E07\u0E35\u0E49? "
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -5229,7 +5315,8 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: "\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E19\u0E01\u0E21\u0E35\u0E08\u0E23\u0E34\u0E07\u0E44\u0E2B\u0E21? "
+  - id: 53
+    dialogueString: "\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E19\u0E01\u0E21\u0E35\u0E08\u0E23\u0E34\u0E07\u0E44\u0E2B\u0E21? "
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -5254,14 +5341,16 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: "\u0E40\u0E04\u0E22\u0E2D\u0E22\u0E32\u0E01\u0E40\u0E25\u0E48\u0E19\u0E01\u0E35\u0E2C\u0E32
+  - id: 54
+    dialogueString: "\u0E40\u0E04\u0E22\u0E2D\u0E22\u0E32\u0E01\u0E40\u0E25\u0E48\u0E19\u0E01\u0E35\u0E2C\u0E32
       extreme \u0E44\u0E2B\u0E21? "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E41\u0E1A\u0E1A\u0E1A\u0E31\u0E19\u0E08\u0E35\u0E49\u0E08\u0E31\u0E4A\u0E21\u0E2B\u0E23\u0E37\u0E2D\u0E42\u0E14\u0E14\u0E23\u0E48\u0E21\u0E44\u0E23\u0E07\u0E35\u0E49? "
+  - id: 55
+    dialogueString: "\u0E41\u0E1A\u0E1A\u0E1A\u0E31\u0E19\u0E08\u0E35\u0E49\u0E08\u0E31\u0E4A\u0E21\u0E2B\u0E23\u0E37\u0E2D\u0E42\u0E14\u0E14\u0E23\u0E48\u0E21\u0E44\u0E23\u0E07\u0E35\u0E49? "
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -5286,19 +5375,22 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: "\u0E0A\u0E48\u0E27\u0E07\u0E19\u0E35\u0E49\u0E44\u0E21\u0E48\u0E04\u0E48\u0E2D\u0E22\u0E40\u0E2B\u0E47\u0E19\u0E19\u0E01\u0E40\u0E25\u0E22\u0E19\u0E30 "
+  - id: 56
+    dialogueString: "\u0E0A\u0E48\u0E27\u0E07\u0E19\u0E35\u0E49\u0E44\u0E21\u0E48\u0E04\u0E48\u0E2D\u0E22\u0E40\u0E2B\u0E47\u0E19\u0E19\u0E01\u0E40\u0E25\u0E22\u0E19\u0E30 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E40\u0E23\u0E32\u0E27\u0E48\u0E32\u0E40\u0E23\u0E32\u0E44\u0E21\u0E48\u0E40\u0E04\u0E22\u0E16\u0E32\u0E21\u0E19\u0E32\u0E22\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E07\u0E19\u0E35\u0E49 "
+  - id: 57
+    dialogueString: "\u0E40\u0E23\u0E32\u0E27\u0E48\u0E32\u0E40\u0E23\u0E32\u0E44\u0E21\u0E48\u0E40\u0E04\u0E22\u0E16\u0E32\u0E21\u0E19\u0E32\u0E22\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E07\u0E19\u0E35\u0E49 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E19\u0E32\u0E22\u0E0A\u0E2D\u0E1A\u0E19\u0E01\u0E23\u0E36\u0E40\u0E1B\u0E25\u0E48\u0E32\u0E19\u0E30 "
+  - id: 58
+    dialogueString: "\u0E19\u0E32\u0E22\u0E0A\u0E2D\u0E1A\u0E19\u0E01\u0E23\u0E36\u0E40\u0E1B\u0E25\u0E48\u0E32\u0E19\u0E30 "
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -5325,9 +5417,9 @@ MonoBehaviour:
         answerScores:
         - 0
   currentBubbleIndex: 0
-  currentRandomizedBubbleIndex: 0
-  randomizedBubbleSettings: []
-  currentRandomizedBundle: []
+  currentStackIndex: 0
+  randomizedPrompts: []
+  randomizedStack: []
 --- !u!1 &875219390
 GameObject:
   m_ObjectHideFlags: 0
@@ -5710,58 +5802,66 @@ MonoBehaviour:
   loop: 0
   endingType: 2
   bubbleSettings:
-  - dialogueString: Ignored yet again.
+  - id: 0
+    dialogueString: 'Ignored yet again. '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "You\u2019re doing it just like everyone else."
+  - id: 1
+    dialogueString: "You\u2019re doing it just like everyone else. "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u2026"
+  - id: 2
+    dialogueString: "\u2026 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "Don\u2019t you think it\u2019s selfish?"
+  - id: 3
+    dialogueString: "Don\u2019t you think it\u2019s selfish? "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "Pretending that your problems don\u2019t exist."
+  - id: 4
+    dialogueString: "Pretending that your problems don\u2019t exist. "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "Pretending that \u201CI\u201D don't exist."
+  - id: 5
+    dialogueString: "Pretending that \u201CI\u201D don't exist. "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "Haha\u2026 but who am I kidding. "
+  - id: 6
+    dialogueString: "Haha\u2026 but who am I kidding. "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'Perhaps this is for the best then. '
+  - id: 7
+    dialogueString: 'Perhaps this is for the best then. '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
   currentBubbleIndex: 0
-  currentRandomizedBubbleIndex: 0
-  randomizedBubbleSettings: []
-  currentRandomizedBundle: []
+  currentStackIndex: 0
+  randomizedPrompts: []
+  randomizedStack: []
 --- !u!1 &939192951
 GameObject:
   m_ObjectHideFlags: 0
@@ -8051,47 +8151,53 @@ MonoBehaviour:
   loop: 0
   endingType: 1
   bubbleSettings:
-  - dialogueString: "\u0E02\u0E2D\u0E1A\u0E04\u0E38\u0E13\u0E17\u0E35\u0E48\u0E21\u0E32\u0E04\u0E38\u0E22\u0E01\u0E31\u0E1A\u0E09\u0E31\u0E19\u0E27\u0E31\u0E19\u0E19\u0E35\u0E49\u0E19\u0E30 "
+  - id: 0
+    dialogueString: "\u0E02\u0E2D\u0E1A\u0E04\u0E38\u0E13\u0E17\u0E35\u0E48\u0E21\u0E32\u0E04\u0E38\u0E22\u0E01\u0E31\u0E1A\u0E09\u0E31\u0E19\u0E27\u0E31\u0E19\u0E19\u0E35\u0E49\u0E19\u0E30 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E19\u0E36\u0E01\u0E27\u0E48\u0E32\u0E08\u0E30\u0E44\u0E21\u0E48\u0E21\u0E32\u0E41\u0E25\u0E49\u0E27\u0E0B\u0E30\u0E2D\u0E35\u0E01 "
+  - id: 1
+    dialogueString: "\u0E19\u0E36\u0E01\u0E27\u0E48\u0E32\u0E08\u0E30\u0E44\u0E21\u0E48\u0E21\u0E32\u0E41\u0E25\u0E49\u0E27\u0E0B\u0E30\u0E2D\u0E35\u0E01 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E14\u0E35\u0E43\u0E08\u0E17\u0E35\u0E48\u0E04\u0E23\u0E31\u0E49\u0E07\u0E19\u0E35\u0E49\u0E09\u0E31\u0E19\u0E04\u0E34\u0E14\u0E1C\u0E34\u0E14 "
+  - id: 2
+    dialogueString: "\u0E14\u0E35\u0E43\u0E08\u0E17\u0E35\u0E48\u0E04\u0E23\u0E31\u0E49\u0E07\u0E19\u0E35\u0E49\u0E09\u0E31\u0E19\u0E04\u0E34\u0E14\u0E1C\u0E34\u0E14 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E2E\u0E48\u0E32\u0E2E\u0E48\u0E32\u0E2E\u0E48\u0E32\u0E2E\u0E48\u0E32
+  - id: 3
+    dialogueString: "\u0E2E\u0E48\u0E32\u0E2E\u0E48\u0E32\u0E2E\u0E48\u0E32\u0E2E\u0E48\u0E32
       \u0E23\u0E39\u0E49\u0E2A\u0E36\u0E01\u0E14\u0E35\u0E40\u0E1B\u0E47\u0E19\u0E1A\u0E49\u0E32\u0E40\u0E25\u0E22 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E17\u0E35\u0E48\u0E23\u0E39\u0E49\u0E27\u0E48\u0E32\u0E22\u0E31\u0E07\u0E21\u0E35\u0E04\u0E19\u0E41\u0E04\u0E23\u0E4C\u0E2D\u0E22\u0E39\u0E48 "
+  - id: 4
+    dialogueString: "\u0E17\u0E35\u0E48\u0E23\u0E39\u0E49\u0E27\u0E48\u0E32\u0E22\u0E31\u0E07\u0E21\u0E35\u0E04\u0E19\u0E41\u0E04\u0E23\u0E4C\u0E2D\u0E22\u0E39\u0E48 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E44\u0E27\u0E49\u0E04\u0E23\u0E31\u0E49\u0E07\u0E2B\u0E19\u0E49\u0E32\u0E21\u0E32\u0E40\u0E08\u0E2D\u0E01\u0E31\u0E19\u0E43\u0E2B\u0E21\u0E48\u0E19\u0E30 "
+  - id: 5
+    dialogueString: "\u0E44\u0E27\u0E49\u0E04\u0E23\u0E31\u0E49\u0E07\u0E2B\u0E19\u0E49\u0E32\u0E21\u0E32\u0E40\u0E08\u0E2D\u0E01\u0E31\u0E19\u0E43\u0E2B\u0E21\u0E48\u0E19\u0E30 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
   currentBubbleIndex: 0
-  currentRandomizedBubbleIndex: 0
-  randomizedBubbleSettings: []
-  currentRandomizedBundle: []
+  currentStackIndex: 0
+  randomizedPrompts: []
+  randomizedStack: []
 --- !u!1 &1244564311
 GameObject:
   m_ObjectHideFlags: 0
@@ -10096,49 +10202,57 @@ MonoBehaviour:
   loop: 0
   endingType: 8
   bubbleSettings:
-  - dialogueString: "\u0E09\u0E31\u0E19\u0E01\u0E47\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E19\u0E32\u0E22\u0E08\u0E30\u0E40\u0E02\u0E49\u0E32\u0E43\u0E08 "
+  - id: 0
+    dialogueString: "\u0E09\u0E31\u0E19\u0E01\u0E47\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E19\u0E32\u0E22\u0E08\u0E30\u0E40\u0E02\u0E49\u0E32\u0E43\u0E08 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E41\u0E15\u0E48\u0E09\u0E31\u0E19\u0E04\u0E34\u0E14\u0E1C\u0E34\u0E14 "
+  - id: 1
+    dialogueString: "\u0E41\u0E15\u0E48\u0E09\u0E31\u0E19\u0E04\u0E34\u0E14\u0E1C\u0E34\u0E14 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E04\u0E27\u0E32\u0E21\u0E04\u0E34\u0E14\u0E41\u0E07\u0E48\u0E1A\u0E27\u0E01\u0E02\u0E2D\u0E07\u0E19\u0E32\u0E22... "
+  - id: 2
+    dialogueString: "\u0E04\u0E27\u0E32\u0E21\u0E04\u0E34\u0E14\u0E41\u0E07\u0E48\u0E1A\u0E27\u0E01\u0E02\u0E2D\u0E07\u0E19\u0E32\u0E22... "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E44\u0E21\u0E48\u0E23\u0E39\u0E49\u0E2B\u0E23\u0E37\u0E2D\u0E44\u0E07\u0E27\u0E48\u0E32\u0E09\u0E31\u0E19\u0E40\u0E08\u0E47\u0E1A\u0E1B\u0E27\u0E14\u0E41\u0E04\u0E48\u0E44\u0E2B\u0E19? "
+  - id: 3
+    dialogueString: "\u0E44\u0E21\u0E48\u0E23\u0E39\u0E49\u0E2B\u0E23\u0E37\u0E2D\u0E44\u0E07\u0E27\u0E48\u0E32\u0E09\u0E31\u0E19\u0E40\u0E08\u0E47\u0E1A\u0E1B\u0E27\u0E14\u0E41\u0E04\u0E48\u0E44\u0E2B\u0E19? "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E17\u0E33\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E01\u0E31\u0E1A\u0E27\u0E48\u0E32\u0E09\u0E31\u0E19\u0E1E\u0E22\u0E32\u0E22\u0E32\u0E21\u0E44\u0E21\u0E48\u0E1E\u0E2D "
+  - id: 4
+    dialogueString: "\u0E17\u0E33\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E01\u0E31\u0E1A\u0E27\u0E48\u0E32\u0E09\u0E31\u0E19\u0E1E\u0E22\u0E32\u0E22\u0E32\u0E21\u0E44\u0E21\u0E48\u0E1E\u0E2D "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E17\u0E33\u0E44\u0E21\u0E44\u0E21\u0E48\u0E25\u0E2D\u0E07\u0E40\u0E02\u0E49\u0E32\u0E43\u0E08\u0E04\u0E27\u0E32\u0E21\u0E23\u0E39\u0E49\u0E2A\u0E36\u0E01\u0E09\u0E31\u0E19\u0E1A\u0E49\u0E32\u0E07? "
+  - id: 5
+    dialogueString: "\u0E17\u0E33\u0E44\u0E21\u0E44\u0E21\u0E48\u0E25\u0E2D\u0E07\u0E40\u0E02\u0E49\u0E32\u0E43\u0E08\u0E04\u0E27\u0E32\u0E21\u0E23\u0E39\u0E49\u0E2A\u0E36\u0E01\u0E09\u0E31\u0E19\u0E1A\u0E49\u0E32\u0E07? "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E40\u0E1C\u0E0A\u0E34\u0E0D\u0E2B\u0E19\u0E49\u0E32\u0E01\u0E31\u0E1A\u0E15\u0E31\u0E27\u0E15\u0E19\u0E17\u0E35\u0E48\u0E41\u0E17\u0E49\u0E08\u0E23\u0E34\u0E07\u0E02\u0E2D\u0E07\u0E19\u0E32\u0E22\u0E1A\u0E49\u0E32\u0E07\u0E2A\u0E34 "
+  - id: 6
+    dialogueString: "\u0E40\u0E1C\u0E0A\u0E34\u0E0D\u0E2B\u0E19\u0E49\u0E32\u0E01\u0E31\u0E1A\u0E15\u0E31\u0E27\u0E15\u0E19\u0E17\u0E35\u0E48\u0E41\u0E17\u0E49\u0E08\u0E23\u0E34\u0E07\u0E02\u0E2D\u0E07\u0E19\u0E32\u0E22\u0E1A\u0E49\u0E32\u0E07\u0E2A\u0E34 "
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E2E\u0E48\u0E32\u0E2E\u0E48\u0E32\u0E2E\u0E48\u0E32\u2026
+  - id: 7
+    dialogueString: "\u0E2E\u0E48\u0E32\u0E2E\u0E48\u0E32\u0E2E\u0E48\u0E32\u2026
       \u0E41\u0E15\u0E48\u0E19\u0E32\u0E22\u0E01\u0E47\u0E04\u0E07\u0E08\u0E30\u0E1A\u0E2D\u0E01\u0E43\u0E2B\u0E49\u0E09\u0E31\u0E19\u0E2A\u0E39\u0E49\u0E15\u0E48\u0E2D\u0E44\u0E1B
       \u0E43\u0E0A\u0E48\u0E44\u0E2B\u0E21\u0E25\u0E48\u0E30? "
     interval: 0.25
@@ -10146,7 +10260,8 @@ MonoBehaviour:
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: "\u0E44\u0E14\u0E49 \u0E40\u0E14\u0E35\u0E4B\u0E22\u0E27\u0E08\u0E30\u0E42\u0E0A\u0E27\u0E4C\u0E43\u0E2B\u0E49\u0E14\u0E39\u0E27\u0E48\u0E32
+  - id: 8
+    dialogueString: "\u0E44\u0E14\u0E49 \u0E40\u0E14\u0E35\u0E4B\u0E22\u0E27\u0E08\u0E30\u0E42\u0E0A\u0E27\u0E4C\u0E43\u0E2B\u0E49\u0E14\u0E39\u0E27\u0E48\u0E32
       \"\u0E09\u0E31\u0E19\" \u0E08\u0E30\u0E2A\u0E39\u0E49\u0E15\u0E48\u0E2D\u0E44\u0E1B\u0E22\u0E31\u0E07\u0E44\u0E07 "
     interval: 0.25
     ignoreParameterType: 0
@@ -10154,9 +10269,9 @@ MonoBehaviour:
     hasAnswer: 0
     answerSettings: []
   currentBubbleIndex: 0
-  currentRandomizedBubbleIndex: 0
-  randomizedBubbleSettings: []
-  currentRandomizedBundle: []
+  currentStackIndex: 0
+  randomizedPrompts: []
+  randomizedStack: []
 --- !u!4 &1758816446
 Transform:
   m_ObjectHideFlags: 0
@@ -10601,12 +10716,13 @@ MonoBehaviour:
   bubblePrefab: {fileID: 3650761695848284737, guid: bf25b700fe3e15246810994a40d00440, type: 3}
   isEnding: 0
   playOnLevelStart: 1
-  startDelay: 0
+  startDelay: 5
   randomizeOrder: 1
   loop: 1
   endingType: 0
   bubbleSettings:
-  - dialogueString: 'How''s life been treating you recently? '
+  - id: 0
+    dialogueString: 'How''s life been treating you recently? '
     interval: 5
     ignoreParameterType: 2
     ignoreParameterScores:
@@ -10631,19 +10747,22 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: 'You remembered Kim? He became an illustrator. '
+  - id: 1
+    dialogueString: 'You remembered Kim? He became an illustrator. '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'I was always berated for drawing back then. '
+  - id: 2
+    dialogueString: 'I was always berated for drawing back then. '
     interval: 0.5
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'What do you reckon is the difference? '
+  - id: 3
+    dialogueString: 'What do you reckon is the difference? '
     interval: 5
     ignoreParameterType: 2
     ignoreParameterScores:
@@ -10668,13 +10787,15 @@ MonoBehaviour:
         parameterType: 4
         answerScores:
         - 1
-  - dialogueString: 'All this time that I''ve been trying '
+  - id: 4
+    dialogueString: 'All this time that I''ve been trying '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'What is it even for? '
+  - id: 5
+    dialogueString: 'What is it even for? '
     interval: 5
     ignoreParameterType: 2
     ignoreParameterScores:
@@ -10699,13 +10820,15 @@ MonoBehaviour:
         parameterType: 8
         answerScores:
         - 1
-  - dialogueString: 'Another job rejection, '
+  - id: 6
+    dialogueString: 'Another job rejection, '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'Why am I even trying? '
+  - id: 7
+    dialogueString: 'Why am I even trying? '
     interval: 5
     ignoreParameterType: 2
     ignoreParameterScores:
@@ -10730,19 +10853,22 @@ MonoBehaviour:
         parameterType: 2
         answerScores:
         - 1
-  - dialogueString: '"I wish to become a person I can be proud of." '
+  - id: 8
+    dialogueString: '"I wish to become a person I can be proud of." '
     interval: 0.5
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'I could often see my younger self say that. '
+  - id: 9
+    dialogueString: 'I could often see my younger self say that. '
     interval: 0.5
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'What a joke, right? '
+  - id: 10
+    dialogueString: 'What a joke, right? '
     interval: 5
     ignoreParameterType: 2
     ignoreParameterScores:
@@ -10767,7 +10893,8 @@ MonoBehaviour:
         parameterType: 1
         answerScores:
         - 1
-  - dialogueString: 'Don''t you think that life is really unfair? '
+  - id: 11
+    dialogueString: 'Don''t you think that life is really unfair? '
     interval: 5
     ignoreParameterType: 2
     ignoreParameterScores:
@@ -10792,7 +10919,8 @@ MonoBehaviour:
         parameterType: 2
         answerScores:
         - 1
-  - dialogueString: 'Nobody would care if I disappear right? '
+  - id: 12
+    dialogueString: 'Nobody would care if I disappear right? '
     interval: 5
     ignoreParameterType: 2
     ignoreParameterScores:
@@ -10811,19 +10939,22 @@ MonoBehaviour:
         parameterType: 1
         answerScores:
         - 1
-  - dialogueString: 'Everything feels so meaningless. '
+  - id: 13
+    dialogueString: 'Everything feels so meaningless. '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'I''ve been trying really hard. '
+  - id: 14
+    dialogueString: 'I''ve been trying really hard. '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'Yet it all amounts to nothing. '
+  - id: 15
+    dialogueString: 'Yet it all amounts to nothing. '
     interval: 5
     ignoreParameterType: 1
     ignoreParameterScores:
@@ -10848,7 +10979,8 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: 'It just feel like I''m always down in the pit. '
+  - id: 16
+    dialogueString: 'It just feel like I''m always down in the pit. '
     interval: 5
     ignoreParameterType: 2
     ignoreParameterScores:
@@ -10867,19 +10999,22 @@ MonoBehaviour:
         parameterType: 1
         answerScores:
         - 2
-  - dialogueString: 'I feel so lost right now. '
+  - id: 17
+    dialogueString: 'I feel so lost right now. '
     interval: 0.5
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'It''s like being stranded in a tunnel. '
+  - id: 18
+    dialogueString: 'It''s like being stranded in a tunnel. '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'without even seeing the light at the end. '
+  - id: 19
+    dialogueString: 'without even seeing the light at the end. '
     interval: 5
     ignoreParameterType: 2
     ignoreParameterScores:
@@ -10904,19 +11039,22 @@ MonoBehaviour:
         parameterType: 1
         answerScores:
         - 1
-  - dialogueString: 'Ever look back into the past? '
+  - id: 20
+    dialogueString: 'Ever look back into the past? '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'Thinking of the good old days? '
+  - id: 21
+    dialogueString: 'Thinking of the good old days? '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'And looking at yourself now, wondering how it got here. '
+  - id: 22
+    dialogueString: 'And looking at yourself now, wondering how it got here. '
     interval: 5
     ignoreParameterType: 2
     ignoreParameterScores:
@@ -10941,7 +11079,8 @@ MonoBehaviour:
         parameterType: 1
         answerScores:
         - 1
-  - dialogueString: 'I want to die. '
+  - id: 23
+    dialogueString: 'I want to die. '
     interval: 5
     ignoreParameterType: 2
     ignoreParameterScores:
@@ -10966,19 +11105,22 @@ MonoBehaviour:
         parameterType: 4
         answerScores:
         - 3
-  - dialogueString: '"It''s going to get better." '
+  - id: 24
+    dialogueString: '"It''s going to get better." '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: '"Everything''s gonna be alright." '
+  - id: 25
+    dialogueString: '"Everything''s gonna be alright." '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'Hah... what shallow words. '
+  - id: 26
+    dialogueString: 'Hah... what shallow words. '
     interval: 5
     ignoreParameterType: 1
     ignoreParameterScores:
@@ -11003,13 +11145,15 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: 'It''s been so long that I forgot, '
+  - id: 27
+    dialogueString: 'It''s been so long that I forgot, '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'but do you remember the last time I smiled? '
+  - id: 28
+    dialogueString: 'but do you remember the last time I smiled? '
     interval: 5
     ignoreParameterType: 2
     ignoreParameterScores:
@@ -11034,13 +11178,15 @@ MonoBehaviour:
         parameterType: 4
         answerScores:
         - 2
-  - dialogueString: 'Do you think that it''s still possible? '
+  - id: 29
+    dialogueString: 'Do you think that it''s still possible? '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'For my childhood dream to be alive once more. '
+  - id: 30
+    dialogueString: 'For my childhood dream to be alive once more. '
     interval: 5
     ignoreParameterType: 2
     ignoreParameterScores:
@@ -11065,13 +11211,15 @@ MonoBehaviour:
         parameterType: 1
         answerScores:
         - 1
-  - dialogueString: 'If tomato is a fruit, '
+  - id: 31
+    dialogueString: 'If tomato is a fruit, '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'Do you think ketchup is a smoothie? '
+  - id: 32
+    dialogueString: 'Do you think ketchup is a smoothie? '
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -11096,19 +11244,22 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: 'Looking at all this meat, '
+  - id: 33
+    dialogueString: 'Looking at all this meat, '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'I must ask... '
+  - id: 34
+    dialogueString: 'I must ask... '
     interval: 0.5
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'You ever thought of becoming a vegan? '
+  - id: 35
+    dialogueString: 'You ever thought of becoming a vegan? '
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -11133,13 +11284,15 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: 'I''m thinking of getting a new phone case. '
+  - id: 36
+    dialogueString: 'I''m thinking of getting a new phone case. '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'What color do you think would fit? '
+  - id: 37
+    dialogueString: 'What color do you think would fit? '
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -11164,13 +11317,15 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: 'I know tomato can be pronounce in two ways, '
+  - id: 38
+    dialogueString: 'I know tomato can be pronounce in two ways, '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'But how would you pronounce potato? '
+  - id: 39
+    dialogueString: 'But how would you pronounce potato? '
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -11195,7 +11350,8 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: 'How do you eat ice cream? '
+  - id: 40
+    dialogueString: 'How do you eat ice cream? '
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -11220,7 +11376,8 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: 'The weather''s pretty bad lately huh? '
+  - id: 41
+    dialogueString: 'The weather''s pretty bad lately huh? '
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -11245,7 +11402,8 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: 'Have you heard? Our president got sick again. '
+  - id: 42
+    dialogueString: 'Have you heard? Our president got sick again. '
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -11264,7 +11422,8 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: 'You like pork? '
+  - id: 43
+    dialogueString: 'You like pork? '
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -11289,7 +11448,8 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: 'That''s an interesting way to grill those meat. '
+  - id: 44
+    dialogueString: 'That''s an interesting way to grill those meat. '
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -11314,13 +11474,15 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: 'With how often we come here, '
+  - id: 45
+    dialogueString: 'With how often we come here, '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'we should''ve tried the mushroom by now. '
+  - id: 46
+    dialogueString: 'we should''ve tried the mushroom by now. '
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -11345,13 +11507,15 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: 'Random question, '
+  - id: 47
+    dialogueString: 'Random question, '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'who do think invented the Calender? '
+  - id: 48
+    dialogueString: 'who do think invented the Calender? '
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -11376,7 +11540,8 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: 'Sugar or salt? '
+  - id: 49
+    dialogueString: 'Sugar or salt? '
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -11401,7 +11566,8 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: 'Any interesting games you''re playing? '
+  - id: 50
+    dialogueString: 'Any interesting games you''re playing? '
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -11426,13 +11592,15 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: 'Ever had the thought that we''re just in a game? '
+  - id: 51
+    dialogueString: 'Ever had the thought that we''re just in a game? '
     interval: 0.5
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'That all this is just nothing but an illusion? '
+  - id: 52
+    dialogueString: 'That all this is just nothing but an illusion? '
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -11457,7 +11625,8 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: 'Do you think chairs exist? '
+  - id: 53
+    dialogueString: 'Do you think chairs exist? '
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -11482,13 +11651,15 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: 'Do you ever have the urge to try extreme sports, '
+  - id: 54
+    dialogueString: 'Do you ever have the urge to try extreme sports, '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'like bungee-jumping or skydiving? '
+  - id: 55
+    dialogueString: 'like bungee-jumping or skydiving? '
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -11513,19 +11684,22 @@ MonoBehaviour:
         parameterType: 0
         answerScores:
         - 0
-  - dialogueString: 'We rarely see birds nowadays. '
+  - id: 56
+    dialogueString: 'We rarely see birds nowadays. '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'I don''t think I''ve ever asked you this, '
+  - id: 57
+    dialogueString: 'I don''t think I''ve ever asked you this, '
     interval: 0.25
     ignoreParameterType: 0
     ignoreParameterScores: []
     hasAnswer: 0
     answerSettings: []
-  - dialogueString: 'but do you like birds? '
+  - id: 58
+    dialogueString: 'but do you like birds? '
     interval: 5
     ignoreParameterType: 0
     ignoreParameterScores:
@@ -11551,9 +11725,9 @@ MonoBehaviour:
         answerScores:
         - 0
   currentBubbleIndex: 0
-  currentRandomizedBubbleIndex: 0
-  randomizedBubbleSettings: []
-  currentRandomizedBundle: []
+  currentStackIndex: 0
+  randomizedPrompts: []
+  randomizedStack: []
 --- !u!1 &1912986749
 GameObject:
   m_ObjectHideFlags: 0
@@ -13171,8 +13345,8 @@ MonoBehaviour:
     parameterScore: 0
   - parameterType: 1
     parameterScore: 0
-  waveToImport: {fileID: 1893292097}
-  fileName: Dialogues EN
+  waveToImport: {fileID: 484055267}
+  fileName: Bad Ending 3 EN
 --- !u!4 &2128562624
 Transform:
   m_ObjectHideFlags: 0

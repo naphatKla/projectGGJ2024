@@ -35,13 +35,14 @@ namespace Managers
         protected override void Awake()
         {
             base.Awake();
+            audioMixer.GetFloat(_musicVolumeParameter, out _initialMusicVolume);
+            audioMixer.GetFloat(_fxVolumeParameter, out _initialFxVolume);
             _baseAudioSource = fxAudioPool[0].gameObject;
             freeSources = fxAudioPool;
         }
         void Start()
         {
-            audioMixer.GetFloat(_musicVolumeParameter, out _initialMusicVolume);
-            audioMixer.GetFloat(_fxVolumeParameter, out _initialFxVolume);
+            
         }
 
         // Update is called once per frame
@@ -79,7 +80,7 @@ namespace Managers
         {
             musicAudioSource.Stop();
         }
-        
+
         public void FadeOutMusic(float duration, AfterFadeAction afterFadeAction = AfterFadeAction.Nothing)
         {
             if (_musicFadeTween.IsActive()) _musicFadeTween.Kill();
@@ -100,9 +101,10 @@ namespace Managers
             
         }
         
-        public void FadeInMusic(float duration)
+        public void FadeInMusic(float duration, bool fromZero = false)
         {
             if (_musicFadeTween.IsActive()) _musicFadeTween.Kill();
+            if (fromZero) audioMixer.SetFloat(_musicVolumeParameter, -80f);
             musicAudioSource.Play();
             _musicFadeTween = audioMixer.DOSetFloat(_musicVolumeParameter, _initialMusicVolume, duration);
         }
@@ -183,9 +185,10 @@ namespace Managers
             });
         }
         
-        public void FadeInFx(float duration)
+        public void FadeInFx(float duration, bool fromZero = false)
         {
             if (_fxFadeTween.IsActive()) _fxFadeTween.Kill();
+            if (fromZero) audioMixer.SetFloat(_fxVolumeParameter, -80f);
             foreach (AudioSource audioSource in reservedSources)
             {
                 audioSource.Play();

@@ -16,6 +16,8 @@ namespace Bubbles
     [Serializable]
     public struct BubbleSettings
     {
+        [SerializeField][ReadOnly] private int id;
+        
         [Title("Dialogue")]
         [SerializeField] private string dialogueString;
         [SerializeField][MinValue(0.25f)] private float interval;
@@ -26,8 +28,9 @@ namespace Bubbles
         [SerializeField] private bool hasAnswer;
         //[SerializeField][ShowIf(nameof(hasAnswer))] private string answerString;
         [SerializeField][ShowIf(nameof(hasAnswer))] private List<BubbleAnswerSettings> answerSettings;
-
+        
         private bool _showIgnoreScore;
+        public int Id => id;
         public float Interval => interval;
         public string DialogueString => dialogueString;
         public ParameterType IgnoreParameterType => ignoreParameterType;
@@ -41,16 +44,16 @@ namespace Bubbles
             _showIgnoreScore = ignoreParameterType != ParameterType.Generic;
         }
         
-        public BubbleSettings(string dialogueString, float interval, ParameterType ignoreParameterType = ParameterType.Generic,
+        public BubbleSettings(int id, string dialogueString, float interval, ParameterType ignoreParameterType = ParameterType.Generic,
             float[] ignoreParameterScores = null, bool hasAnswer = false,
             List<BubbleAnswerSettings> answerSettings = null)
         {
+            this.id = id;
             this.dialogueString = dialogueString;
             this.interval = interval;
             this.ignoreParameterType = ignoreParameterType;
             this.ignoreParameterScores = ignoreParameterScores;
             this.hasAnswer = hasAnswer;
-            //this.answerString = answerString;
             this.answerSettings = answerSettings;
             _showIgnoreScore = ignoreParameterType != ParameterType.Generic;
         }

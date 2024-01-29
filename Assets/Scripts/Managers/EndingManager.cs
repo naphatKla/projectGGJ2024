@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using DG.Tweening;
 using Manager;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -17,8 +18,10 @@ namespace Managers
     }
     public class EndingManager : MonoBehaviour
     {
+        [SerializeField] private AudioClip endingMusic;
         [SerializeField] private VideoPlayer videoPlayer;
         [SerializeField] private EndingSettings[] endingSettings;
+        private bool _goingToCredit;
         
         public static ParameterType endingType = ParameterType.Ignorant;
         
@@ -28,7 +31,13 @@ namespace Managers
         {
             PlayEnding();
         }
-        
+
+        private void Start()
+        {
+            SoundManager.Instance.PlayMusic(endingMusic);
+            SoundManager.Instance.FadeInMusic(1f, true);
+        }
+
         private void PlayEnding()
         {
             videoPlayer.clip = endingSettings.First(x => x.EndingType == endingType).VideoClip;
@@ -41,12 +50,23 @@ namespace Managers
             if (!videoPlayer.isPrepared) return;
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                SceneManager.LoadScene("Credit");
+                GoToCredit();
             }
             if (videoPlayer.frame >= (long)videoPlayer.frameCount - 1)
             {
-                SceneManager.LoadScene("Credit");
+                GoToCredit();
             }
+        }
+        
+        private void GoToCredit()
+        {
+            if (_goingToCredit) return;
+            _goingToCredit = true;
+            SoundManager.Instance.FadeOutMusic(1f, AfterFadeAction.Stop);
+            DOVirtual.DelayedCall(1f, () =>
+            {
+                SceneManager.LoadScene("Credit");
+            });
         }
     }
 }

@@ -23,12 +23,13 @@ namespace Bubbles
 
         [Title("Debug")]
         [SerializeField][ReadOnly] private int currentBubbleIndex;
-        [SerializeField][ReadOnly] private int currentRandomizedBubbleIndex;
-        [SerializeField] private List<BubbleSettings> randomizedBubbleSettings = new List<BubbleSettings>();
-        [SerializeField] private List<BubbleSettings> currentRandomizedBundle = new List<BubbleSettings>();
+        [SerializeField][ReadOnly] private int currentStackIndex;
+        [SerializeField] private List<BubbleSettings> randomizedPrompts = new List<BubbleSettings>();
+        [SerializeField] private List<BubbleSettings> randomizedStack = new List<BubbleSettings>();
         
         private BubbleSettings _previousBubbleSettings;
         private bool _isPlaying;
+        private bool _readyToEnd;
         private bool _nextBubble = true;
         private float _currentInterval;
         
@@ -44,69 +45,75 @@ namespace Bubbles
         
         private void Awake()
         {
+            randomizedPrompts.Clear();
+            randomizedStack.Clear();
             currentBubbleIndex = 0;
             _currentInterval = 0;
             if (randomizeOrder)
             {
-                randomizedBubbleSettings = bubbleSettings.FindAll(x => x.HasAnswer);
+                randomizedPrompts = bubbleSettings.FindAll(x => x.HasAnswer);
             }
         }
         
         private void Update()
         {
-            if (!_isPlaying || !_nextBubble) return;
+            if (!_isPlaying || !_nextBubble || GameManager.Instance.IsLose) return;
             _currentInterval -= Time.deltaTime;
             if (_currentInterval > 0) return;
             if (randomizeOrder)
             {
-                if (currentRandomizedBubbleIndex == 0 && randomizedBubbleSettings.Count > 0)
-                {
-                    int randomIndex = Random.Range(0, randomizedBubbleSettings.Count);
-                    BubbleSettings randomBubbleSettings = randomizedBubbleSettings[randomIndex];
-                    currentRandomizedBundle.Add(randomBubbleSettings);
-                    int index = bubbleSettings.IndexOf(randomBubbleSettings);
-                    SelectRandomizedBubble(index);
-                }
-                if (currentRandomizedBubbleIndex >= currentRandomizedBundle.Count)
-                {
-                    currentRandomizedBubbleIndex = 0;
-                    currentRandomizedBundle = new List<BubbleSettings>();
-                }
-                else
-                {
-                    Debug.Log("Index of: " +currentRandomizedBundle[currentRandomizedBubbleIndex].DialogueString);
-                    Debug.Log("Index: " + bubbleSettings.IndexOf(currentRandomizedBundle[currentRandomizedBubbleIndex]));
-                    SpawnBubble(bubbleSettings.IndexOf(currentRandomizedBundle[currentRandomizedBubbleIndex]));
-                    _previousBubbleSettings = currentRandomizedBundle[currentRandomizedBubbleIndex];
-                    randomizedBubbleSettings.Remove(currentRandomizedBundle[^1]);
-                    currentRandomizedBubbleIndex++;
-                    _nextBubble = false;
-                }
-                
-                if (randomizedBubbleSettings.Count <= 0 &&
-                    currentRandomizedBubbleIndex >= currentRandomizedBundle.Count)
-                {
-                    if (loop)
-                    {
-                        randomizedBubbleSettings = bubbleSettings.FindAll(x => x.HasAnswer);
-                        currentRandomizedBubbleIndex = 0;
-                        currentRandomizedBundle = new List<BubbleSettings>();
-                        _isPlaying = true;
-                        return;
-                    }
-                    _isPlaying = false;
-                }
-                
+                SpawnRandomly();
             }
-            else if (!randomizeOrder)
+            else
             {
-                SpawnBubble(currentBubbleIndex);
-                _previousBubbleSettings = bubbleSettings[currentBubbleIndex];
-                currentBubbleIndex++;
-                _nextBubble = false;
+                SpawnOrderly();
             }
             _currentInterval = 0;
+        }
+
+        private void SpawnRandomly()
+        {
+            if (currentStackIndex >= randomizedStack.Count)
+            {
+                currentStackIndex = 0;
+                randomizedStack.Clear();
+                RandomStack();
+            }
+            else
+            {
+                BubbleSettings randomBubble = randomizedStack[currentStackIndex];
+                int index = bubbleSettings.FindIndex(x => x.Id == randomBubble.Id);
+                Debug.Log("String: " + randomBubble.DialogueString);
+                Debug.Log("Index: " + index);
+                SpawnBubble(index);
+                _previousBubbleSettings = randomBubble;
+                randomizedPrompts.Remove(randomizedStack[^1]);
+                currentStackIndex++;
+                _nextBubble = false;
+            }
+
+            if (randomizedPrompts.Count > 0 ||
+                currentStackIndex < randomizedStack.Count) return;
+            if (loop)
+            {
+                randomizedPrompts = bubbleSettings.FindAll(x => x.HasAnswer);
+                currentStackIndex = 0;
+                randomizedStack.Clear();
+                _isPlaying = true;
+                return;
+            }
+            _isPlaying = false;
+
+        }
+
+        private void SpawnOrderly()
+        {
+            SpawnBubble(currentBubbleIndex);
+            _previousBubbleSettings = bubbleSettings[currentBubbleIndex];
+            currentBubbleIndex++;
+            _nextBubble = false;
             if (currentBubbleIndex < bubbleSettings.Count) return;
+            if (isEnding) _readyToEnd = true;
             if (loop)
             {
                 currentBubbleIndex = 0;
@@ -115,37 +122,37 @@ namespace Bubbles
             else
             {
                 _isPlaying = false;
-                if (isEnding)
-                {
-                    SceneManager.LoadScene("Ending");
-                }
-            }
-        }
-        
-        private void SelectRandomizedBubble(int index)
-        {
-            for (int i = index - 1; i >= 0; i--)
-            {
-                if (!bubbleSettings[i].HasAnswer)
-                {
-                    currentRandomizedBundle.Add(bubbleSettings[i]);
-                }
-                else break;
-            }
-            currentRandomizedBundle.Reverse();
-            Debug.Log($"Current Randomized Bundle: {currentRandomizedBundle.Count}");
-            foreach (BubbleSettings bubbleSettings in currentRandomizedBundle)
-            {
-                Debug.Log($"Bubble Settings: {bubbleSettings.DialogueString}");
             }
         }
 
         public void PlayWave()
         {
+            if (randomizeOrder)
+            {
+                RandomStack();
+            }
             DOVirtual.DelayedCall(startDelay, () =>
             {
                 _isPlaying = true;
             });
+        }
+
+        private void RandomStack()
+        {
+            int randomIndex = Random.Range(0, randomizedPrompts.Count);
+            BubbleSettings randomBubbleSettings = randomizedPrompts[randomIndex];
+            randomizedStack.Add(randomBubbleSettings);
+            int index = bubbleSettings.FindIndex(x => x.Id == randomBubbleSettings.Id);
+            for (int i = index - 1; i >= 0; i--)
+            {
+                if (!bubbleSettings[i].HasAnswer)
+                {
+                    randomizedStack.Add(bubbleSettings[i]);
+                }
+                else break;
+            }
+            randomizedStack.Reverse();
+            if (randomizedStack.Count == 0) Debug.LogWarning("Randomized Stack is empty");
         }
         
         public void StopWave()
@@ -155,6 +162,10 @@ namespace Bubbles
         
         public void SetNextBubble()
         {
+            if (_readyToEnd)
+            {
+                GameManager.Instance.GoToEnding();
+            }
             _nextBubble = true;
             _currentInterval = _previousBubbleSettings.Interval;
         }

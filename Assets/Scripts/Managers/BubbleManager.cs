@@ -148,10 +148,12 @@ namespace Managers
         [Title("IO")]
         [SerializeField] private BubbleWave waveToImport;
         [SerializeField] private string fileName;
+        private int _currentId;
         private List<BubbleSettings> _overrideBubbleSettings = new List<BubbleSettings>();
         [Button("Import CSV")]
         private void ImportCSV()
         {
+            _currentId = 0;
             _overrideBubbleSettings = new List<BubbleSettings>();
             string path = Path.Combine(Application.streamingAssetsPath, "Import", $"{fileName}.csv");
             path = path.Replace(@"\", "/");
@@ -204,7 +206,8 @@ namespace Managers
                 int endIndex = s.IndexOf('>');
                 string leading = s.Substring(0, startIndex);
                 string interval = s.Substring(startIndex + 1, endIndex - startIndex - 1);
-                _overrideBubbleSettings.Add(new BubbleSettings(leading, Convert.ToSingle(interval)));
+                _overrideBubbleSettings.Add(new BubbleSettings(_currentId, leading, Convert.ToSingle(interval)));
+                _currentId++;
             }
         }
 
@@ -252,8 +255,9 @@ namespace Managers
             {
                 answerSettings.Add(new BubbleAnswerSettings(answers[i], new AnswerArchetype(types[i], new[] {scores[i]})));
             }
-            _overrideBubbleSettings.Add(new BubbleSettings(question, Convert.ToSingle(interval), types[^1],
+            _overrideBubbleSettings.Add(new BubbleSettings(_currentId, question, Convert.ToSingle(interval), types[^1],
                 new[] { scores[^1] }, true, answerSettings));
+            _currentId++;
         }
 
         [Title("Debug")]

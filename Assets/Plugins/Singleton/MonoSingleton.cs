@@ -76,7 +76,7 @@ namespace Plugins.Singleton
         /// </summary>
         public virtual void OnDestroy()
         {
-            applicationIsQuitting = true;
+            //applicationIsQuitting = true;
         }
         
         protected virtual void Awake()
@@ -159,7 +159,7 @@ namespace Plugins.Singleton
         /// </summary>
         public void OnDestroy()
         {
-            applicationIsQuitting = true;
+            //applicationIsQuitting = true;
         }
         
         protected virtual void Awake()

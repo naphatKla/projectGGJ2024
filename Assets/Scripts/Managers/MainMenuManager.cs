@@ -1,4 +1,5 @@
 using System;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,16 +15,15 @@ namespace Managers
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+            if (!PlayerPrefs.HasKey("Language"))
+            {
+                PlayerPrefs.SetString("Language", "EN");
+            }
+            languageImage.sprite = PlayerPrefs.GetString("Language") == "EN" ? languageSprites[0] : languageSprites[1];
         }
 
         public void ToggleLanguage()
         {
-            if (!PlayerPrefs.HasKey("Language"))
-            {
-                PlayerPrefs.SetString("Language", "TH");
-                languageImage.sprite = languageSprites[1];
-                return;
-            }
             string currentLanguage = PlayerPrefs.GetString("Language", _defaultLanguage);
             switch (currentLanguage)
             {
@@ -36,6 +36,13 @@ namespace Managers
                     languageImage.sprite = languageSprites[0];
                     break;
             }
+        }
+        
+        [Title("Debug")]
+        [Button("Delete Keys")]
+        private void DeleteKeys()
+        {
+            PlayerPrefs.DeleteKey("Language");
         }
     }
 }

@@ -5,6 +5,7 @@ using Plugins.Singleton;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Managers
@@ -15,7 +16,7 @@ namespace Managers
         public float gamePlayTime;
         public int meatGoal;
         [HideInInspector] public int meatCooked;
-        [HideInInspector]  public int meatBurned;
+        [HideInInspector] public int meatBurned;
         public bool IsAllMeatBurned => meatBurned >= stove.slotCount;
         [SerializeField] private float _timeCount;
         public bool IsWin => meatCooked >= meatGoal;
@@ -28,17 +29,17 @@ namespace Managers
         [SerializeField] private TextMeshProUGUI timerText;
         [SerializeField] private TextMeshProUGUI meatGoalText;
         private BubbleManager BubbleManager => BubbleManager.Instance;
-        [Header("Sound")]
-        [SerializeField] private AudioClip ambientSound;
+        [Header("Sound")] [SerializeField] private AudioClip ambientSound;
         [SerializeField] private AudioClip winSound;
-        
+
         void Start()
         {
             meatGoalText.text = $"{meatCooked} / {meatGoal}";
             SoundManager.Instance.PlayMusic(ambientSound);
-            SoundManager.Instance.PlayFx(winSound, out _, true);
+            SoundManager.Instance.FadeInMusic(2f, true);
+            SoundManager.Instance.FadeInFx(0.5f, true);
         }
-        
+
         void Update()
         {
             if (IsLose || IsWin) return;
@@ -61,7 +62,7 @@ namespace Managers
                 });
             }
         }
-        
+
         public void AddMeatCooked()
         {
             meatCooked++;
@@ -70,7 +71,7 @@ namespace Managers
             CheckEnding();
             winFeedback.PlayFeedbacks();
         }
-        
+
         [Button("Check Ending")]
         private void CheckEnding()
         {
@@ -114,7 +115,17 @@ namespace Managers
                 .FindAll(x => !x.BubbleWave.IsEnding).ForEach(x => x.BubbleWave.StopWave());
             EndingManager.endingType = endingType;
         }
+        public void GoToEnding()
+        {
+            SoundManager.Instance.FadeOutMusic(1f, AfterFadeAction.Stop);
+            SoundManager.Instance.FadeOutFx(1f, AfterFadeAction.Stop);
+            DOVirtual.DelayedCall(1f, () =>
+            {
+                SceneManager.LoadScene("Ending");
+            });
+        }
     }
+
     public class ParameterComparer : IComparer<ParameterArchetype>
     {
         public int Compare(ParameterArchetype x, ParameterArchetype y)
