@@ -6,6 +6,7 @@ using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Managers
@@ -30,14 +31,15 @@ namespace Managers
         [SerializeField] private TextMeshProUGUI meatGoalText;
         private BubbleManager BubbleManager => BubbleManager.Instance;
         [Header("Sound")] [SerializeField] private AudioClip ambientSound;
-        [SerializeField] private AudioClip winSound;
+        [SerializeField] private AudioClip windSound;
+        public MMF_Player meatBurnFeedback;
+        public Image transition;
 
         void Start()
         {
             meatGoalText.text = $"{meatCooked} / {meatGoal}";
             SoundManager.Instance.PlayMusic(ambientSound);
-            SoundManager.Instance.FadeInMusic(2f, true);
-            SoundManager.Instance.FadeInFx(0.5f, true);
+            SoundManager.Instance.PlayFx(windSound,out _,true);
         }
 
         void Update()
@@ -119,6 +121,8 @@ namespace Managers
         {
             SoundManager.Instance.FadeOutMusic(1f, AfterFadeAction.Stop);
             SoundManager.Instance.FadeOutFx(1f, AfterFadeAction.Stop);
+            transition.GetComponent<Animator>().SetTrigger("ChangeScene");
+            
             DOVirtual.DelayedCall(1f, () =>
             {
                 SceneManager.LoadScene("Ending");

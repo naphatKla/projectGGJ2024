@@ -9,19 +9,22 @@ namespace Managers
     {
         [SerializeField] private Image languageImage;
         [SerializeField] private Sprite[] languageSprites;
+        [SerializeField] private AudioClip bgmSound;
         private readonly string _defaultLanguage = "EN";
 
         private void Awake()
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+            SoundManager.Instance.PlayMusic(bgmSound);
+            Debug.Log("Call");
             if (!PlayerPrefs.HasKey("Language"))
             {
                 PlayerPrefs.SetString("Language", "EN");
             }
             languageImage.sprite = PlayerPrefs.GetString("Language") == "EN" ? languageSprites[0] : languageSprites[1];
         }
-
+        
         public void ToggleLanguage()
         {
             string currentLanguage = PlayerPrefs.GetString("Language", _defaultLanguage);

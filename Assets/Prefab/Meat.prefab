@@ -106,7 +106,7 @@ MonoBehaviour:
   dropSound: {fileID: 8300000, guid: 613e7f1727a3c3b4da575697d5332199, type: 3}
   flipSound: {fileID: 8300000, guid: 2d81e8f87205c8b4f9004a0b696aafa4, type: 3}
   burntSound: {fileID: 8300000, guid: ef9acc0b8ff44984490bb1db86db6ee0, type: 3}
-  onGrillSound: {fileID: 8300000, guid: 2de0a23a6201fda458becb9070a837dd, type: 3}
+  burntFeedback: {fileID: 0}
 --- !u!95 &947387935910498258
 Animator:
   serializedVersion: 5

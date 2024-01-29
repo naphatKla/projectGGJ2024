@@ -65,8 +65,9 @@ namespace Managers
             indicesToRemove.ForEach(x => reservedSources.RemoveAt(x));
         }
         
-        public void PlayMusic(AudioClip musicClip, bool loop = true)
+        public void PlayMusic(AudioClip musicClip, bool loop = true, bool isSkipIfCurrentClipPlaying = true)
         {
+            if (isSkipIfCurrentClipPlaying && musicAudioSource.isPlaying && musicAudioSource.clip == musicClip) return;
             musicAudioSource.clip = musicClip;
             musicAudioSource.loop = loop;
             musicAudioSource.Play();

@@ -1,5 +1,6 @@
 using DG.Tweening;
 using Manager;
+using Managers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,9 +9,14 @@ public class CreditManager : MonoBehaviour
 {
     //[SerializeField] private Animator creditAnimator;
     [SerializeField] private Image transition;
+    [SerializeField] private AudioClip creditMusic;
     private bool _isTransitioning;
-
-    // Update is called once per frame
+    
+    void Awake()
+    {
+        SoundManager.Instance.PlayMusic(creditMusic,isSkipIfCurrentClipPlaying:true);
+    }
+    
     void Update()
     {
         if (_isTransitioning) return;

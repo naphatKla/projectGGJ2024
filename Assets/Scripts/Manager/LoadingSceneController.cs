@@ -1,5 +1,6 @@
 using System.Collections;
 using DG.Tweening;
+using Managers;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
@@ -40,6 +41,8 @@ namespace Manager
         {
             //_currentTipsIndex = Random.Range(0, tips.Length);
             //tipsText.text = tips[_currentTipsIndex];
+            SoundManager.Instance.StopAllFx();
+            SoundManager.Instance.StopMusic();
             StartCoroutine(LoadSceneAsync());
         }
 

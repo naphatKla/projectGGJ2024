@@ -51,6 +51,7 @@ namespace Bubbles
     }
     public class BubbleAnswer : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
     {
+        [SerializeField] private AudioClip answerSound;
         private BubbleManager BubbleManager => BubbleManager.Instance;
         private Bubble _bubble;
         private BubbleAnswerSettings _settings;
@@ -85,7 +86,8 @@ namespace Bubbles
         public void OnPointerClick(PointerEventData eventData)
         {
             ModifyParameterScore();
-            //SoundManager.Instance.PlayFx(_settings.AnswerSounds, out _);
+            SoundManager.Instance.PlayFx(answerSound, out AudioSource answerSource);
+            answerSource.pitch = UnityEngine.Random.Range(0.8f, 1.2f);
             _bubble.ShrinkBubble();
         }
 

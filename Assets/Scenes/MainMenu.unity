@@ -661,6 +661,7 @@ GameObject:
   - component: {fileID: 502379908}
   - component: {fileID: 502379907}
   - component: {fileID: 502379906}
+  - component: {fileID: 502379909}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -769,6 +770,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 502379904}
   m_CullTransparentMesh: 1
+--- !u!95 &502379909
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502379904}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 93a8fd46a12e54840b62058a3d5bc0b3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &775448919
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,6 +1148,7 @@ MonoBehaviour:
   languageSprites:
   - {fileID: 21300000, guid: 06fef1db52e0dfe48a2ff686986a8c27, type: 3}
   - {fileID: 21300000, guid: 1721ea7494118824dadc6f6f1dbc7b7b, type: 3}
+  bgmSound: {fileID: 8300000, guid: 6e7fa6efd9a237d499faa2225ef2fbf4, type: 3}
 --- !u!4 &978879340
 Transform:
   m_ObjectHideFlags: 0

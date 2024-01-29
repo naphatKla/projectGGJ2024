@@ -52,15 +52,19 @@ namespace Manager
                     SoundManager.Instance.FadeOutMusic(0.5f, AfterFadeAction.Stop);
                     SoundManager.Instance.FadeOutFx(0.5f, AfterFadeAction.Stop);
                     loadSceneTransition.GetComponent<Animator>().SetTrigger("ChangeScene");
-                    DOVirtual.DelayedCall(0.6f, (() =>
+                    DOVirtual.DelayedCall(1f, (() =>
                     {
                         if (sceneButton.useLoadingScene)
                         {
                             SceneNameAfterLoad = sceneButton.sceneName == SceneName.LoadingScene? SceneName.MainMenu : sceneButton.sceneName;
                             SceneManager.LoadScene(SceneName.LoadingScene.ToString());
+                            SoundManager.Instance.FadeInMusic(0.5f, true);
+                            SoundManager.Instance.FadeInFx(0.5f, true);
                             return;
                         }
                         SceneManager.LoadScene(sceneButton.sceneName.ToString());
+                        SoundManager.Instance.FadeInMusic(0.5f, true);
+                        SoundManager.Instance.FadeInFx(0.5f, true);
                     }));
                 });
             }

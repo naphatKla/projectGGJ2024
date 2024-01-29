@@ -19,6 +19,7 @@ namespace Managers
     public class EndingManager : MonoBehaviour
     {
         [SerializeField] private AudioClip endingMusic;
+        [SerializeField] private AudioClip endingFx;
         [SerializeField] private VideoPlayer videoPlayer;
         [SerializeField] private EndingSettings[] endingSettings;
         private bool _goingToCredit;
@@ -34,8 +35,11 @@ namespace Managers
 
         private void Start()
         {
+            SoundManager.Instance.FadeInMusic(2f,true);
+            SoundManager.Instance.StopAllFx();
+            SoundManager.Instance.FadeInFx(1, true);
             SoundManager.Instance.PlayMusic(endingMusic);
-            SoundManager.Instance.FadeInMusic(1f, true);
+            SoundManager.Instance.PlayFx(endingFx,out _,true);
         }
 
         private void PlayEnding()
@@ -62,7 +66,6 @@ namespace Managers
         {
             if (_goingToCredit) return;
             _goingToCredit = true;
-            SoundManager.Instance.FadeOutMusic(1f, AfterFadeAction.Stop);
             DOVirtual.DelayedCall(1f, () =>
             {
                 SceneManager.LoadScene("Credit");

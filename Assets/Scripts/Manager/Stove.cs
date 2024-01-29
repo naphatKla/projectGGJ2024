@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using DG.Tweening;
 using Managers;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,7 +21,8 @@ public class Stove : MonoBehaviour
 
     private void Start()
     {
-        SoundManager.Instance.PlayMusic(fireSound);
+        SoundManager.Instance.PlayFx(fireSound,out AudioSource fireSource,true);
+        fireSource.volume = 0.25f;
     }
 
     private void Update()
@@ -36,7 +38,10 @@ public class Stove : MonoBehaviour
 
         if (stoveSlots.All(slot => slot.childCount <= 0))
         {
-            //SoundManager.Instance.StopFx(_cookingSource);
+            if (_cookingSource)
+            {
+                _cookingSource.DOFade(0f, 0.5f).OnComplete(() => { _cookingSource.Stop(); });
+            }
             return;
         }
 
