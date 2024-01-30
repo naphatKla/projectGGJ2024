@@ -27,7 +27,14 @@ public class Stove : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.Instance.IsWin || GameManager.Instance.IsLose) return;
+        if (GameManager.Instance.IsWin || GameManager.Instance.IsLose)
+        {
+            if (_cookingSource)
+            {
+                _cookingSource.DOFade(0f, 0.5f).OnComplete(() => { _cookingSource.Stop(); });
+            }
+            return;
+        }
         Meat[] meats = stoveSlots.Where(slot => slot.childCount > 0)
             .Select(slot => slot.GetChild(0).GetComponent<Meat>()).ToArray();
         foreach (Meat meat in meats)
@@ -36,7 +43,7 @@ public class Stove : MonoBehaviour
             meat.OnGrill();
         }
 
-        if (stoveSlots.All(slot => slot.childCount <= 0))
+        if (stoveSlots.All(slot => slot.childCount <= 0) || meats.All(meat => meat.IsBurnt))
         {
             if (_cookingSource)
             {

@@ -22,6 +22,7 @@ namespace Managers
         [SerializeField] private float _timeCount;
         public bool IsWin => meatCooked >= meatGoal;
         public bool IsLose;
+        public bool IsGameEnd => IsWin || IsLose;
         [SerializeField] private MMF_Player loseFeedback;
         [SerializeField] private MMF_Player winFeedback;
         [SerializeField] private Image timerImage;

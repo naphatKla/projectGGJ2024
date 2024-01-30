@@ -101,6 +101,7 @@ MonoBehaviour:
   - FoodState: 2
     CookedTime: 0
     NextFoodState: 2
+  randomRotationRange: {x: 15, y: 15}
   burntParticle:
   - {fileID: 3308441436170377588}
   dropSound: {fileID: 8300000, guid: 613e7f1727a3c3b4da575697d5332199, type: 3}

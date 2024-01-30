@@ -29,6 +29,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
     public bool IsOnGrill => transform.parent.CompareTag("Stove");
     public bool IsOnFlip {get; set;}
     public bool IsFlipping{get; set;}
+    [SerializeField] Vector2 randomRotationRange;
     [SerializeField] ParticleSystem[] burntParticle;
     private bool _isMouseDown;
     private Stove _lastedStove;
@@ -64,6 +65,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
         _animator = GetComponent<Animator>();
         _image.alphaHitTestMinimumThreshold = 0.1f;
         DOVirtual.DelayedCall(0.5f, ()=> _animator.SetBool("IsSpawning", false));
+        transform.rotation = Quaternion.Euler(0, 0, UnityEngine.Random.Range(randomRotationRange.x, randomRotationRange.y));
     }
 
     private void FixedUpdate()
