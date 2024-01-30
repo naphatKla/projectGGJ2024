@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: RawOnGrill
+  m_Name: Ripeye_CookedOnGrill
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -55,9 +55,9 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 21300000, guid: fccfac3fdfe2db34fbeb3312c9cafc10, type: 3}
+      value: {fileID: 21300000, guid: fb071e11b008a8a43878ddfc7b1977b6, type: 3}
     - time: 0.8333333
-      value: {fileID: 21300000, guid: fccfac3fdfe2db34fbeb3312c9cafc10, type: 3}
+      value: {fileID: 21300000, guid: fb071e11b008a8a43878ddfc7b1977b6, type: 3}
     attribute: m_Sprite
     path: 
     classID: 114
@@ -89,8 +89,8 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: fccfac3fdfe2db34fbeb3312c9cafc10, type: 3}
-    - {fileID: 21300000, guid: fccfac3fdfe2db34fbeb3312c9cafc10, type: 3}
+    - {fileID: 21300000, guid: fb071e11b008a8a43878ddfc7b1977b6, type: 3}
+    - {fileID: 21300000, guid: fb071e11b008a8a43878ddfc7b1977b6, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
