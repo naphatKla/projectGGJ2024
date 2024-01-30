@@ -24,7 +24,7 @@ public class FoodSpawnerManager : MonoSingleton<FoodSpawnerManager>
         Instantiate(foods[Random.Range(0, foods.Length)], point.position, Quaternion.identity, point);
         SoundManager.Instance.PlayFx(spawnSound, out AudioSource spawnSource);
         spawnSource.pitch = Random.Range(0.8f, 1.2f);
-        spawnSource.volume = 0.7f;
+        spawnSource.volume = 0.6f;
     }
     
     public void AddFoodToTheNearestSlot(Meat meat)

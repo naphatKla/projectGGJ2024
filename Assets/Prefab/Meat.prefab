@@ -106,7 +106,6 @@ MonoBehaviour:
   dropSound: {fileID: 8300000, guid: 613e7f1727a3c3b4da575697d5332199, type: 3}
   flipSound: {fileID: 8300000, guid: 2d81e8f87205c8b4f9004a0b696aafa4, type: 3}
   burntSound: {fileID: 8300000, guid: ef9acc0b8ff44984490bb1db86db6ee0, type: 3}
-  burntFeedback: {fileID: 0}
 --- !u!95 &947387935910498258
 Animator:
   serializedVersion: 5
@@ -117,7 +116,7 @@ Animator:
   m_GameObject: {fileID: 4937973334806860604}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a39eb8fd20d653540bb1ee32cac557fe, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6f1ba75e669dd1446a791af3284db3ca, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

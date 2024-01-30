@@ -70,7 +70,7 @@ namespace Manager
                 loadingPercentText.text = $"{(_asyncOperation.progress+0.1) *100f :0}%";
                 if (_asyncOperation.progress >= 0.9f && Time.timeSinceLevelLoad > minimumLoadingTime)
                 {
-                    loadingText.text = "Any key to continue";
+                    loadingText.text = "Any key to continue ...";
                     _isDoneLoading = true;
                     yield break;
                 }

@@ -128,7 +128,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
         
         SoundManager.Instance.PlayFx(dropSound,out AudioSource dropSource);
         dropSource.pitch = UnityEngine.Random.Range(0.8f, 1.2f);
-        dropSource.volume = 0.7f;
+        dropSource.volume = 0.6f;
         
         if (!eventData.pointerEnter || !eventData.pointerEnter.CompareTag("Stove") && !IsFlipping)
         {

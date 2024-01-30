@@ -805,7 +805,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hoverScale: 1.08
-  _hoverSound: {fileID: 0}
+  _hoverSound: {fileID: 8300000, guid: f9c8fb0f59001be4683d3c873a50bc59, type: 3}
+  clickSound: {fileID: 8300000, guid: 68ce741e4f2097d4888d5b070d899c2b, type: 3}
 --- !u!1 &775448919
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,7 +1314,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hoverScale: 1.25
-  _hoverSound: {fileID: 0}
+  _hoverSound: {fileID: 8300000, guid: f9c8fb0f59001be4683d3c873a50bc59, type: 3}
+  clickSound: {fileID: 8300000, guid: 68ce741e4f2097d4888d5b070d899c2b, type: 3}
 --- !u!1 &1001643078
 GameObject:
   m_ObjectHideFlags: 0
@@ -2399,7 +2401,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hoverScale: 1.25
-  _hoverSound: {fileID: 0}
+  _hoverSound: {fileID: 8300000, guid: f9c8fb0f59001be4683d3c873a50bc59, type: 3}
+  clickSound: {fileID: 8300000, guid: 68ce741e4f2097d4888d5b070d899c2b, type: 3}
 --- !u!1 &1570156093
 GameObject:
   m_ObjectHideFlags: 0
@@ -2865,7 +2868,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hoverScale: 1.25
-  _hoverSound: {fileID: 0}
+  _hoverSound: {fileID: 8300000, guid: f9c8fb0f59001be4683d3c873a50bc59, type: 3}
+  clickSound: {fileID: 8300000, guid: 68ce741e4f2097d4888d5b070d899c2b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
