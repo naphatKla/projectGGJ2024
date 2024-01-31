@@ -69,6 +69,11 @@ namespace Managers
             DOVirtual.DelayedCall(1f, () =>
             {
                 SoundManager.Instance.FadeOutFx(3f, AfterFadeAction.Stop);
+                DOVirtual.DelayedCall(3, () =>
+                {
+                    SoundManager.Instance.StopAllFx();
+                    SoundManager.Instance.FadeInFx(0.5f, true);
+                });
                 SceneManager.LoadScene("Credit");
             });
         }

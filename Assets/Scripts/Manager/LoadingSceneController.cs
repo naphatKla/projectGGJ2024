@@ -32,6 +32,8 @@ namespace Manager
         [PropertyTooltip("Minimum time to show the loading text even if the scene is already finished loading")]
         private float minimumLoadingTime = 1.0f;
         
+        [SerializeField] private AudioClip loadingMusic;
+        
         private int _currentTipsIndex;
         private AsyncOperation _asyncOperation;
         private bool _isDoneLoading;
@@ -43,6 +45,7 @@ namespace Manager
             //tipsText.text = tips[_currentTipsIndex];
             SoundManager.Instance.StopAllFx();
             SoundManager.Instance.StopMusic();
+            SoundManager.Instance.PlayMusic(loadingMusic);
             StartCoroutine(LoadSceneAsync());
         }
 
@@ -53,8 +56,11 @@ namespace Manager
             if (_isTransitioning) return;
             _isTransitioning = true;
             transition.GetComponent<Animator>().SetTrigger("ChangeScene");
+            SoundManager.Instance.FadeOutMusic(2f, AfterFadeAction.Stop);
             DOVirtual.DelayedCall(0.6f, (() =>
             {
+                SoundManager.Instance.FadeInMusic(0.5f, true);
+                SoundManager.Instance.StopMusic();
                 _asyncOperation.allowSceneActivation = true;
             }));
         }

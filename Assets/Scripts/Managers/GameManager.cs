@@ -30,15 +30,18 @@ namespace Managers
         [SerializeField] private Button mainMenuButton;
         [SerializeField] private TextMeshProUGUI timerText;
         [SerializeField] private TextMeshProUGUI meatGoalText;
+        [SerializeField] private GameObject achivement;
         private BubbleManager BubbleManager => BubbleManager.Instance;
         [Header("Sound")] [SerializeField] private AudioClip ambientSound;
         [SerializeField] private AudioClip windSound;
+        [SerializeField] private AudioClip achivementSound;
         public MMF_Player meatBurnFeedback;
         public Image transition;
         private AudioSource _ambientSource;
         private AudioSource _windSource;
         private bool _isStopFX;
-        
+        public static List<ParameterType> endingTypeUnlocked = new List<ParameterType>();
+
         void Start()
         {
             meatGoalText.text = $"{meatCooked} / {meatGoal}";
@@ -129,6 +132,13 @@ namespace Managers
             BubbleManager.CurrentBubbleManagerSettings
                 .FindAll(x => !x.BubbleWave.IsEnding).ForEach(x => x.BubbleWave.StopWave());
             EndingManager.endingType = endingType;
+            
+            if(endingTypeUnlocked.Contains(endingType)) return;
+            SoundManager.Instance.PlayFx(achivementSound, out _ );
+            endingTypeUnlocked.Add(endingType);
+            achivement.SetActive(true);
+            achivement.GetComponentInChildren<TextMeshProUGUI>().text = $"{endingTypeUnlocked.Count} / 4 ending unlocked";
+            MainMenuManager.IsPlayAchievementNotification = true;
         }
         public void GoToEnding()
         {

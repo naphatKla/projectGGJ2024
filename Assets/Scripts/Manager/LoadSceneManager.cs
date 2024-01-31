@@ -49,10 +49,10 @@ namespace Manager
                 sceneButton.button.onClick.AddListener(() =>
                 {
                     DOTween.KillAll();
-                    SoundManager.Instance.FadeOutMusic(0.5f, AfterFadeAction.Stop);
-                    SoundManager.Instance.FadeOutFx(0.5f, AfterFadeAction.Stop);
+                    SoundManager.Instance.FadeOutMusic(2f, AfterFadeAction.Stop);
+                    SoundManager.Instance.FadeOutFx(2f, AfterFadeAction.Stop);
                     loadSceneTransition.GetComponent<Animator>().SetTrigger("ChangeScene");
-                    DOVirtual.DelayedCall(1f, (() =>
+                    DOVirtual.DelayedCall(0.6f, (() =>
                     {
                         if (sceneButton.useLoadingScene)
                         {

@@ -24,9 +24,11 @@ public class CreditManager : MonoBehaviour
         {
             _isTransitioning = true;
             transition.GetComponent<Animator>().SetTrigger("ChangeScene");
+            SoundManager.Instance.FadeOutMusic(2f, AfterFadeAction.Stop);
             DOVirtual.DelayedCall(0.6f, (() =>
             {
                 SceneManager.LoadScene(SceneName.MainMenu.ToString());
+                SoundManager.Instance.FadeInMusic(0.5f, true);
             }));
         }
     }

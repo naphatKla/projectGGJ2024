@@ -65,7 +65,8 @@ public class FlipController : MonoSingleton<FlipController>
         flipBar.gameObject.SetActive(true);
         hitCheckFrame.gameObject.SetActive(true);
         flipBar.rectTransform.position = position + barOffset;
-        flipBar.rectTransform.position = new Vector3(flipBar.rectTransform.position.x, Mathf.Clamp(flipBar.rectTransform.position.y,-200,200) , flipBar.rectTransform.position.z);
+        flipBar.rectTransform.position = new Vector3(flipBar.rectTransform.position.x, Mathf.Clamp(flipBar.rectTransform.position.y,-200,50) , flipBar.rectTransform.position.z);
+        Debug.Log(Mathf.Clamp(flipBar.rectTransform.position.y,-200,200));
         _currentMeat = meat;
     }
     
