@@ -35,9 +35,9 @@ namespace Managers
 
         private void Start()
         {
-            SoundManager.Instance.FadeInMusic(3f,true);
+            SoundManager.Instance.FadeInMusic(0f,true);
             SoundManager.Instance.StopAllFx();
-            SoundManager.Instance.FadeInFx(3, true);
+            SoundManager.Instance.FadeInFx(1, true);
             SoundManager.Instance.PlayMusic(endingMusic);
             SoundManager.Instance.PlayFx(endingFx,out _,true);
         }
@@ -69,11 +69,6 @@ namespace Managers
             DOVirtual.DelayedCall(1f, () =>
             {
                 SoundManager.Instance.FadeOutFx(3f, AfterFadeAction.Stop);
-                DOVirtual.DelayedCall(3, () =>
-                {
-                    SoundManager.Instance.StopAllFx();
-                    SoundManager.Instance.FadeInFx(0.5f, true);
-                });
                 SceneManager.LoadScene("Credit");
             });
         }

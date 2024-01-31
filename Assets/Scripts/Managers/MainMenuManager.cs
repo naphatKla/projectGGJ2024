@@ -20,6 +20,7 @@ namespace Managers
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+            SoundManager.Instance.FadeInFx(0.5f);
             SoundManager.Instance.PlayMusic(bgmSound);
             Debug.Log("Call");
             if (!PlayerPrefs.HasKey("Language"))
@@ -31,7 +32,7 @@ namespace Managers
             if (!IsPlayAchievementNotification) return;
             achievement.SetActive(true);
             achievement.GetComponentInChildren<TextMeshProUGUI>().text = $"{GameManager.endingTypeUnlocked.Count} / 4 ending unlocked";
-            SoundManager.Instance.PlayFx(achievementSound, out _);
+            achievement.GetComponent<AudioSource>().PlayOneShot(achievementSound);
             IsPlayAchievementNotification = false;
         }
         

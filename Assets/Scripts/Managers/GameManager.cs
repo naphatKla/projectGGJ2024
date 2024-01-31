@@ -134,9 +134,9 @@ namespace Managers
             EndingManager.endingType = endingType;
             
             if(endingTypeUnlocked.Contains(endingType)) return;
-            SoundManager.Instance.PlayFx(achivementSound, out _ );
             endingTypeUnlocked.Add(endingType);
             achivement.SetActive(true);
+            achivement.GetComponent<AudioSource>().PlayOneShot(achivementSound);
             achivement.GetComponentInChildren<TextMeshProUGUI>().text = $"{endingTypeUnlocked.Count} / 4 ending unlocked";
             MainMenuManager.IsPlayAchievementNotification = true;
         }
