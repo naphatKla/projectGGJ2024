@@ -58,7 +58,7 @@ public class Stove : MonoBehaviour
 
         if (_cookingSource && _cookingSource.isPlaying) return;
         SoundManager.Instance.PlayFx(cookingSound[UnityEngine.Random.Range(0, cookingSound.Length)], out _cookingSource);
-        _cookingSource.volume = 0.5f;
+        _cookingSource.volume = 0.4f;
     }
 
 

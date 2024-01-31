@@ -67,7 +67,7 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
         DOVirtual.DelayedCall(0.5f, ()=> _animator.SetBool("IsSpawning", false));
         transform.rotation = Quaternion.Euler(0, 0, UnityEngine.Random.Range(randomRotationRange.x, randomRotationRange.y));
     }
-
+    
     private void FixedUpdate()
     {
         _animator.SetBool("OnGrill", IsOnGrill);
@@ -198,5 +198,14 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
         ChangeFoodStateHandler();
         if (_cookedTimeOnGrill[_currentSide == 0? 1 : 0] <= 0 || _cookedTimeOnGrill[_currentSide == 0? 1 : 0] <= _lastedOppositeSideCookedTime-1.5f) return;
         _cookedTimeOnGrill[_currentSide == 0? 1 : 0] -= Time.deltaTime;
+    }
+    
+    private void OnApplicationFocus(bool hasFocus)
+    {
+        _isMouseDown = false;
+        if (BubbleManager.Instance.currentBubble)
+            BubbleManager.Instance.currentBubble.GetComponent<Image>().raycastTarget = true;
+        _holdClickTween.Kill();
+        GetComponent<Image>().raycastTarget = true;
     }
 }

@@ -20,6 +20,8 @@ namespace Managers
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+            Application.runInBackground = true;
+            Application.targetFrameRate = 165;
             SoundManager.Instance.FadeInFx(0.5f);
             SoundManager.Instance.PlayMusic(bgmSound);
             Debug.Log("Call");
@@ -51,7 +53,7 @@ namespace Managers
                     break;
             }
         }
-        
+      
         [Title("Debug")]
         [Button("Delete Keys")]
         private void DeleteKeys()
