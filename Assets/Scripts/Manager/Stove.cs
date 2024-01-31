@@ -13,6 +13,8 @@ public class Stove : MonoBehaviour
     [SerializeField] private AudioClip[] cookingSound;
     [SerializeField] private AudioClip fireSound;
     private AudioSource _cookingSource;
+    private AudioSource _fireSource;
+    private bool _isStopFX;
     
     private void Awake()
     {
@@ -21,17 +23,19 @@ public class Stove : MonoBehaviour
 
     private void Start()
     {
-        SoundManager.Instance.PlayFx(fireSound,out AudioSource fireSource,true);
-        fireSource.volume = 0.25f;
+        SoundManager.Instance.PlayFx(fireSound,out _fireSource,true);
+        _fireSource.volume = 0.25f;
     }
 
     private void Update()
     {
         if (GameManager.Instance.IsWin || GameManager.Instance.IsLose)
         {
-            if (_cookingSource)
+            if (_cookingSource && !_isStopFX)
             {
-                _cookingSource.DOFade(0f, 0.5f).OnComplete(() => { _cookingSource.Stop(); });
+                _cookingSource.DOFade(0f, 3f).OnComplete(() => { _cookingSource.Stop(); });
+                _fireSource.DOFade(0f, 3f).OnComplete(() => { _fireSource.Stop(); });
+                _isStopFX = true;
             }
             return;
         }
@@ -45,7 +49,7 @@ public class Stove : MonoBehaviour
 
         if (stoveSlots.All(slot => slot.childCount <= 0) || meats.All(meat => meat.IsBurnt))
         {
-            if (_cookingSource)
+            if (_cookingSource && !_isStopFX)
             {
                 _cookingSource.DOFade(0f, 0.5f).OnComplete(() => { _cookingSource.Stop(); });
             }

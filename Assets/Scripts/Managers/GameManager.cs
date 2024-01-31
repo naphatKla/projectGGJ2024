@@ -35,17 +35,29 @@ namespace Managers
         [SerializeField] private AudioClip windSound;
         public MMF_Player meatBurnFeedback;
         public Image transition;
-
+        private AudioSource _ambientSource;
+        private AudioSource _windSource;
+        private bool _isStopFX;
+        
         void Start()
         {
             meatGoalText.text = $"{meatCooked} / {meatGoal}";
-            SoundManager.Instance.PlayMusic(ambientSound);
-            SoundManager.Instance.PlayFx(windSound,out _,true);
+            SoundManager.Instance.PlayFx(ambientSound, out _ambientSource, true);
+            SoundManager.Instance.PlayFx(windSound,out _windSource,true);
         }
 
         void Update()
         {
-            if (IsLose || IsWin) return;
+            if (IsLose || IsWin)
+            {
+                if (_ambientSource && !_isStopFX)
+                {
+                    _isStopFX = true;
+                    _ambientSource.DOFade(0f, 3f).OnComplete(() => { _ambientSource.Stop(); });
+                    _windSource.DOFade(0f, 3f).OnComplete(() => { _windSource.Stop(); });
+                }
+                return;
+            }
             _timeCount += Time.deltaTime;
             _timeCount = Mathf.Clamp(_timeCount, 0, gamePlayTime);
             timerImage.fillAmount = 1 - (_timeCount / gamePlayTime);

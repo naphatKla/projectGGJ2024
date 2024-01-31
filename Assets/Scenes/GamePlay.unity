@@ -304,8 +304,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 369063789}
-  - {fileID: 1399660137}
   - {fileID: 1970033904}
+  - {fileID: 1399660137}
   m_Father: {fileID: 616219037}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -8306,12 +8306,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 37493120}
   - {fileID: 116767731}
+  - {fileID: 37493120}
   - {fileID: 1839000297}
   - {fileID: 1672205027}
-  - {fileID: 1861479233}
   - {fileID: 1639621020}
+  - {fileID: 1861479233}
   m_Father: {fileID: 616219037}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -9298,7 +9298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stove: {fileID: 1039849567}
   gamePlayTime: 180
-  meatGoal: 20
+  meatGoal: 3
   meatCooked: 0
   meatBurned: 0
   _timeCount: 0
@@ -12926,9 +12926,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 955366176}
   - {fileID: 407478570}
   - {fileID: 1840949841}
-  - {fileID: 955366176}
   m_Father: {fileID: 616219037}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}

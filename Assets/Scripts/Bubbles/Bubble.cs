@@ -60,6 +60,7 @@ namespace Bubbles
     }
     public class Bubble : MonoBehaviour, IPointerEnterHandler
     {
+        [SerializeField] private AudioSource audioSource;
         [SerializeField] private TMP_Text dialogueText;
         [SerializeField] private BubbleAnswer answerPrefab;
         [SerializeField] private RectTransform[] answerSpawnPoints;
@@ -151,7 +152,8 @@ namespace Bubbles
             dialogueText.DOFade(1f, duration);
             _image.color = new Color(1f, 1f, 1f, 0f);
             _image.DOFade(1f, duration);
-            SoundManager.Instance.PlayFx(popUpSounds[Random.Range(0, popUpSounds.Length)], out _);
+            audioSource.PlayOneShot(popUpSounds[Random.Range(0, popUpSounds.Length)]);
+            Debug.Log("Bubbb");
         }
         
         private void StartFadeOut(float duration)

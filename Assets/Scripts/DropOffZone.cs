@@ -19,6 +19,7 @@ public class DropOffZone : MonoBehaviour, IDropHandler
         if (!eventData.pointerDrag.CompareTag("Grillable")) return;
         
         Meat meat = eventData.pointerDrag.GetComponent<Meat>();
+        if (meat.IsFlipping) return;
         CheckMeatHandler(meat);
     }
 
