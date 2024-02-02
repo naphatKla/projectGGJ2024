@@ -21,7 +21,8 @@ public enum FoodState
     public FoodState NextFoodState;
 }
 
-public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHandler, IPointerUpHandler
+public class 
+    Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHandler, IPointerUpHandler
 {
     public List<CookedState> cookedStates;
     public FoodState FoodState => _currentFoodState[_currentSide];
@@ -201,11 +202,13 @@ public class Meat : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerDownHa
     }
     
     private void OnApplicationFocus(bool hasFocus)
-    {
+    { 
         _isMouseDown = false;
         if (BubbleManager.Instance.currentBubble)
             BubbleManager.Instance.currentBubble.GetComponent<Image>().raycastTarget = true;
         _holdClickTween.Kill();
         GetComponent<Image>().raycastTarget = true;
+        FoodSpawnerManager.Instance.AddFoodToTheNearestSlot(this);
+        
     }
 }

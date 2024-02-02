@@ -20,7 +20,7 @@ namespace Managers
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
-            Application.runInBackground = true;
+            //Application.runInBackground = true;
             Application.targetFrameRate = 165;
             SoundManager.Instance.FadeInFx(0.5f);
             SoundManager.Instance.PlayMusic(bgmSound);
