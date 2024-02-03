@@ -9650,7 +9650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stove: {fileID: 1039849567}
   gamePlayTime: 180
-  meatGoal: 1
+  meatGoal: 20
   meatCooked: 0
   meatBurned: 0
   _timeCount: 0
