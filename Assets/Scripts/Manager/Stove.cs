@@ -39,6 +39,7 @@ public class Stove : MonoBehaviour
             }
             return;
         }
+        
         Meat[] meats = stoveSlots.Where(slot => slot.childCount > 0)
             .Select(slot => slot.GetChild(0).GetComponent<Meat>()).ToArray();
         foreach (Meat meat in meats)

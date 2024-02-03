@@ -6,7 +6,6 @@ using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Managers
@@ -45,8 +44,11 @@ namespace Managers
         void Start()
         {
             meatGoalText.text = $"{meatCooked} / {meatGoal}";
+            SoundManager.Instance.StopMusic();
             SoundManager.Instance.PlayFx(ambientSound, out _ambientSource, true);
             SoundManager.Instance.PlayFx(windSound,out _windSource,true);
+            _ambientSource.volume = 1f;
+            _windSource.volume = 1f;
         }
 
         void Update()
@@ -61,6 +63,13 @@ namespace Managers
                 }
                 return;
             }
+
+            if (_ambientSource && !_ambientSource.isPlaying)
+                SoundManager.Instance.PlayFx(ambientSound, out _ambientSource, true);
+            if (_windSource && !_windSource.isPlaying)
+                SoundManager.Instance.PlayFx(windSound, out _windSource, true);
+            
+            
             _timeCount += Time.deltaTime;
             _timeCount = Mathf.Clamp(_timeCount, 0, gamePlayTime);
             timerImage.fillAmount = 1 - (_timeCount / gamePlayTime);
