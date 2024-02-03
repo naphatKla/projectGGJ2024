@@ -44,7 +44,21 @@ namespace Managers
 
         private void PlayEnding()
         {
-            videoPlayer.clip = endingSettings.First(x => x.EndingType == endingType).VideoClip;
+            VideoClip videoClip = endingSettings.First(x => x.EndingType == endingType).VideoClip;
+            switch (Application.platform)
+            {
+                case RuntimePlatform.WindowsServer:
+                case RuntimePlatform.WindowsEditor:
+                case RuntimePlatform.WindowsPlayer:
+                    videoPlayer.source = VideoSource.VideoClip;
+                    videoPlayer.clip = videoClip;
+                    break;
+                case RuntimePlatform.WebGLPlayer:
+                    videoPlayer.source = VideoSource.Url;
+                    string path = System.IO.Path.Combine(Application.streamingAssetsPath + "/Videos/", videoClip.name + ".mp4").Replace('\\', '/');
+                    videoPlayer.url = path;
+                    break;
+            }
             videoPlayer.Play();
         }
 
